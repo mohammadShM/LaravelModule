@@ -2,104 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2a3277d-b2ce-442a-9b1c-bf89ca5e04db" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/css/font/font.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/modal.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/responsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/digikala/digikala.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/digikala/digikala.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/digikala/digikala.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/digikala/digikala.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/iransans/eot/IRANSans(FaNum)_Medium.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/iransans/eot/IRANSansWeb(FaNum).eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/iransans/eot/IRANSansWeb(FaNum)_Bold.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/iransans/eot/IRANSansWeb(FaNum)_Light.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/iransans/eot/IRANSansWeb(FaNum)_Medium.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/iransans/eot/IRANSansWeb(FaNum)_UltraLight.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/iransans/ttf/IRANSansWeb(FaNum).ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/iransans/ttf/IRANSansWeb(FaNum)_Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/iransans/ttf/IRANSansWeb(FaNum)_Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/iransans/ttf/IRANSansWeb(FaNum)_Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/iransans/ttf/IRANSansWeb(FaNum)_UltraLight.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/iransans/woff/IRANSansWeb(FaNum).woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/iransans/woff/IRANSansWeb(FaNum)_Bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/iransans/woff/IRANSansWeb(FaNum)_Light.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/iransans/woff/IRANSansWeb(FaNum)_Medium.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/iransans/woff/IRANSansWeb(FaNum)_UltraLight.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/iransans/woff2/IRANSansWeb(FaNum).woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/iransans/woff2/IRANSansWeb(FaNum)_Bold.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/iransans/woff2/IRANSansWeb(FaNum)_Light.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/iransans/woff2/IRANSansWeb(FaNum)_Medium.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/iransans/woff2/IRANSansWeb(FaNum)_UltraLight.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/70.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/Liquidate-square.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/ads/1440px/test.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/banner/1000024381.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/banner/angularjs.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/banner/anuglar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/banner/aparat.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/banner/boostrap.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/banner/cms.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/banner/digiphpmvc-angular.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/banner/ee.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/banner/faranesh.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/banner/fgh.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/banner/javascript.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/banner/lara.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/banner/laravel-payment-processing.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/banner/lll.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/banner/nodejs-v8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/banner/nodejs.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/banner/php.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/banner/phpfull.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/banner/react-redux.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/banner/reactjs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/banner/restfull-lara.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/blog-pic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/cover.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/discont_badge.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/laravel-pic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/laravel-tel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/podcast.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/pricing.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/profile.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/slideshow/p-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/slideshow/p-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/slideshow/p-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/slideshow/p-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/slideshow/p-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/st.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/st1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/star-empty.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/star-fill.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/telgram.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/weblogo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/workinja.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/activation-code.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/countDownTimer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/jquery-3.4.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/js.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/modal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/master.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/reset-password.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/verification-code.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Rules/ValidMobile.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Rules/ValidPassword.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/User/Providers/UserServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/fa.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/fa/auth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/fa/pagination.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/fa/passwords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/fa/validation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/LaravelWebModular.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LaravelWebModular.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/mohammadshm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/mohammadshm.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/master.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,12 +162,13 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/vendor/laravel/ui/auth-backend/VerifiesEmails.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/ui/src/Auth/bootstrap-stubs/auth/register.stub&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/ui/auth-backend/AuthenticatesUsers.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/ui/src/Auth/bootstrap-stubs/auth/login.stub&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/ui/auth-backend/SendsPasswordResetEmails.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/.env" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/auth" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/lang/fa" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\resources\lang\fa" />
       <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\resources\views\auth" />
       <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\resources\views" />
       <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\public" />
@@ -272,8 +194,16 @@
       <workItem from="1592424198167" duration="1788000" />
       <workItem from="1592475882309" duration="2378000" />
       <workItem from="1592480661183" duration="15852000" />
-      <workItem from="1592563366052" duration="5581000" />
+      <workItem from="1592563366052" duration="13553000" />
     </task>
+    <task id="LOCAL-00001" summary="for create login and register form in front and back by laravel/ui">
+      <created>1592576031330</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1592576031330</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,6 +222,10 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="for create login and register form in front and back by laravel/ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="for create login and register form in front and back by laravel/ui" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="361" y="71" key="#Composer" timestamp="1592404517620">
       <screen x="0" y="0" width="1536" height="824" />
@@ -301,10 +235,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1592483614245" />
+    <state x="282" y="0" key="CommitChangelistDialog2" timestamp="1592576027398">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="282" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1592576027398" />
     <state x="515" y="324" key="ComposerInitDialogKey" timestamp="1592404751596">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="515" y="324" key="ComposerInitDialogKey/0.0.1536.824@0.0.1536.824" timestamp="1592404751596" />
+    <state x="542" y="167" key="FileChooserDialogImpl" timestamp="1592586778971">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="542" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1592586778971" />
     <state width="1495" height="201" key="GridCell.Tab.0.bottom" timestamp="1592482790066">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -321,6 +263,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1495" height="201" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1592482790066" />
+    <state x="374" y="213" key="NewPhpClassDialog" timestamp="1592586198674">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="374" y="213" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1592586198674" />
     <state x="593" y="332" key="NewPhpFileDialog" timestamp="1592484496624">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -329,6 +275,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="307" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1592424994335" />
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1592576033610">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1592576033610" />
     <state x="409" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1592563437832">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

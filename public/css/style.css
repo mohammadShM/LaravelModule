@@ -136,7 +136,7 @@ a, span {
 }
 
 .t-header-searchbox input {
-    font-family: irs;
+    font-family: irs, serif;
     width: 100%;
     height: 100%;
     color: #444;
@@ -2774,7 +2774,7 @@ footer {
 .dark-mode .head-right div,
 .dark-mode .episodes-list--title,
 .dark-mode .comments .comment-header-detail .comment-header-name,
-.dark-mode .comments .comment-header-detail .comment-header-date,.dark-mode .card-details .author-name,.dark-mode .card-details .date {
+.dark-mode .comments .comment-header-detail .comment-header-date, .dark-mode .card-details .author-name, .dark-mode .card-details .date {
     color: #d1d1d2 !important;
 }
 
@@ -3675,4 +3675,16 @@ textarea {
     padding-right: 0 !important;
     max-width: 100% !important;
     transition: all 200ms ease;
+}
+
+.center {
+    text-align: center;
+}
+
+.invalid-feedback {
+    color: red;
+}
+
+.is-invalid{
+    border: 1px solid red;
 }
