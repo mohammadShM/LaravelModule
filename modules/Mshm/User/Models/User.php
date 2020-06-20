@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Mshm\User\Models;
 
 use Eloquent;
 use Illuminate\Contracts\Auth\MustVerifyEmail;

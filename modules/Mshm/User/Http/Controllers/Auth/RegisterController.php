@@ -1,15 +1,15 @@
 <?php
-// password {@M123m}
-namespace App\Http\Controllers\Auth;
+
+namespace Mshm\User\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
-use App\Rules\ValidMobile;
-use App\Rules\ValidPassword;
-use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Mshm\User\Models\User;
+use Mshm\User\Rules\ValidMobile;
+use Mshm\User\Rules\ValidPassword;
 
 class RegisterController extends Controller
 {
@@ -74,4 +74,10 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
+
+    public function showRegistrationForm()
+    {
+        return view('User::Front.register');
+    }
+
 }

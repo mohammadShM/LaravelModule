@@ -1,7 +1,5 @@
 <?php
 
-// Modular
-// Monolithic
 namespace App\Http\Controllers;
 
 use Illuminate\Contracts\Support\Renderable;

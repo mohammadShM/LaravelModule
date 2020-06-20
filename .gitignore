@@ -5,9 +5,12 @@
 /vendor
 .env
 .env.backup
+.sample.txt
 .phpunit.result.cache
 Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
 .idea/vcs.xml
+database/factories/
+resources/views/auth/

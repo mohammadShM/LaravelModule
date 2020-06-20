@@ -1,4 +1,4 @@
-@extends('auth.master')
+@extends('User::Front.master')
 @section('content')
     <form action="" class="form" method="post">
         <a class="account-logo" href="index.html">

@@ -1,10 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace Mshm\User\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\ResetsPasswords;
+use Illuminate\Http\Request;
+use Mshm\User\Rules\ValidPassword;
 
 class ResetPasswordController extends Controller
 {
@@ -27,4 +29,22 @@ class ResetPasswordController extends Controller
      * @var string
      */
     protected $redirectTo = RouteServiceProvider::HOME;
+
+    protected function rules()
+    {
+        return [
+            'token' => 'required',
+            'email' => 'required|email',
+            'password' => ['required', 'string', 'min:6', 'confirmed', new ValidPassword()],
+        ];
+    }
+
+    public function showResetForm(Request $request, $token = null)
+    {
+        /** @noinspection PhpUndefinedFieldInspection */
+        return view('User::Front.passwords.reset')->with(
+            ['token' => $token, 'email' => $request->email]
+        );
+    }
+
 }
