@@ -1,12 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e2a3277d-b2ce-442a-9b1c-bf89ca5e04db" name="Default Changelist" comment="complete User module for register and login pages">
+    <list default="true" id="e2a3277d-b2ce-442a-9b1c-bf89ca5e04db" name="Default Changelist" comment="Create route account verification with six-digit code and testing for it .">
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/User/Mail/VerifyCodeMail.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/User/Notifications/VerifyMailNotification.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/User/Resources/Views/mails/verify-mail.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/User/Services/VerifyCodeService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/User/Tests/Unit/VerifyCodeServiceTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/mail/html/button.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/mail/html/footer.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/mail/html/header.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/mail/html/layout.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/mail/html/message.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/mail/html/panel.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/mail/html/subcopy.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/mail/html/table.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/mail/html/themes/default.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/mail/text/button.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/mail/text/footer.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/mail/text/header.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/mail/text/layout.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/mail/text/message.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/mail/text/panel.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/mail/text/subcopy.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/mail/text/table.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/mohammadshm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/mohammadshm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/LoginTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/User/Tests/Feature/LoginTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/RegistrationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/User/Tests/Feature/RegistrationTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/MobileValidationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/User/Tests/Unit/MobileValidationTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/PasswordValidationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/User/Tests/Unit/PasswordValidationTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/User/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/User/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,34 +160,38 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1dS3189ejc4TnY1Q42OhBOKIpBQ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="add_unversioned_files" value="$PROJECT_DIR$/vendor/laravel/ui/auth-backend/VerifiesEmails.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/ui/src/Auth/bootstrap-stubs/auth/register.stub&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/fzaninotto/faker/src/Faker/Generator.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/ui/auth-backend/AuthenticatesUsers.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/ui/src/Auth/bootstrap-stubs/auth/login.stub&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/storage/framework/views/dda049c9e200e442f8a8d037b92db6dfd6703224.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/ui/auth-backend/SendsPasswordResetEmails.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/.env" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/modules/Mshm/User/Tests" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/vendor/laravel/ui/auth-backend/VerifiesEmails.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/ui/src/Auth/bootstrap-stubs/auth/register.stub&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/framework/src/Illuminate/Auth/Listeners/SendEmailVerificationNotification.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/framework/src/Illuminate/Contracts/Auth/MustVerifyEmail.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/framework/src/Illuminate/Mail/resources/views/html/themes/default.css&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/fzaninotto/faker/src/Faker/Generator.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/ui/auth-backend/AuthenticatesUsers.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/ui/auth-backend/RegistersUsers.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/ui/src/Auth/bootstrap-stubs/auth/login.stub&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/storage/framework/views/dda049c9e200e442f8a8d037b92db6dfd6703224.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/ui/auth-backend/SendsPasswordResetEmails.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/.env" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/modules/Mshm/User/Tests/Unit" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\User\Tests\Unit" />
       <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\User\Tests" />
       <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular" />
       <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\resources\lang\fa" />
       <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\resources\views\auth" />
-      <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\resources\views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\User" />
+      <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\User\Resources\Views" />
       <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\User\Resources\Views\Front" />
       <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\User\Models" />
       <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\User\Database\Factories" />
-      <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\User\Database\Migrations" />
-      <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\User" />
     </key>
   </component>
   <component name="RunManager" selected="PHPUnit.MobileValidationTest.test_mobile_can_not_be_less_than_9_character">
@@ -205,7 +231,7 @@
       <workItem from="1592563366052" duration="13937000" />
       <workItem from="1592655840597" duration="7326000" />
       <workItem from="1592668234844" duration="5076000" />
-      <workItem from="1592735272716" duration="9840000" />
+      <workItem from="1592735272716" duration="21689000" />
     </task>
     <task id="LOCAL-00001" summary="for create login and register form in front and back by laravel/ui">
       <created>1592576031330</created>
@@ -262,6 +288,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="for create login and register form in front and back by laravel/ui" />
     <MESSAGE value="config first tools for module" />
     <MESSAGE value="complete User module for register and login pages" />
@@ -280,6 +307,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="398" y="22" key="#MobileValidationTest.test_mobile_can_not_be_less_than_9_character/0.0.1536.824@0.0.1536.824" timestamp="1592744008350" />
+    <state x="433" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1592760148923">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="433" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1592760148923" />
     <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1592483614245">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -292,14 +323,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="510" y="4" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0/0.0.1536.824@0.0.1536.824" timestamp="1592738891013" />
-    <state x="282" y="0" key="CommitChangelistDialog2" timestamp="1592676314411">
+    <state x="282" y="0" key="CommitChangelistDialog2" timestamp="1592760735453">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="282" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1592676314411" />
+    <state x="282" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1592760735453" />
     <state x="515" y="324" key="ComposerInitDialogKey" timestamp="1592404751596">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="515" y="324" key="ComposerInitDialogKey/0.0.1536.824@0.0.1536.824" timestamp="1592404751596" />
+    <state x="144" y="65" key="DiffContextDialog" timestamp="1592748893895">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="144" y="65" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1592748893895" />
     <state x="542" y="167" key="FileChooserDialogImpl" timestamp="1592587093436">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -320,10 +355,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1495" height="201" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1592482790066" />
-    <state x="374" y="213" key="NewPhpClassDialog" timestamp="1592662177479">
+    <state x="374" y="213" key="NewPhpClassDialog" timestamp="1592759320054">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="374" y="213" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1592662177479" />
+    <state x="374" y="213" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1592759320054" />
     <state x="593" y="332" key="NewPhpFileDialog" timestamp="1592661332193">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
