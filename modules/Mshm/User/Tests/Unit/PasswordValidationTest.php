@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Unit;
+namespace Mshm\User\Tests\Unit;
 
 use Mshm\User\Rules\ValidPassword;
 use PHPUnit\Framework\TestCase;
