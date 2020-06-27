@@ -1,23 +1,41 @@
 @extends('User::Front.master')
 
 @section('content')
-    <div class="form">
-        <a class="account-logo" href="/">
-            <img src="/img/weblogo.png" alt="">
-        </a>
-        <div class="form-content form-account">
-            @if (session('resent'))
-                <div class="alert alert-success" role="alert">
-                    یک لینک تایید ایمیل جدید به ایمیلتان ارسال شد.
-                </div>
-            @endif
-            قبل از ادامه لطفا ایمیلتان را چک کنید
-            اگر ایمیلی دریافت نکرده اید درخواست ارسال مجدد لینک بدهید.
-            <form class="d-inline center" method="POST" action="{{ route('verification.resend') }}">
-                @csrf
-                <button type="submit" class="btn btn-link p-0 m-0 align-baseline">ارسال مجددا کد لینک تایید</button>
-                <a href="/" class="">بازگشت به صفحه ی اصلی</a>
-            </form>
-        </div>
+    <div class="account">
+        <form action="{{ route('verification.verify') }}" class="form" method="post">
+            @csrf
+            <a class="account-logo" href="/">
+                <img src="/img/weblogo.png" alt="">
+            </a>
+            <div class="card-header">
+                <p class="activation-code-title">کد فرستاده شده به ایمیل <span>{{ auth()->user()->email }}</span> را
+                    وارد کنید</p>
+            </div>
+            <div class="form-content form-content1">
+                <input name="verify_code" class="activation-code-input @error('verify_code') is-invalid @enderror"
+                       required placeholder="فعال سازی">
+                @error('verify_code')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
+                <br>
+                <button class="btn i-t">تایید</button>
+                <a href="#" onclick="event.preventDefault(); document.getElementById('resend-code').submit()"
+                >ارسال مجدد کد فعالسازی</a>
+            </div>
+            <div class="form-footer">
+                <a href="{{ route('register') }}">صفحه ثبت نام</a>
+            </div>
+        </form>
+        <form id="resend-code" action="{{ route('verification.resend') }}" method="post">
+            @csrf
+        </form>
     </div>
+@endsection
+@section('js')
+    <!--suppress VueDuplicateTag, HtmlUnknownTarget -->
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <!--suppress HtmlUnknownTarget, VueDuplicateTag -->
+    <script src="/js/activation-code.js"></script>
 @endsection

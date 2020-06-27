@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\VerifiesEmails;
 use Illuminate\Http\Request;
+use Mshm\User\Http\Requests\VerifyCodeRequest;
+use Mshm\User\Models\User;
+use Mshm\User\Services\VerifyCodeService;
 
 class VerificationController extends Controller
 {
@@ -37,7 +40,7 @@ class VerificationController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        $this->middleware('signed')->only('verify');
+        // $this->middleware('signed')->only('verify');
         $this->middleware('throttle:6,1')->only('verify', 'resend');
     }
 
@@ -48,4 +51,15 @@ class VerificationController extends Controller
             : view('User::Front.verify');
     }
 
+    public function verify(VerifyCodeRequest $request)
+    {
+        if (!VerifyCodeService::check(auth()->id(), $request->verify_code)) {
+            return back()->withErrors(['verify_code' => 'کد وارد شده معتبر نمی باشد!']);
+        }
+        /** @var User $user */
+        $user = auth()->user();
+        $user->markEmailAsVerified();
+        return redirect()->route('home');
+    }
+    
 }
