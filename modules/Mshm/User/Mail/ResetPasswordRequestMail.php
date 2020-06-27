@@ -8,7 +8,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Mshm\User\Models\User;
 
-class VerifyCodeMail extends Mailable
+class ResetPasswordRequestMail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -21,7 +21,7 @@ class VerifyCodeMail extends Mailable
 
     public function build()
     {
-        return $this->markdown('User::mails.verify-mail')
-            ->subject('وبسایت نمونه | کد فعالسازی');
+        return $this->markdown('User::mails.reset-password-verify-code')
+            ->subject('وبسایت نمونه | بازیابی رمز عبور');
     }
 }

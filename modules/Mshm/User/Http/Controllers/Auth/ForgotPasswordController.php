@@ -4,6 +4,8 @@ namespace Mshm\User\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
+use Mshm\User\Http\Requests\SendResetPasswordVerifyRequest;
+use Mshm\User\Models\User;
 
 class ForgotPasswordController extends Controller
 {
@@ -20,9 +22,23 @@ class ForgotPasswordController extends Controller
 
     use SendsPasswordResetEmails;
 
-    public function showLinkRequestForm()
-      {
-          return view('User::Front.passwords.email');
-      }
+    public function showVerifyCodeRequestForm()
+    {
+        return view('User::Front.passwords.email');
+    }
+
+
+    public function sendVerifyCodeEmail(SendResetPasswordVerifyRequest $request)
+    {
+        // check if exists in database
+        // TODO: userRepository
+        $user = User::query()->where('email', $request->email)->first();
+        // if true send email
+        if ($user) {
+            $user->sendResetPasswordRequestNotification();
+        }
+        // view verifyCodeForm
+
+    }
 
 }

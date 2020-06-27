@@ -5,6 +5,7 @@ namespace Mshm\User\Tests\Feature;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Mshm\User\Models\User;
+use Mshm\User\Services\VerifyCodeService;
 use Tests\TestCase;
 
 class RegistrationTest extends TestCase
@@ -40,6 +41,23 @@ class RegistrationTest extends TestCase
         $this->registerNewUser();
         $response = $this->get(route('home'));
         $response->assertRedirect(route('verification.notice'));
+    }
+
+    public function test_user_can_verify_account()
+    {
+        $user = User::create([
+            'name' => $this->faker->firstName(),
+            'email' => $this->faker->email,
+            'password' => '!!125asdAA@',
+        ]);
+        $code = VerifyCodeService::generate();
+        VerifyCodeService::store($user->id, $code);
+        auth()->loginUsingId($user->id);
+        $this->assertAuthenticated();
+        $this->post(route('verification.verify'), [
+            'verify_code' => $code
+        ]);
+        $this->assertEquals(true, $user->fresh()->hasVerifiedEmail());
     }
 
     public function test_verified_user_can_see_home_page()

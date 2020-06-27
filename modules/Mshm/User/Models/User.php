@@ -10,6 +10,7 @@ use Illuminate\Notifications\DatabaseNotification;
 use Illuminate\Notifications\DatabaseNotificationCollection;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Carbon;
+use Mshm\User\Notifications\ResetPasswordRequestNotification;
 use Mshm\User\Notifications\VerifyMailNotification;
 
 /**
@@ -72,6 +73,11 @@ class User extends Authenticatable implements MustVerifyEmail
     public function sendEmailVerificationNotification()
     {
         $this->notify(new VerifyMailNotification());
+    }
+
+    public function sendResetPasswordRequestNotification()
+    {
+        $this->notify(new ResetPasswordRequestNotification());
     }
 
 }
