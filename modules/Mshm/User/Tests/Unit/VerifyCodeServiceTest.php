@@ -2,6 +2,7 @@
 
 namespace Mshm\User\Tests\Unit;
 
+use Illuminate\Support\Facades\Cache;
 use Mshm\User\Services\VerifyCodeService;
 use Tests\TestCase;
 
@@ -19,9 +20,8 @@ class VerifyCodeServiceTest extends TestCase
     public function test_verify_code_can_store()
     {
         $code = VerifyCodeService::generate();
-        VerifyCodeService::store(1, $code);
-        /** @noinspection PhpUnhandledExceptionInspection */
-        $this->assertEquals($code, cache()->get('verify_code_1'));
+        VerifyCodeService::store(1, $code, 120);
+        $this->assertEquals($code, Cache::get('verify_code_1'));
     }
 
 }

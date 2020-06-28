@@ -11,6 +11,7 @@ class VerifyCodeService
 
     private static $min = 100000;
     private static $max = 999999;
+    private static $prefix = 'verify_code_';
 
     public static function generate()
     {
@@ -21,10 +22,10 @@ class VerifyCodeService
         }
     }
 
-    public static function store($id, $code)
+    public static function store($id, $code ,$time)
     {
         try {
-            return cache()->set('verify_code_' . $id, $code, now()->addDay());
+            return cache()->set(self::$prefix . $id, $code, $time);
         } catch (InvalidArgumentException $e) {
             return abort(404, 'Not Cache Work , Please Try Again.');
         } catch (Exception $e) {
@@ -35,7 +36,18 @@ class VerifyCodeService
     public static function get($id)
     {
         try {
-            return Cache::get('verify_code_' . $id);
+            return Cache::get(self::$prefix . $id);
+        } catch (Exception $e) {
+            return abort(404, 'Not Cache Work , Please Try Again.');
+        }
+    }
+
+    public static function has($id)
+    {
+        try {
+            return cache()->has(self::$prefix . $id);
+        } catch (InvalidArgumentException $e) {
+            return abort(404, 'Not Cache Work , Please Try Again.');
         } catch (Exception $e) {
             return abort(404, 'Not Cache Work , Please Try Again.');
         }
@@ -44,7 +56,7 @@ class VerifyCodeService
     public static function delete($id)
     {
         try {
-            return cache()->delete('verify_code_' . $id);
+            return cache()->delete(self::$prefix . $id);
         } catch (InvalidArgumentException $e) {
             return abort(404, 'Not Cache Work , Please Try Again.');
         } catch (Exception $e) {

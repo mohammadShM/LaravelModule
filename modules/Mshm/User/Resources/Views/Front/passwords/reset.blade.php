@@ -1,7 +1,7 @@
 @extends('User::Front.master')
 @section('content')
     <form action="{{ route('password.update') }}" class="form" method="post">
-        <a class="account-logo" href="index.html">
+        <a class="account-logo" href="/">
             <img src="/img/weblogo.png" alt="">
         </a>
         <div class="form-content form-account">

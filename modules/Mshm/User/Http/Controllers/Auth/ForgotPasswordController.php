@@ -4,8 +4,10 @@ namespace Mshm\User\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
+use Mshm\User\Http\Requests\ResetPasswordVerifyCodeRequest;
 use Mshm\User\Http\Requests\SendResetPasswordVerifyRequest;
-use Mshm\User\Models\User;
+use Mshm\User\Repositories\UserRepo;
+use Mshm\User\Services\VerifyCodeService;
 
 class ForgotPasswordController extends Controller
 {
@@ -22,23 +24,36 @@ class ForgotPasswordController extends Controller
 
     use SendsPasswordResetEmails;
 
+    /** @noinspection PhpUnused */
     public function showVerifyCodeRequestForm()
     {
         return view('User::Front.passwords.email');
     }
 
-
+    /** @noinspection PhpUnused */
     public function sendVerifyCodeEmail(SendResetPasswordVerifyRequest $request)
     {
+        // use in RepositoryPattern (userRepo)
+        $user = resolve(UserRepo::class)->findByEmail($request->email);
+        // if true send email || check if code exists
         // check if exists in database
-        // TODO: userRepository
-        $user = User::query()->where('email', $request->email)->first();
-        // if true send email
-        if ($user) {
+        if ($user && !VerifyCodeService::has($user->id)) {
             $user->sendResetPasswordRequestNotification();
         }
         // view verifyCodeForm
+        return view('User::Front.passwords.enter-verify-code-form');
+    }
 
+    /** @noinspection PhpUnused */
+    public function checkVerifyCode(ResetPasswordVerifyCodeRequest $request)
+    {
+        // use in RepositoryPattern (userRepo)
+        $user = resolve(UserRepo::class)->findByEmail($request->email);
+        if (!VerifyCodeService::check($user->id, $request->verify_code)) {
+            return back()->withErrors(['verify_code' => 'کد وارد شده معتبر نمیباشد!']);
+        }
+        auth()->loginUsingId($user->id);
+        return redirect()->route('password.showResetForm');
     }
 
 }

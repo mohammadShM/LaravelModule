@@ -9,7 +9,7 @@ use Mshm\User\Services\VerifyCodeService;
  * @property mixed verify_code
  * @property mixed email
  */
-class VerifyCodeRequest extends FormRequest
+class ResetPasswordVerifyCodeRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -30,6 +30,7 @@ class VerifyCodeRequest extends FormRequest
     {
         return [
             'verify_code' => VerifyCodeService::getRule(),
+            'email' => 'required|email',
         ];
     }
 }
