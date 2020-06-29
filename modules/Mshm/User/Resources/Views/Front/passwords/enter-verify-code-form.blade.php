@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="account">
-        <form action="{{ route('verification.verify') }}" class="form" method="post">
+        <form action="{{ route('password.checkVerifyCode') }}" class="form" method="post">
             @csrf
             <input type="hidden" name="email" value="{{ request()->email }}">
             <a class="account-logo" href="/">

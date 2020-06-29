@@ -51,7 +51,7 @@ class RegistrationTest extends TestCase
             'password' => '!!125asdAA@',
         ]);
         $code = VerifyCodeService::generate();
-        VerifyCodeService::store($user->id, $code,120);
+        VerifyCodeService::store($user->id, $code,now()->addDay());
         auth()->loginUsingId($user->id);
         $this->assertAuthenticated();
         $this->post(route('verification.verify'), [
