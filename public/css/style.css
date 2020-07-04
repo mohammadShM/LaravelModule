@@ -3170,6 +3170,7 @@ footer {
     flex-basis: 73%;
     position: relative;
     margin-top: 8px;
+    height: 390px;
 }
 
 .slideshow img {

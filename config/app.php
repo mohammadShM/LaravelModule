@@ -176,6 +176,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         // custom service provider for module user
         \Mshm\User\Providers\UserServiceProvider::class,
+        \Mshm\Dashboard\Providers\DashboardServiceProvider::class,
 
     ],
 

@@ -37,7 +37,8 @@
     "autoload": {
         "psr-4": {
             "App\\": "app/",
-            "Mshm\\User\\": "modules/Mshm/User/"
+            "Mshm\\User\\": "modules/Mshm/User/",
+            "Mshm\\Dashboard\\": "modules/Mshm/Dashboard/"
         },
         "classmap": [
             "database/seeds",
