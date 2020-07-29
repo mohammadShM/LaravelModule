@@ -38,7 +38,8 @@
         "psr-4": {
             "App\\": "app/",
             "Mshm\\User\\": "modules/Mshm/User/",
-            "Mshm\\Dashboard\\": "modules/Mshm/Dashboard/"
+            "Mshm\\Dashboard\\": "modules/Mshm/Dashboard/",
+            "Mshm\\Category\\": "modules/Mshm/Category/"
         },
         "classmap": [
             "database/seeds",

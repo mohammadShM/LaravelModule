@@ -174,9 +174,10 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        // custom service provider for module user
+        // custom service provider for module user ===============================
         \Mshm\User\Providers\UserServiceProvider::class,
         \Mshm\Dashboard\Providers\DashboardServiceProvider::class,
+        \Mshm\Category\Providers\CategoryServiceProvider::class,
 
     ],
 

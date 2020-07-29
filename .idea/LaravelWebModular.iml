@@ -3,6 +3,7 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" packagePrefix="Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/modules/Mshm/Category" isTestSource="false" packagePrefix="Mshm\Category\" />
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/modules/Mshm/User" isTestSource="false" packagePrefix="Mshm\User\" />
       <sourceFolder url="file://$MODULE_DIR$/modules/Mshm/Dashboard" isTestSource="false" packagePrefix="Mshm\Dashboard\" />

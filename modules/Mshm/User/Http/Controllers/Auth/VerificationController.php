@@ -14,7 +14,7 @@ class VerificationController extends Controller
 {
     /*
     |--------------------------------------------------------------------------
-    | Email Verification Controller
+    | Email Verification Controllers
     |--------------------------------------------------------------------------
     |
     | This controller is responsible for handling email verification for any
@@ -61,5 +61,5 @@ class VerificationController extends Controller
         $user->markEmailAsVerified();
         return redirect()->route('home');
     }
-    
+
 }
