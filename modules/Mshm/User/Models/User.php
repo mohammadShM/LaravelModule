@@ -12,6 +12,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Carbon;
 use Mshm\User\Notifications\ResetPasswordRequestNotification;
 use Mshm\User\Notifications\VerifyMailNotification;
+use Spatie\Permission\Traits\HasRoles;
 
 /**
  * App\User
@@ -25,6 +26,7 @@ use Mshm\User\Notifications\VerifyMailNotification;
  * @property int $id
  * @property string $name
  * @property string $email
+ * @property string $mobile
  * @property Carbon|null $email_verified_at
  * @property string $password
  * @property string|null $remember_token
@@ -39,9 +41,11 @@ use Mshm\User\Notifications\VerifyMailNotification;
  * @method static Builder|User whereRememberToken($value)
  * @method static Builder|User whereUpdatedAt($value)
  */
+
 class User extends Authenticatable implements MustVerifyEmail
 {
     use Notifiable;
+    use HasRoles;
 
     /**
      * The attributes that are mass assignable.

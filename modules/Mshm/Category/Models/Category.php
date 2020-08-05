@@ -6,7 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * @method static create(array $array)
- * @method static where(string $string, string $string1, $id)
+ * @method static where(string $string, $id)
+ * @method static find($id)
+ * @method static whereTitle(string $newTitle)
  * @property mixed parent_id
  * @property mixed parentCategory
  * @property mixed id
