@@ -40,7 +40,8 @@
             "App\\": "app/",
             "Mshm\\User\\": "modules/Mshm/User/",
             "Mshm\\Dashboard\\": "modules/Mshm/Dashboard/",
-            "Mshm\\Category\\": "modules/Mshm/Category/"
+            "Mshm\\Category\\": "modules/Mshm/Category/",
+            "Mshm\\RolePermissions\\": "modules/Mshm/RolePermissions/"
         },
         "classmap": [
             "database/seeds",

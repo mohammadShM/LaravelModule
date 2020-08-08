@@ -15,4 +15,8 @@ Route::get('/test', function () {
 //    auth()->user()->givePermissionTo('manage categories');
     // for show permission by package laravel permission
 //    return auth()->user()->permissions;
+    // for all 3 level
+//    Permission::create(['name'=>'manage role_permissions']);
+//        auth()->user()->givePermissionTo('manage role_permissions');
+//        return auth()->user()->permissions;
 });

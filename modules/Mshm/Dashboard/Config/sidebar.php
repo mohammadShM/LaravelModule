@@ -2,7 +2,8 @@
 // config file
 return [
     'items' => [
-        'dashboard'=>[],
-        'categories'=>[],
+        'dashboard' => [],
+        'categories' => [],
+        'role-permissions' => [],
     ]
 ];

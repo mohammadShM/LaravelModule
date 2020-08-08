@@ -685,6 +685,10 @@ textarea {
     content: '\e111';
 }
 
+.sidebar__nav .i-role_permissions a::before {
+    content: '\e084';
+}
+
 .sidebar__nav.is-active ul li {
     margin: 0 9px;
 }
@@ -1444,6 +1448,7 @@ select {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    padding-right: 35px;
 }
 
 .ui-checkbox input {
@@ -1885,4 +1890,13 @@ select {
 }
 .notification__box .title__noti{
     padding: 15px 0;
+}
+.pt-1{
+    padding-top: 10px;
+}
+.mt-2{
+    margin-top: 20px;
+}
+.invalid-feedback{
+    color: red;
 }

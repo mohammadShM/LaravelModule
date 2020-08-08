@@ -178,6 +178,7 @@ return [
         \Mshm\User\Providers\UserServiceProvider::class,
         \Mshm\Dashboard\Providers\DashboardServiceProvider::class,
         \Mshm\Category\Providers\CategoryServiceProvider::class,
+        \Mshm\RolePermissions\Providers\RolePermissionServiceProvider::class,
 
     ],
 
