@@ -41,7 +41,8 @@
             "Mshm\\User\\": "modules/Mshm/User/",
             "Mshm\\Dashboard\\": "modules/Mshm/Dashboard/",
             "Mshm\\Category\\": "modules/Mshm/Category/",
-            "Mshm\\RolePermissions\\": "modules/Mshm/RolePermissions/"
+            "Mshm\\RolePermissions\\": "modules/Mshm/RolePermissions/",
+            "Mshm\\Course\\": "modules/Mshm/Course/"
         },
         "classmap": [
             "database/seeds",
