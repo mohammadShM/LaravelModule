@@ -3,6 +3,10 @@
 namespace Mshm\Course\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use Mshm\Category\Repositories\CategoryRepo;
+use Mshm\Course\Http\Requests\CourseRequest;
+use Mshm\Course\Models\Course;
+use Mshm\Course\Repositories\CourseRepo;
 use Mshm\User\Repositories\UserRepo;
 
 class CourseController extends Controller
@@ -13,10 +17,18 @@ class CourseController extends Controller
         return 'courses';
     }
 
-    public function create(UserRepo $userRepo)
+    public function create(UserRepo $userRepo, CategoryRepo $categoryRepo)
     {
         $teachers = $userRepo->getTeachers();
-        return view('Courses::create',compact('teachers'));
+        $categories = $categoryRepo->all();
+        return view('Courses::create', compact('teachers', 'categories'));
+    }
+
+    public function store(CourseRequest $request, CourseRepo $courseRepo)
+    {
+        /** @var Course $course */
+        $course = $courseRepo->store($request);
+        return $course;
     }
 
 }

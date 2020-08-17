@@ -6,6 +6,7 @@ Route::get('/', function () {
     return view('index');
 });
 
+// for set handle role permissions in user login
 Route::get('/test', function () {
     // for create permission by package laravel permission
 //    Permission::create([
@@ -16,7 +17,7 @@ Route::get('/test', function () {
     // for show permission by package laravel permission
 //    return auth()->user()->permissions;
     // for all 3 level
-//    Permission::create(['name'=>'manage role_permissions']);
-//        auth()->user()->givePermissionTo('manage role_permissions');
+    // Permission::create(['name'=>'manage role_permissions']);
+//        auth()->user()->givePermissionTo('teach');
 //        return auth()->user()->permissions;
 });

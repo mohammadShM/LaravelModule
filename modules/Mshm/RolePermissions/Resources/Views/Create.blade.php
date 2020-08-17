@@ -12,7 +12,7 @@
     @enderror
     <p class="box__title margin-bottom-15">انتخاب مجوز ها</p>
     @foreach($permissions as $permission)
-        <label class="ui-checkbox pt-1">
+        <label class="ui-checkbox pt-1 pr-3">
             <input type="checkbox" name="permissions[{{ $permission->name }}]" class="sub-checkbox" data-id="2"
                    value="{{ $permission->name }}"
                    @if (is_array(old('permissions')) && array_key_exists($permission->name,old('permissions')))

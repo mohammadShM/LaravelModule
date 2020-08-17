@@ -25,22 +25,39 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2a3277d-b2ce-442a-9b1c-bf89ca5e04db" name="Default Changelist" comment="1 =&gt; create Course Module&#10;2 =&gt;">
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Course/Database/Migrations/2020_08_09_152841_create_courses_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Course/Http/Controllers/CourseController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Course/Models/Course.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Course/Providers/CourseServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Course/Resources/Views/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Course/Routes/courses_routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/LaravelWebModular.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LaravelWebModular.iml" afterDir="false" />
+    <list default="true" id="e2a3277d-b2ce-442a-9b1c-bf89ca5e04db" name="Default Changelist" comment="1 =&gt; create default role and permission in database&#10;2 =&gt; create RolePermissionTableSeeder.php&#10;3 =&gt; create course modules &#10;4 =&gt; some refactor&#10;5 =&gt; create blade component for error in inputs and .....&#10;6 =&gt; translate validation message&#10;7 =&gt;">
+      <change afterPath="$PROJECT_DIR$/app/View/Components/File.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/View/Components/Input.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/View/Components/Select.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/View/Components/TagSelect.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/View/Components/Textarea.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/View/Components/ValidationError.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/Course/Database/Seeds/RolePermissionTableSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/Course/Http/Requests/CourseRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/Course/Repositories/CourseRepo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/Course/Resources/Lang/fa.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/Course/Resources/Lang/fa/validation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/Course/Rules/ValidTeacher.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/file.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/input.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/select.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/tag-select.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/textarea.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/validation-error.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/mohammadshm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/mohammadshm.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Dashboard/Config/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Dashboard/Config/sidebar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Database/Migrations/2020_08_09_152841_create_courses_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Database/Migrations/2020_08_09_152841_create_courses_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Http/Controllers/CourseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Http/Controllers/CourseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Models/Course.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Models/Course.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Providers/CourseServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Providers/CourseServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Resources/Views/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Resources/Views/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Dashboard/Resources/Views/layout/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Dashboard/Resources/Views/layout/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/RolePermissions/Resources/Views/Create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/RolePermissions/Resources/Views/Create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/RolePermissions/Resources/Views/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/RolePermissions/Resources/Views/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/Mshm/User/Repositories/UserRepo.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/User/Repositories/UserRepo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/panel/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/panel/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/panel/js/tagsInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/panel/js/tagsInput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,24 +200,25 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/vendor/laravel/ui/auth-backend/VerifiesEmails.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/framework/src/Illuminate/Contracts/Auth/MustVerifyEmail.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/framework/src/Illuminate/Mail/resources/views/html/themes/default.css&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/fzaninotto/faker/src/Faker/Generator.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/ui/auth-backend/AuthenticatesUsers.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/framework/src/Illuminate/Routing/Router.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/ui/src/Auth/bootstrap-stubs/auth/login.stub&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/storage/framework/views/dda049c9e200e442f8a8d037b92db6dfd6703224.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/framework/src/Illuminate/Http/RedirectResponse.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/ui/src/Auth/bootstrap-stubs/auth/register.stub&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/framework/src/Illuminate/Auth/Listeners/SendEmailVerificationNotification.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/ui/auth-backend/RegistersUsers.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/ui/auth-backend/SendsPasswordResetEmails.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/.env" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/panel/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/modules/Mshm/Course/Resources" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\Course\Resources" />
       <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\public\panel\js" />
       <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\Course\Resources\Views" />
       <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\RolePermissions\Http\Requests" />
       <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\RolePermissions\Resources\Views" />
-      <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\RolePermissions\Repositories" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\Course\Database\Seeds" />
+      <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\database\seeds" />
+      <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\RolePermissions\Database\Seeds" />
       <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\Course\Database\Migrations" />
       <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\RolePermissions\Http" />
-      <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\RolePermissions\Database" />
-      <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\RolePermissions" />
-      <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\RolePermissions\Database\Migrations" />
     </key>
   </component>
   <component name="RunManager" selected="PHPUnit.MobileValidationTest.test_mobile_can_not_be_less_than_9_character">
@@ -293,7 +311,14 @@
       <workItem from="1596700528344" duration="5230000" />
       <workItem from="1596802369218" duration="2276000" />
       <workItem from="1596886514949" duration="18192000" />
-      <workItem from="1596978062625" duration="10753000" />
+      <workItem from="1596978062625" duration="11076000" />
+      <workItem from="1597058365147" duration="2387000" />
+      <workItem from="1597231919864" duration="303000" />
+      <workItem from="1597232249572" duration="4658000" />
+      <workItem from="1597492217945" duration="1567000" />
+      <workItem from="1597499863069" duration="6825000" />
+      <workItem from="1597576366973" duration="6684000" />
+      <workItem from="1597653937276" duration="7774000" />
     </task>
     <task id="LOCAL-00001" summary="for create login and register form in front and back by laravel/ui">
       <created>1592576031330</created>
@@ -393,7 +418,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596918702301</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="1 =&gt; create Course Module">
+      <created>1597005917827</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1597005917827</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -436,7 +468,8 @@
     <MESSAGE value="1 =&gt; create module Category .&#10;2 =&gt; set Category module .&#10;3 =&gt; set ui for Category .&#10;4 =&gt; edit category in dashboard&#10;5 =&gt; ajax delete in category in dashboard" />
     <MESSAGE value="1 =&gt; refactor category by repository&#10;2 =&gt; testing for category module&#10;3 =&gt; create sidebar menu &#10;4 =&gt; create breadcrumb in dashboard &#10;5 =&gt; permissions for user" />
     <MESSAGE value="1 =&gt; create RolePermissions Module&#10;2 =&gt; create lang fa translate for rolePermissions&#10;3 =&gt; complete role permission module" />
-    <option name="LAST_COMMIT_MESSAGE" value="1 =&gt; create RolePermissions Module&#10;2 =&gt; create lang fa translate for rolePermissions&#10;3 =&gt; complete role permission module" />
+    <MESSAGE value="1 =&gt; create Course Module" />
+    <option name="LAST_COMMIT_MESSAGE" value="1 =&gt; create Course Module" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="71" key="#Composer" timestamp="1592404517620">
@@ -475,6 +508,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="467" y="203" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1595875331059" />
+    <state x="566" y="93" key="#com.intellij.ide.util.MemberChooser" timestamp="1597661433543">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="566" y="93" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1597661433543" />
     <state x="449" y="143" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1596638157230">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -487,18 +524,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1593278302166" />
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1596987413578">
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597664752679">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1596987413578" />
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1597664752679" />
     <state x="510" y="4" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0" timestamp="1592738891013">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="510" y="4" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0/0.0.1536.824@0.0.1536.824" timestamp="1592738891013" />
-    <state x="282" y="0" key="CommitChangelistDialog2" timestamp="1596986873987">
+    <state x="282" y="0" key="CommitChangelistDialog2" timestamp="1597664722953">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="282" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1596986873987" />
+    <state x="282" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1597664722953" />
     <state x="515" y="324" key="ComposerInitDialogKey" timestamp="1592404751596">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -527,22 +564,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1495" height="201" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1592482790066" />
-    <state x="374" y="213" key="NewPhpClassDialog" timestamp="1596987337849">
+    <state x="374" y="213" key="NewPhpClassDialog" timestamp="1597664567627">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="374" y="213" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1596987337849" />
-    <state x="593" y="332" key="NewPhpFileDialog" timestamp="1596987136851">
+    <state x="374" y="213" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1597664567627" />
+    <state x="593" y="332" key="NewPhpFileDialog" timestamp="1597663078817">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="593" y="332" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1596987136851" />
+    <state x="593" y="332" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1597663078817" />
     <state x="391" y="63" key="SettingsEditor" timestamp="1596641048552">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="391" y="63" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1596641048552" />
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1596918743110">
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1597005919764">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1596918743110" />
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1597005919764" />
     <state x="409" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1595927399181">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -555,9 +592,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1596463592840" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1597005373550">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1597606291043">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1597005373550" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1597606291043" />
   </component>
 </project>
