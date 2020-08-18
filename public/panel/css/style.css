@@ -1924,6 +1924,16 @@ span.tagRemove:hover {
 }
 
 /* ========================================= for me custom style ========================================= */
+.h_line tr th {
+    border-left: 2px solid #E2E2E2;
+    border-right: 2px solid #E2E2E2;
+    border-bottom: 2px solid #E2E2E2;
+}
+
+/*.h_line tr th:last-of-type {*/
+/*    border: none;*/
+/*}*/
+
 .pt-1 {
     padding-top: 10px;
 }
@@ -1961,6 +1971,6 @@ span.tagRemove:hover {
     margin-top: 15px;
 }
 
-.multi-text{
+.multi-text {
     margin-bottom: 15px;
 }

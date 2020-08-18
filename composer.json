@@ -12,6 +12,7 @@
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^1.0",
         "guzzlehttp/guzzle": "^6.3",
+        "intervention/image": "^2.5",
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^2.0",
@@ -42,7 +43,8 @@
             "Mshm\\Dashboard\\": "modules/Mshm/Dashboard/",
             "Mshm\\Category\\": "modules/Mshm/Category/",
             "Mshm\\RolePermissions\\": "modules/Mshm/RolePermissions/",
-            "Mshm\\Course\\": "modules/Mshm/Course/"
+            "Mshm\\Course\\": "modules/Mshm/Course/",
+            "Mshm\\Media\\": "modules/Mshm/Media/"
         },
         "classmap": [
             "database/seeds",

@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static where(string $string, $id)
  * @method static find($id)
  * @method static whereTitle(string $newTitle)
+ * @method static findOrFail($id)
  * @property mixed parent_id
  * @property mixed parentCategory
  * @property mixed id

@@ -40,6 +40,7 @@ use Spatie\Permission\Traits\HasRoles;
  * @method static Builder|User wherePassword($value)
  * @method static Builder|User whereRememberToken($value)
  * @method static Builder|User whereUpdatedAt($value)
+ * @method static permission(string $string)
  */
 
 class User extends Authenticatable implements MustVerifyEmail

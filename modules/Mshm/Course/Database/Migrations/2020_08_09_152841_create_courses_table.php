@@ -18,6 +18,7 @@ class CreateCoursesTable extends Migration
             $table->id();
             $table->bigInteger('teacher_id')->unsigned();
             $table->bigInteger('category_id')->unsigned()->nullable();
+            $table->bigInteger('banner_id')->unsigned()->nullable();
             $table->string('title');
             $table->string('slug');
             $table->float('priority')->nullable();
@@ -32,7 +33,8 @@ class CreateCoursesTable extends Migration
                 ->on('categories')->onDelete('SET NULL');
             $table->foreign('teacher_id')->references('id')
                 ->on('users')->onDelete('CASCADE');
-
+            $table->foreign('banner_id')->references('id')
+                           ->on('media')->onDelete('SET NULL');
         });
     }
 

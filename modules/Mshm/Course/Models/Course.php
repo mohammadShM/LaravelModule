@@ -3,9 +3,15 @@
 namespace Mshm\Course\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Mshm\Media\Models\Media;
+use Mshm\User\Models\User;
 
 /**
  * @method static create(array $array)
+ * @method static paginate()
+ * @method static find($id)
+ * @method static findOrFail($id)
+ * @property mixed banner
  */
 class Course extends Model
 {
@@ -19,5 +25,15 @@ class Course extends Model
     const STATUS_NOT_COMPLETED = 'not-completed';
     const STATUS_LOCKED = 'locked';
     static $statuses = [self::STATUS_COMPLETED, self::STATUS_NOT_COMPLETED, self::STATUS_LOCKED];
+
+    public function banner()
+    {
+        return $this->belongsTo(Media::class,'banner_id');
+    }
+
+    public function teacher()
+    {
+        return $this->belongsTo(User::class,'teacher_id');
+    }
 
 }

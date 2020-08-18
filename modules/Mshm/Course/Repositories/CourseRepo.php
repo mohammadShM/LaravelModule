@@ -13,6 +13,7 @@ class CourseRepo
         return Course::create([
             "teacher_id" => $values->teacher_id,
             "category_id" => $values->category_id,
+            "banner_id" => $values->banner_id,
             "title" => $values->title,
             "slug" => Str::slug($values->title),
             "priority" => $values->priority,
@@ -21,8 +22,17 @@ class CourseRepo
             "type" => $values->type,
             "status" => $values->status,
             "body" => $values->body,
-            // "image" => $values->image,
         ]);
     }
+
+    public function paginate()
+    {
+        return Course::paginate();
+    }
+
+	public function findById($id)
+	{
+        return Course::findOrFail($id);
+	}
 
 }

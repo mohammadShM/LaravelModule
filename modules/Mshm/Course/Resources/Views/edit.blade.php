@@ -7,23 +7,26 @@
     <div class="row no-gutters  " style="align-content: center;justify-content: center;">
         <div class="col-10 bg-white">
             <p class="box__title">بروزرسانی دوره</p>
-            <form action="{{ route('courses.store') }}" class="padding-30" method="post" enctype="multipart/form-data">
+            <form action="{{ route('courses.update' ,$course->id) }}"
+                  class="padding-30" method="post" enctype="multipart/form-data">
                 @csrf
-                <x-input name="title" placeholder="عنوان دوره" type="text" required/>
+                @method('patch')
+                <x-input name="title" placeholder="عنوان دوره" type="text" value="{{ $course->title }}" required/>
                 <x-input type="text" class="text-left" name="slug" placeholder="نام انگلیسی دوره"
-                         required/>
+                         value="{{ $course->slug }}" required/>
                 <div class="d-flex multi-text">
-                    <x-input type="text" class="text-left mlg-15" name="priority" placeholder="ردیف دوره"/>
+                    <x-input type="text" class="text-left mlg-15" name="priority"
+                             value="{{ $course->priority }}" placeholder="ردیف دوره"/>
                     <x-input type="text" placeholder="مبلغ دوره" name="price" class="text-left mlg-15"
-                             required/>
+                             value="{{ $course->price }}" required/>
                     <x-input type="number" placeholder="درصد مدرس" name="percent" class="text-left"
-                             required/>
+                             value="{{ $course->percent }}" required/>
                 </div>
                 <x-select name="teacher_id" required>
                     <option value="">انتخاب مدرس دوره</option>
                     @foreach($teachers as $teacher)
                         <option value="{{ $teacher->id }}"
-                                @if($teacher->id == old('teacher_id')) selected @endif >
+                                @if($teacher->id == $course->teacher_id) selected @endif >
                             {{ $teacher->name }}</option>
                     @endforeach
                 </x-select>
@@ -32,7 +35,7 @@
                     <option value="">نوع دوره</option>
                     @foreach(\Mshm\Course\Models\Course::$types as $type)
                         <option value="{{ $type }}"
-                                @if($type == old('type')) selected @endif >
+                                @if($type == $course->type) selected @endif >
                             @lang($type)</option>
                     @endforeach
                 </x-select>
@@ -40,7 +43,7 @@
                     <option value="">وضعیت دوره</option>
                     @foreach(\Mshm\Course\Models\Course::$statuses as $status)
                         <option value="{{ $status }}"
-                                @if($status == old('status')) selected @endif>
+                                @if($status == $course->status) selected @endif>
                             @lang($status)</option>
                     @endforeach
                 </x-select>
@@ -48,13 +51,13 @@
                     <option value="">دسته بندی</option>
                     @foreach($categories as $category)
                         <option value="{{ $category->id }}"
-                                @if($category->id == old('category_id')) selected @endif >
+                                @if($category->id == $course->category_id ) selected @endif >
                             {{ $category->title }}</option>
                     @endforeach
                 </x-select>
-                <x-file placeholder="آپلود بنر دوره" name="image" required/>
-                <x-textarea placeholder="توضیحات دوره" name="body"/>
-                <button class="btn btn-webamooz_net">ایجاد دوره</button>
+                <x-file placeholder="آپلود بنر دوره" name="image" :value="$course->banner"/>
+                <x-textarea placeholder="توضیحات دوره" name="body" value="{{ $course->body }}"/>
+                <button class="btn btn-webamooz_net">بروزرسانی</button>
             </form>
         </div>
     </div>

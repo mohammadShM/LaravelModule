@@ -180,6 +180,7 @@ return [
         \Mshm\Category\Providers\CategoryServiceProvider::class,
         \Mshm\RolePermissions\Providers\RolePermissionServiceProvider::class,
         \Mshm\Course\Providers\CourseServiceProvider::class,
+        \Mshm\Media\Providers\MediaServiceProvider::class,
 
     ],
 
@@ -232,6 +233,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Image' => Intervention\Image\Facades\Image::class
 
     ],
 
