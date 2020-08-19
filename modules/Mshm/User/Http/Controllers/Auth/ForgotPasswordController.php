@@ -31,10 +31,11 @@ class ForgotPasswordController extends Controller
     }
 
     /** @noinspection PhpUnused */
-    public function sendVerifyCodeEmail(SendResetPasswordVerifyRequest $request)
+    public function sendVerifyCodeEmail(SendResetPasswordVerifyRequest $request , UserRepo  $userRepo)
     {
         // use in RepositoryPattern (userRepo)
-        $user = resolve(UserRepo::class)->findByEmail($request->email);
+        // $user = resolve(UserRepo::class)->findByEmail($request->email);
+        $user = $userRepo->findByEmail($request->email);
         // if true send email || check if code exists
         // check if exists in database
         if ($user && !VerifyCodeService::has($user->id)) {

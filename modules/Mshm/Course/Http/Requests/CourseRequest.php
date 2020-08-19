@@ -18,7 +18,7 @@ class CourseRequest extends FormRequest
 
     public function rules()
     {
-        return [
+        $rules = [
             "title" => "required|min:3|max:190",
             "slug" => "required|min:3|max:190|unique:courses,slug",
             "priority" => "nullable|numeric",
@@ -31,21 +31,30 @@ class CourseRequest extends FormRequest
             "image" => "required|mimes:jpg,png,jpeg",
             "body" => "nullable"
         ];
+        // for update
+        if (request()->method === 'PATCH') {
+            $rules["image"] = "nullable|mimes:jpg,png,jpeg";
+            $rules["slug"] = "required|min:3|max:190|unique:courses,slug,"
+                // course === id in function update in get params in courseController
+                . request()->route('course');
+        }
+        // for update and store
+        return $rules;
     }
 
     public function attributes()
     {
         return [
-            "price"=>"قیمت",
-            "slug"=>"عنوان انگلیسی",
-            "priority"=>"ردیف دوره",
-            "percent"=>"درصد دوره",
-            "teacher_id"=>"مدرس",
-            "category_id"=>"دسته بندی",
-            "status"=>"وضعیت",
-            "type"=>"نوع",
-            "body"=>"توضیحات",
-            "image"=>"بنر دوره",
+            "price" => "قیمت",
+            "slug" => "عنوان انگلیسی",
+            "priority" => "ردیف دوره",
+            "percent" => "درصد دوره",
+            "teacher_id" => "مدرس",
+            "category_id" => "دسته بندی",
+            "status" => "وضعیت",
+            "type" => "نوع",
+            "body" => "توضیحات",
+            "image" => "بنر دوره",
         ];
     }
 

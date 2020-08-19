@@ -25,37 +25,26 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2a3277d-b2ce-442a-9b1c-bf89ca5e04db" name="Default Changelist" comment="1 =&gt; create Media Module&#10;2 =&gt; upload images&#10;3 =&gt; resize image by package Intervention&#10;4 =&gt; crete index view for Courses module&#10;5 =&gt; delete file and course&#10;6 =&gt; edit for course">
-      <change afterPath="$PROJECT_DIR$/config/image.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Course/Resources/Views/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Course/Resources/Views/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Media/Database/Migrations/2020_08_17_132837_create_media_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Media/Models/Media.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Media/Providers/MediaServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Media/Services/ImageFileService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Media/Services/MediaFileService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Media/Services/VideoFileService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/LaravelWebModular.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LaravelWebModular.iml" afterDir="false" />
+    <list default="true" id="e2a3277d-b2ce-442a-9b1c-bf89ca5e04db" name="Default Changelist" comment="1 =&gt; update in course controller&#10;2 =&gt; update all test &#10;3 =&gt;">
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/RolePermissions/Models/Permission.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/RolePermissions/Models/Role.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/mohammadshm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/mohammadshm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/View/Components/File.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/Components/File.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/View/Components/Textarea.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/Components/Textarea.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Category/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Category/Models/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Category/Repositories/CategoryRepo.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Category/Repositories/CategoryRepo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/permission.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/permission.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Category/Responses/AjaxResponses.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Category/Responses/AjaxResponses.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Category/Tests/Feature/CategoryTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Category/Tests/Feature/CategoryTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Database/Migrations/2020_08_09_152841_create_courses_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Database/Migrations/2020_08_09_152841_create_courses_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Database/Seeds/RolePermissionTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Database/Seeds/RolePermissionTableSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Http/Controllers/CourseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Http/Controllers/CourseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Http/Requests/CourseRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Http/Requests/CourseRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Models/Course.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Models/Course.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Repositories/CourseRepo.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Repositories/CourseRepo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Resources/Views/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Resources/Views/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/User/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/User/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Resources/Lang/fa.json" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Resources/Lang/fa.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Resources/Views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Resources/Views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Routes/courses_routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Routes/courses_routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/User/Http/Controllers/Auth/ForgotPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/User/Http/Controllers/Auth/ForgotPasswordController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/Mshm/User/Repositories/UserRepo.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/User/Repositories/UserRepo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/panel/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/panel/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/file.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/file.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/textarea.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/textarea.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/panel/js/js.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/panel/js/js.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -319,7 +308,8 @@
       <workItem from="1597499863069" duration="6825000" />
       <workItem from="1597576366973" duration="6684000" />
       <workItem from="1597653937276" duration="16731000" />
-      <workItem from="1597751575747" duration="13191000" />
+      <workItem from="1597751575747" duration="13635000" />
+      <workItem from="1597841714688" duration="9976000" />
     </task>
     <task id="LOCAL-00001" summary="for create login and register form in front and back by laravel/ui">
       <created>1592576031330</created>
@@ -433,7 +423,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597665450166</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="1 =&gt; create Media Module&#10;2 =&gt; upload images&#10;3 =&gt; resize image by package Intervention&#10;4 =&gt; crete index view for Courses module&#10;5 =&gt; delete file and course&#10;6 =&gt; edit for course">
+      <created>1597773566039</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1597773566039</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -478,7 +475,8 @@
     <MESSAGE value="1 =&gt; create RolePermissions Module&#10;2 =&gt; create lang fa translate for rolePermissions&#10;3 =&gt; complete role permission module" />
     <MESSAGE value="1 =&gt; create Course Module" />
     <MESSAGE value="1 =&gt; create default role and permission in database&#10;2 =&gt; create RolePermissionTableSeeder.php&#10;3 =&gt; create course modules &#10;4 =&gt; some refactor&#10;5 =&gt; create blade component for error in inputs and .....&#10;6 =&gt; translate validation message" />
-    <option name="LAST_COMMIT_MESSAGE" value="1 =&gt; create default role and permission in database&#10;2 =&gt; create RolePermissionTableSeeder.php&#10;3 =&gt; create course modules &#10;4 =&gt; some refactor&#10;5 =&gt; create blade component for error in inputs and .....&#10;6 =&gt; translate validation message" />
+    <MESSAGE value="1 =&gt; create Media Module&#10;2 =&gt; upload images&#10;3 =&gt; resize image by package Intervention&#10;4 =&gt; crete index view for Courses module&#10;5 =&gt; delete file and course&#10;6 =&gt; edit for course" />
+    <option name="LAST_COMMIT_MESSAGE" value="1 =&gt; create Media Module&#10;2 =&gt; upload images&#10;3 =&gt; resize image by package Intervention&#10;4 =&gt; crete index view for Courses module&#10;5 =&gt; delete file and course&#10;6 =&gt; edit for course" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="71" key="#Composer" timestamp="1592404517620">
@@ -533,18 +531,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1593278302166" />
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597670798271">
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597856552929">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1597670798271" />
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1597856552929" />
     <state x="510" y="4" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0" timestamp="1592738891013">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="510" y="4" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0/0.0.1536.824@0.0.1536.824" timestamp="1592738891013" />
-    <state x="282" y="0" key="CommitChangelistDialog2" timestamp="1597770466951">
+    <state x="282" y="0" key="CommitChangelistDialog2" timestamp="1597855364426">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="282" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1597770466951" />
+    <state x="282" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1597855364426" />
     <state x="515" y="324" key="ComposerInitDialogKey" timestamp="1592404751596">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -573,10 +571,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1495" height="201" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1592482790066" />
-    <state x="374" y="213" key="NewPhpClassDialog" timestamp="1597673617812">
+    <state x="374" y="213" key="NewPhpClassDialog" timestamp="1597856399579">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="374" y="213" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1597673617812" />
+    <state x="374" y="213" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1597856399579" />
     <state x="593" y="332" key="NewPhpFileDialog" timestamp="1597663078817">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -585,10 +583,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="391" y="63" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1596641048552" />
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1597665461091">
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1597773570245">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1597665461091" />
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1597773570245" />
     <state x="409" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1595927399181">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -601,9 +599,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1596463592840" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1597765840712">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1597855571735">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1597765840712" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1597855571735" />
   </component>
 </project>

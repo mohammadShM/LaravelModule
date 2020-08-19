@@ -3,8 +3,8 @@
 namespace Mshm\Course\Database\Seeds;
 
 use Illuminate\Database\Seeder;
-use Spatie\Permission\Models\Permission;
-use Spatie\Permission\Models\Role;
+use Mshm\RolePermissions\Models\Permission;
+use Mshm\RolePermissions\Models\Role;
 
 class RolePermissionTableSeeder extends Seeder
 {
@@ -15,10 +15,13 @@ class RolePermissionTableSeeder extends Seeder
      */
     public function run()
     {
-        Permission::findOrCreate('manage categories');
-        Permission::findOrCreate('manage role_permissions');
-        Permission::findOrCreate('teach');
-        /** @noinspection PhpUndefinedMethodInspection */
-        Role::findOrCreate('teacher')->givePermissionTo(['teach']);
+        foreach (Permission::$permissions as $permission) {
+            Permission::findOrCreate($permission);
+        }
+        foreach (Role::$roles as $name => $permissions) {
+            /** @noinspection PhpUndefinedMethodInspection */
+            Role::findOrCreate($name)->givePermissionTo($permissions);
+        }
     }
+
 }

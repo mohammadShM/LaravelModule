@@ -26,6 +26,7 @@ class CreateCoursesTable extends Migration
             $table->string('percent', 5);
             $table->enum('type', Course::$types);
             $table->enum('status', Course::$statuses);
+            $table->enum('confirmation_status', Course::$confirmationStatuses);
             $table->longText('body')->nullable();
             $table->timestamps();
 
