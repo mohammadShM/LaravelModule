@@ -149,14 +149,6 @@ class CourseTest extends TestCase
         return Course::create($data);
     }
 
-    // ================================ create category fake for test ================================
-    private function createCategory()
-    {
-        return Category::create([
-            'title' => $this->faker->word, "slug" => $this->faker->word
-        ]);
-    }
-
     // ================================ create course fake for test ================================
     private function courseData()
     {
@@ -173,6 +165,14 @@ class CourseTest extends TestCase
             "status" => Course::STATUS_COMPLETED,
             "image" => UploadedFile::fake()->image('banner.jpg'),
         ];
+    }
+
+    // ================================ create category fake for test ================================
+    private function createCategory()
+    {
+        return Category::create([
+            'title' => $this->faker->word, "slug" => $this->faker->word
+        ]);
     }
 
 }
