@@ -12,6 +12,7 @@ use Mshm\User\Models\User;
  * @method static find($id)
  * @method static findOrFail($id)
  * @method static where(string $string, $id)
+ * @method static count()
  * @property mixed banner
  */
 class Course extends Model

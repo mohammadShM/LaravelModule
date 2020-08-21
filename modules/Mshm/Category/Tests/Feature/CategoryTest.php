@@ -19,15 +19,12 @@ class CategoryTest extends TestCase
     {
         $this->actionAsAdmin();
         $this->assertAuthenticated();
-        $this->seed(RolePermissionTableSeeder::class);
-        /** @noinspection PhpUndefinedMethodInspection */
-        auth()->user()->givePermissionTo(Permission::PERMISSION_MANAGE_CATEGORIES);
         $this->get(route('categories.index'))->assertOk();
     }
 
     public function test_normal_user_can_not_see_categories_panel()
     {
-        $this->actionAsAdmin();
+        $this->actionAsUser();
         $this->get(route('categories.index'))->assertStatus(403);
     }
 
@@ -35,9 +32,6 @@ class CategoryTest extends TestCase
     {
         $this->withoutExceptionHandling();
         $this->actionAsAdmin();
-        $this->seed(RolePermissionTableSeeder::class);
-        /** @noinspection PhpUndefinedMethodInspection */
-        auth()->user()->givePermissionTo(Permission::PERMISSION_MANAGE_CATEGORIES);
         $this->createCategory();
         $this->assertEquals(1, Category::all()->count());
     }
@@ -46,9 +40,6 @@ class CategoryTest extends TestCase
     {
         $newTitle = "moh131313";
         $this->actionAsAdmin();
-        $this->seed(RolePermissionTableSeeder::class);
-        /** @noinspection PhpUndefinedMethodInspection */
-        auth()->user()->givePermissionTo(Permission::PERMISSION_MANAGE_CATEGORIES);
         $this->createCategory();
         $this->assertEquals(1, Category::all()->count());
         $this->patch(route('categories.update', 1),
@@ -59,9 +50,6 @@ class CategoryTest extends TestCase
     public function test_user_can_delete_category()
     {
         $this->actionAsAdmin();
-        $this->seed(RolePermissionTableSeeder::class);
-        /** @noinspection PhpUndefinedMethodInspection */
-        auth()->user()->givePermissionTo(Permission::PERMISSION_MANAGE_CATEGORIES);
         $this->createCategory();
         $this->assertEquals(1, Category::all()->count());
         $this->delete(route('categories.destroy', 1))->assertOk();
@@ -71,8 +59,19 @@ class CategoryTest extends TestCase
     private function actionAsAdmin()
     {
         $this->actingAs(factory(User::class)->create());
+        $this->seed(RolePermissionTableSeeder::class);
+        /** @noinspection PhpUndefinedMethodInspection */
+        auth()->user()->givePermissionTo(Permission::PERMISSION_MANAGE_CATEGORIES);
     }
     // ================================== create admin fake for test ==================================
+
+    // ================================== create normal user fake for test ==================================
+    private function actionAsUser()
+    {
+        $this->actingAs(factory(User::class)->create());
+        $this->seed(RolePermissionTableSeeder::class);
+    }
+    // ================================== create normal user fake for test ==================================
 
     // ================================== create category fake for test ================================
     private function createCategory()

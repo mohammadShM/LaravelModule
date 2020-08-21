@@ -16,12 +16,16 @@ class CourseController extends Controller
 
     public function index(CourseRepo $courseRepo)
     {
+        /** @noinspection PhpUnhandledExceptionInspection */
+        $this->authorize('manage', Course::class);
         $courses = $courseRepo->paginate();
         return view('Courses::index', compact('courses'));
     }
 
     public function create(UserRepo $userRepo, CategoryRepo $categoryRepo)
     {
+        /** @noinspection PhpUnhandledExceptionInspection */
+        $this->authorize('create', Course::class);
         $teachers = $userRepo->getTeachers();
         $categories = $categoryRepo->all();
         return view('Courses::create', compact('teachers', 'categories'));
@@ -37,6 +41,8 @@ class CourseController extends Controller
     public function edit($id, CourseRepo $courseRepo, UserRepo $userRepo, CategoryRepo $categoryRepo)
     {
         $course = $courseRepo->findById($id);
+        /** @noinspection PhpUnhandledExceptionInspection */
+        $this->authorize('edit', $course);
         $teachers = $userRepo->getTeachers();
         $categories = $categoryRepo->all();
         return view('Courses::edit', compact('course', 'teachers', 'categories'));

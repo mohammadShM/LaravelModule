@@ -1003,13 +1003,14 @@ textarea {
 
 .item-delete:before {
     content: '\e129';
+    font-weight: bolder;
     font-size: 16px;
 }
 
 .item-reject:before {
     content: '\e043';
     font-size: 16px;
-
+    font-weight: bolder;
 }
 
 .item-confirm:before {
@@ -1026,7 +1027,7 @@ textarea {
 .item-lock:before {
     content: '\E0c4';
     font-size: 16px;
-
+    font-weight: bolder;
 }
 
 .item-answer:before {
@@ -1037,6 +1038,7 @@ textarea {
 .item-edit:before {
     content: '\e141';
     font-size: 16px;
+    font-weight: bolder;
 }
 
 .tab__box {

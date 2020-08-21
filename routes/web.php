@@ -1,7 +1,5 @@
 <?php
 
-use Spatie\Permission\Models\Permission;
-
 Route::get('/', function () {
     return view('index');
 });
@@ -18,6 +16,6 @@ Route::get('/test', function () {
 //    return auth()->user()->permissions;
     // for all 3 level
     // Permission::create(['name'=>'manage role_permissions']);
-//        auth()->user()->givePermissionTo('teach');
+//        auth()->user()->givePermissionTo(Permission::PERMISSION_SUPER_ADMIN);
 //        return auth()->user()->permissions;
 });

@@ -7,8 +7,8 @@ Route::group(['namespace' => 'Mshm\Course\Http\Controllers', 'middleware' => ['w
         $router->patch('courses/{course}/accept', 'CourseController@accept')
             ->name('courses.accept');
         $router->patch('courses/{course}/reject', 'CourseController@reject')
-                   ->name('courses.reject');
+            ->name('courses.reject');
         $router->patch('courses/{course}/lock', 'CourseController@lock')
-                           ->name('courses.lock');
+            ->name('courses.lock');
     });
 
