@@ -5,6 +5,8 @@ namespace Mshm\RolePermissions\Providers;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\ServiceProvider;
 use Mshm\RolePermissions\Models\Permission;
+use Mshm\RolePermissions\Models\Role;
+use Mshm\RolePermissions\Policies\RolePermissionPolicy;
 
 class RolePermissionServiceProvider extends ServiceProvider
 {
@@ -15,6 +17,7 @@ class RolePermissionServiceProvider extends ServiceProvider
         $this->loadMigrationsFrom(__DIR__ . '/../Database/Migrations');
         $this->loadViewsFrom(__DIR__ . '/../Resources/Views/', 'RolePermissions');
         $this->loadJsonTranslationsFrom(__DIR__ . "/../Resources/Lang");
+        Gate::policy(Role::class, RolePermissionPolicy::class);
         // Gate before for all
         Gate::before(function ($user) {
             // return true and false and null

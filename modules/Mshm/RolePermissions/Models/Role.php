@@ -2,6 +2,9 @@
 
 namespace Mshm\RolePermissions\Models;
 
+/**
+ * @method static count()
+ */
 class Role extends \Spatie\Permission\Models\Role
 {
 

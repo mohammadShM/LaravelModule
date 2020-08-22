@@ -3,6 +3,7 @@
 namespace Mshm\Category\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Mshm\Course\Models\Course;
 
 /**
  * @method static create(array $array)
@@ -35,6 +36,11 @@ class Category extends Model
     public function subCategories()
     {
         $this->hasMany(Category::class, 'parent_id');
+    }
+
+    public function courses()
+    {
+        return $this->hasMany(Course::class);
     }
 
 }

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -25,7 +28,20 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2a3277d-b2ce-442a-9b1c-bf89ca5e04db" name="Default Changelist" comment="" />
+    <list default="true" id="e2a3277d-b2ce-442a-9b1c-bf89ca5e04db" name="Default Changelist" comment="1 =&gt; completed test for course module &#10;2 =&gt; create role permission test for module RolePermission">
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/RolePermissions/Policies/RolePermissionPolicy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/RolePermissions/Tests/Feature/RolesTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Category/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Category/Models/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Http/Controllers/CourseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Http/Controllers/CourseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Models/Course.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Models/Course.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Policies/CoursePolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Policies/CoursePolicy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Tests/Feature/CourseTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Tests/Feature/CourseTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/RolePermissions/Http/Controllers/RolePermissionsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/RolePermissions/Http/Controllers/RolePermissionsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/RolePermissions/Models/Role.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/RolePermissions/Models/Role.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/RolePermissions/Providers/RolePermissionServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/RolePermissions/Providers/RolePermissionServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -191,25 +207,25 @@
       <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\database\seeds" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.CourseTest">
-    <configuration name="CourseTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Mshm\Course\Tests\Feature\CourseTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/modules/Mshm/Course/Tests/Feature/CourseTest.php" scope="Class" />
+  <component name="RunManager" selected="PHPUnit.RolesTest.test_normal_user_can_not_delete_role">
+    <configuration name="RolesTest.test_normal_user_can_not_delete_role" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Mshm\RolePermissions\Tests\Feature\RolesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/modules/Mshm/RolePermissions/Tests/Feature/RolesTest.php" method="test_normal_user_can_not_delete_role" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="CourseTest.test_normal_user_can_not_edit_course" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Mshm\Course\Tests\Feature\CourseTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/modules/Mshm/Course/Tests/Feature/CourseTest.php" method="test_normal_user_can_not_edit_course" scope="Method" />
+    <configuration name="RolesTest.test_normal_user_can_not_see_edit" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Mshm\RolePermissions\Tests\Feature\RolesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/modules/Mshm/RolePermissions/Tests/Feature/RolesTest.php" method="test_normal_user_can_not_see_edit" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="CourseTest.test_permitted_user_can_not_edit_other_users_courses" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Mshm\Course\Tests\Feature\CourseTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/modules/Mshm/Course/Tests/Feature/CourseTest.php" method="test_permitted_user_can_not_edit_other_users_courses" scope="Method" />
+    <configuration name="RolesTest.test_normal_user_can_not_update_roles" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Mshm\RolePermissions\Tests\Feature\RolesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/modules/Mshm/RolePermissions/Tests/Feature/RolesTest.php" method="test_normal_user_can_not_update_roles" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="CourseTest.test_permitted_user_can_store_course" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Mshm\Course\Tests\Feature\CourseTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/modules/Mshm/Course/Tests/Feature/CourseTest.php" method="test_permitted_user_can_store_course" scope="Method" />
+    <configuration name="RolesTest.test_permitted_user_can_delete_role" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Mshm\RolePermissions\Tests\Feature\RolesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/modules/Mshm/RolePermissions/Tests/Feature/RolesTest.php" method="test_permitted_user_can_delete_role" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="MobileValidationTest.test_mobile_can_not_be_less_than_9_character" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\MobileValidationTest" file="$PROJECT_DIR$/tests/Unit/MobileValidationTest.php" method="test_mobile_can_not_be_less_than_9_character" scope="Method" />
+    <configuration name="RolesTest.test_permitted_user_can_update_roles" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Mshm\RolePermissions\Tests\Feature\RolesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/modules/Mshm/RolePermissions/Tests/Feature/RolesTest.php" method="test_permitted_user_can_update_roles" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -218,11 +234,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.CourseTest" />
-        <item itemvalue="PHPUnit.CourseTest.test_permitted_user_can_store_course" />
-        <item itemvalue="PHPUnit.CourseTest.test_permitted_user_can_not_edit_other_users_courses" />
-        <item itemvalue="PHPUnit.CourseTest.test_normal_user_can_not_edit_course" />
-        <item itemvalue="PHPUnit.MobileValidationTest.test_mobile_can_not_be_less_than_9_character" />
+        <item itemvalue="PHPUnit.RolesTest.test_normal_user_can_not_delete_role" />
+        <item itemvalue="PHPUnit.RolesTest.test_permitted_user_can_delete_role" />
+        <item itemvalue="PHPUnit.RolesTest.test_normal_user_can_not_update_roles" />
+        <item itemvalue="PHPUnit.RolesTest.test_permitted_user_can_update_roles" />
+        <item itemvalue="PHPUnit.RolesTest.test_normal_user_can_not_see_edit" />
       </list>
     </recent_temporary>
   </component>
@@ -308,7 +324,10 @@
       <workItem from="1597841714688" duration="10401000" />
       <workItem from="1597928817611" duration="991000" />
       <workItem from="1597931932152" duration="6121000" />
-      <workItem from="1598004085343" duration="10506000" />
+      <workItem from="1598004085343" duration="10749000" />
+      <workItem from="1598092541678" duration="223000" />
+      <workItem from="1598093037188" duration="1588000" />
+      <workItem from="1598094660572" duration="9022000" />
     </task>
     <task id="LOCAL-00001" summary="for create login and register form in front and back by laravel/ui">
       <created>1592576031330</created>
@@ -443,7 +462,21 @@
       <option name="project" value="LOCAL" />
       <updated>1598018237092</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="1 =&gt; super admin&#10;2 =&gt; create policy and gate for models&#10;3 =&gt; update controllers and testes for modules&#10;4 =&gt; create new test for all modules">
+      <created>1598018285740</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1598018285740</updated>
+    </task>
+    <task id="LOCAL-00021" summary="1 =&gt; super admin&#10;2 =&gt; create policy and gate for models&#10;3 =&gt; update controllers and testes for modules&#10;4 =&gt; create new test for all modules">
+      <created>1598018393541</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1598018393541</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -550,10 +583,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1593278302166" />
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598006268375">
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598108834383">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1598006268375" />
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1598108834383" />
     <state x="510" y="4" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0" timestamp="1592738891013">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -562,10 +595,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="511" y="245" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1597939330190" />
-    <state x="282" y="0" key="CommitChangelistDialog2" timestamp="1598018223772">
+    <state x="282" y="0" key="CommitChangelistDialog2" timestamp="1598108994985">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="282" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1598018223772" />
+    <state x="282" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1598108994985" />
     <state x="515" y="324" key="ComposerInitDialogKey" timestamp="1592404751596">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -578,38 +611,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="542" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1596986829278" />
-    <state width="1495" height="484" key="GridCell.Tab.0.bottom" timestamp="1598017494811">
+    <state width="1495" height="484" key="GridCell.Tab.0.bottom" timestamp="1598111510142">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1495" height="484" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1598017494811" />
-    <state width="1495" height="484" key="GridCell.Tab.0.center" timestamp="1598017494811">
+    <state width="1495" height="484" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1598111510142" />
+    <state width="1495" height="484" key="GridCell.Tab.0.center" timestamp="1598111510142">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1495" height="484" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1598017494811" />
-    <state width="1495" height="484" key="GridCell.Tab.0.left" timestamp="1598017494811">
+    <state width="1495" height="484" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1598111510142" />
+    <state width="1495" height="484" key="GridCell.Tab.0.left" timestamp="1598111510142">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1495" height="484" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1598017494811" />
-    <state width="1495" height="484" key="GridCell.Tab.0.right" timestamp="1598017494811">
+    <state width="1495" height="484" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1598111510142" />
+    <state width="1495" height="484" key="GridCell.Tab.0.right" timestamp="1598111510142">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1495" height="484" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1598017494811" />
-    <state x="374" y="213" key="NewPhpClassDialog" timestamp="1598016148934">
+    <state width="1495" height="484" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1598111510142" />
+    <state x="374" y="213" key="NewPhpClassDialog" timestamp="1598108328000">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="374" y="213" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1598016148934" />
+    <state x="374" y="213" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1598108328000" />
     <state x="593" y="332" key="NewPhpFileDialog" timestamp="1597663078817">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="593" y="332" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1597663078817" />
-    <state x="391" y="63" key="SettingsEditor" timestamp="1596641048552">
+    <state x="391" y="63" key="SettingsEditor" timestamp="1598094645450">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="391" y="63" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1596641048552" />
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1598018242475">
+    <state x="391" y="63" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1598094645450" />
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1598018401066">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1598018242475" />
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1598018401066" />
     <state x="409" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1595927399181">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -622,9 +655,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1596463592840" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1597855571735">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1598109540894">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1597855571735" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1598109540894" />
   </component>
 </project>

@@ -21,8 +21,11 @@
             <directory suffix="Test.php">./modules/Mshm/Category/Tests/Feature</directory>
         </testsuite>
         <testsuite name="Feature">
-             <directory suffix="Test.php">./modules/Mshm/Course/Tests/Feature</directory>
-         </testsuite>
+            <directory suffix="Test.php">./modules/Mshm/Course/Tests/Feature</directory>
+        </testsuite>
+        <testsuite name="Feature">
+            <directory suffix="Test.php">./modules/Mshm/RolePermissions/Tests/Feature</directory>
+        </testsuite>
     </testsuites>
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">

@@ -105,11 +105,91 @@ class CourseTest extends TestCase
         auth()->user()->givePermissionTo(Permission::PERMISSION_MANAGE_OWN_COURSES);
         $this->get(route("courses.edit", $course->id))->assertStatus(403);
     }
+
     // ************************* permitted user can update course *************************
+    public function test_permitted_user_can_update_course()
+    {
+        // $this->withoutExceptionHandling();
+        $this->actAsUser();
+        /** @noinspection PhpUndefinedMethodInspection */
+        auth()->user()->givePermissionTo([Permission::PERMISSION_MANAGE_OWN_COURSES, Permission::PERMISSION_TEACH]);
+        $course = $this->createCourse();
+        $this->patch(route('courses.update', $course->id), [
+            'teacher_id' => auth()->id(),
+            'category_id' => $course->category->id,
+            'title' => "updated title",
+            "slug" => "updated slug",
+            "priority" => 11,
+            "price" => 12001,
+            "percent" => 71,
+            "type" => Course::TYPE_CASH,
+            "status" => Course::STATUS_NOT_COMPLETED,
+            "image" => UploadedFile::fake()->image('img.jpg'),
+        ])->assertRedirect(route('courses.index'));
+        $course = $course->fresh();
+        $this->assertEquals('updated title', $course->title);
+    }
+
+    public function test_normal_user_can_not_update_course()
+    {
+        $this->actAsAdmin();
+        $course = $this->createCourse();
+        $this->actAsUser();
+        /** @noinspection PhpUndefinedMethodInspection */
+        auth()->user()->givePermissionTo([Permission::PERMISSION_TEACH]);
+        $this->patch(route('courses.update', $course->id), [
+            'teacher_id' => auth()->id(),
+            'category_id' => $course->category->id,
+            'title' => "updated title",
+            "slug" => "updated slug",
+            "priority" => 11,
+            "price" => 12001,
+            "percent" => 71,
+            "type" => Course::TYPE_CASH,
+            "status" => Course::STATUS_NOT_COMPLETED,
+            "image" => UploadedFile::fake()->image('img.jpg'),
+        ])->assertStatus(403);
+    }
+
     // ************************* permitted user can delete course *************************
+    public function test_permitted_user_can_delete_course()
+    {
+        $this->actAsAdmin();
+        $course = $this->createCourse();
+        $this->delete(route('courses.destroy', $course->id))->assertOk();
+        $this->assertEquals(0, Course::count());
+    }
+
+    public function test_normal_user_can_not_delete_course()
+    {
+        $this->actAsAdmin();
+        $course = $this->createCourse();
+        $this->actAsUser();
+        $this->delete(route('courses.destroy', $course->id))->assertStatus(403);
+        $this->assertEquals(1, Course::count());
+    }
+
     // ************************* permitted user can accept course *************************
     // ************************* permitted user can reject course *************************
     // ************************* permitted user can lock course *************************
+    public function test_permitted_user_can_change_confirmation_status_courses()
+    {
+        $this->actAsAdmin();
+        $course = $this->createCourse();
+        $this->patch(route('courses.accept', $course->id), [])->assertOk();
+        $this->patch(route('courses.reject', $course->id), [])->assertOk();
+        $this->patch(route('courses.lock', $course->id), [])->assertOk();
+    }
+
+    public function test_normal_user_can_not_change_confirmation_status_courses()
+    {
+        $this->actAsAdmin();
+        $course = $this->createCourse();
+        $this->actAsUser();
+        $this->patch(route('courses.accept', $course->id), [])->assertStatus(403);
+        $this->patch(route('courses.reject', $course->id), [])->assertStatus(403);
+        $this->patch(route('courses.lock', $course->id), [])->assertStatus(403);
+    }
 
     // ================================ for create fake normal user ================================
     private function actAsUser()
@@ -144,7 +224,7 @@ class CourseTest extends TestCase
     private function createCourse()
     {
         $data = $this->courseData() +
-                    ['confirmation_status' => Course::CONFIRMATION_STATUS_PENDING];
+            ['confirmation_status' => Course::CONFIRMATION_STATUS_PENDING];
         unset($data['image']);
         return Course::create($data);
     }

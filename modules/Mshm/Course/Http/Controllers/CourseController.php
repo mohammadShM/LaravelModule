@@ -51,9 +51,13 @@ class CourseController extends Controller
     public function update($id, CourseRequest $request, CourseRepo $courseRepo)
     {
         $course = $courseRepo->findById($id);
+        /** @noinspection PhpUnhandledExceptionInspection */
+        $this->authorize('edit', $course);
         if ($request->hasFile('image')) {
             $request->request->add(['banner_id' => MediaFileService::upload($request->file('image'))->id]);
-            $course->banner->delete();
+            if ($course->banner) {
+                $course->banner->delete();
+            }
         } else {
             $request->request->add(['banner_id' => $course->banner_id]);
         }
@@ -65,6 +69,8 @@ class CourseController extends Controller
     {
         // DELETE MEDIA (BANNER)
         $course = $courseRepo->findById($id);
+        /** @noinspection PhpUnhandledExceptionInspection */
+        $this->authorize('delete', $course);
         if ($course->banner) {
             $course->banner->delete();
         }
@@ -77,6 +83,8 @@ class CourseController extends Controller
 
     public function accept($id, CourseRepo $courseRepo)
     {
+        /** @noinspection PhpUnhandledExceptionInspection */
+        $this->authorize('change_confirmation_status', Course::class);
         if ($courseRepo->updateConfirmationStatus($id, Course::CONFIRMATION_STATUS_ACCEPTED)) {
             return AjaxResponses::successResponse();
         }
@@ -85,6 +93,8 @@ class CourseController extends Controller
 
     public function reject($id, CourseRepo $courseRepo)
     {
+        /** @noinspection PhpUnhandledExceptionInspection */
+        $this->authorize('change_confirmation_status', Course::class);
         if ($courseRepo->updateConfirmationStatus($id, Course::CONFIRMATION_STATUS_REJECTED)) {
             return AjaxResponses::successResponse();
         }
@@ -93,6 +103,8 @@ class CourseController extends Controller
 
     public function lock($id, CourseRepo $courseRepo)
     {
+        /** @noinspection PhpUnhandledExceptionInspection */
+        $this->authorize('change_confirmation_status', Course::class);
         if ($courseRepo->updateStatus($id, Course::STATUS_LOCKED)) {
             return AjaxResponses::successResponse();
         }
