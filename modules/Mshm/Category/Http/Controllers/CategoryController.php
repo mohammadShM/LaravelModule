@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Mshm\Category\Http\Requests\CategoryRequest;
 use Mshm\Category\Models\Category;
 use Mshm\Category\Repositories\CategoryRepo;
-use Mshm\Category\Responses\AjaxResponses;
+use Mshm\Common\Responses\AjaxResponses;
 
 class CategoryController extends Controller
 {

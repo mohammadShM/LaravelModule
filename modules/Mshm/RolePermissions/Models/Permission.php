@@ -6,6 +6,7 @@ class Permission extends \Spatie\Permission\Models\Permission
 {
 
     const PERMISSION_MANAGE_CATEGORIES = 'manage categories';
+    const PERMISSION_MANAGE_USERS = 'manage users';
     const PERMISSION_MANAGE_COURSES = 'manage courses';
     const PERMISSION_MANAGE_OWN_COURSES = 'manage own courses';
     const PERMISSION_MANAGE_ROLE_PERMISSION = 'manage role_permissions';
@@ -18,6 +19,7 @@ class Permission extends \Spatie\Permission\Models\Permission
         self::PERMISSION_MANAGE_ROLE_PERMISSION,
         self::PERMISSION_MANAGE_COURSES,
         self::PERMISSION_MANAGE_OWN_COURSES,
+        self::PERMISSION_MANAGE_USERS,
     ];
 
 }

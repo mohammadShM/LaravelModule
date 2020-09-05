@@ -18,4 +18,6 @@ Route::get('/test', function () {
     // Permission::create(['name'=>'manage role_permissions']);
 //        auth()->user()->givePermissionTo(Permission::PERMISSION_SUPER_ADMIN);
 //        return auth()->user()->permissions;
+    // for set role
+    // return auth()->user()->assignRole('teacher');
 });

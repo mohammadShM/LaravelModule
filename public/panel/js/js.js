@@ -212,7 +212,7 @@ $('.discounts #discounts-field-1').on('click', function (e) {
     $('.discounts .dropdown-select').removeClass('is-active')
 });
 
-// for me ==============================================================================
+// for me ======================================================================================================
 function deleteItem(event, route) {
     event.preventDefault();
     if (confirm('آیا از حذف این آیتم اطمینان دارید')) {
@@ -237,7 +237,7 @@ function deleteItem(event, route) {
     }
 }
 
-// for me ==============================================================================
+// for me =======================================================================================================
 function updateConfirmationStatus(event, route, message, status, field = 'confirmation_status') {
     event.preventDefault();
     if (confirm(message)) {

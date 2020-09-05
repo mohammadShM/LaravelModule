@@ -28,7 +28,7 @@
                         <tr role="row" class="">
                             <td><a href="">{{ $course->priority }}</a></td>
                             <td><a href="">{{ $course->id }}</a></td>
-                            <td><img src="{{ $course->BANNER->thumb }}" alt="{{ $course->title }}" width="80"></td>
+                            <td><img src="{{ $course->banner->thumb }}" alt="{{ $course->title }}" width="80"></td>
                             <td><a href="">{{ $course->title }}</a></td>
                             <td><a href="">{{ $course->teacher->name }}</a></td>
                             <td>{{ $course->price }}</td>

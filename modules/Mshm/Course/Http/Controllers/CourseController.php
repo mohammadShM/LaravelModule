@@ -4,7 +4,7 @@ namespace Mshm\Course\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Mshm\Category\Repositories\CategoryRepo;
-use Mshm\Category\Responses\AjaxResponses;
+use Mshm\Common\Responses\AjaxResponses;
 use Mshm\Course\Http\Requests\CourseRequest;
 use Mshm\Course\Models\Course;
 use Mshm\Course\Repositories\CourseRepo;

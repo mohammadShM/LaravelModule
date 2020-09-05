@@ -1936,6 +1936,20 @@ span.tagRemove:hover {
 /*    border: none;*/
 /*}*/
 
+.role-label-css{
+    font-size: 18px;
+    font-weight: bold;
+    color: #515151;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: right;
+    text-align: right;
+}
+
+.m-for-all{
+    margin: 20px 10px;
+}
+
 .pt-1 {
     padding-top: 10px;
 }

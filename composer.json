@@ -39,6 +39,7 @@
     "autoload": {
         "psr-4": {
             "App\\": "app/",
+            "Mshm\\Common\\": "modules/Mshm/Common/",
             "Mshm\\User\\": "modules/Mshm/User/",
             "Mshm\\Dashboard\\": "modules/Mshm/Dashboard/",
             "Mshm\\Category\\": "modules/Mshm/Category/",

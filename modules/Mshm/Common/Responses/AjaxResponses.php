@@ -1,6 +1,6 @@
 <?php
 
-namespace Mshm\Category\Responses;
+namespace Mshm\Common\Responses;
 
 use Illuminate\Http\Response;
 

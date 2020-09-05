@@ -181,6 +181,7 @@ return [
         \Mshm\RolePermissions\Providers\RolePermissionServiceProvider::class,
         \Mshm\Course\Providers\CourseServiceProvider::class,
         \Mshm\Media\Providers\MediaServiceProvider::class,
+        \Mshm\Common\Providers\CommonServiceProvider::class,
 
     ],
 

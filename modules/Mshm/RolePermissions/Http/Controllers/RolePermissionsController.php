@@ -3,7 +3,7 @@
 namespace Mshm\RolePermissions\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Mshm\Category\Responses\AjaxResponses;
+use Mshm\Common\Responses\AjaxResponses;
 use Mshm\RolePermissions\Http\Requests\RoleRequest;
 use Mshm\RolePermissions\Http\Requests\RoleUpdateRequest;
 use Mshm\RolePermissions\Models\Role;

@@ -9,6 +9,7 @@
       <sourceFolder url="file://$MODULE_DIR$/modules/Mshm/Course" isTestSource="false" packagePrefix="Mshm\Course\" />
       <sourceFolder url="file://$MODULE_DIR$/modules/Mshm/User" isTestSource="false" packagePrefix="Mshm\User\" />
       <sourceFolder url="file://$MODULE_DIR$/modules/Mshm/Dashboard" isTestSource="false" packagePrefix="Mshm\Dashboard\" />
+      <sourceFolder url="file://$MODULE_DIR$/modules/Mshm/Common" isTestSource="false" packagePrefix="Mshm\Common\" />
       <sourceFolder url="file://$MODULE_DIR$/modules/Mshm/Media" isTestSource="false" packagePrefix="Mshm\Media\" />
       <sourceFolder url="file://$MODULE_DIR$/app" isTestSource="false" packagePrefix="App\" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/asm89/stack-cors" />
@@ -124,5 +125,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="jquery" level="application" />
+    <orderEntry type="library" name="jquery-modal" level="application" />
   </component>
 </module>

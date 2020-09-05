@@ -9,4 +9,5 @@
     <link rel="stylesheet" href="/panel/css/responsive_768.css" media="(max-width:768px)">
     <link rel="stylesheet" href="/panel/css/font.css">
     @yield('css')
+    @yield('CssMe')
 </head>
