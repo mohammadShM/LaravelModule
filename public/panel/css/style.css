@@ -1936,7 +1936,7 @@ span.tagRemove:hover {
 /*    border: none;*/
 /*}*/
 
-.role-label-css{
+.role-label-css {
     font-size: 18px;
     font-weight: bold;
     color: #515151;
@@ -1946,7 +1946,7 @@ span.tagRemove:hover {
     text-align: right;
 }
 
-.m-for-all{
+.m-for-all {
     margin: 20px 10px;
 }
 
@@ -1989,4 +1989,25 @@ span.tagRemove:hover {
 
 .multi-text {
     margin-bottom: 15px;
+}
+
+.deletable-item-list  {
+  text-align: right;
+    padding-right: 30px;
+}
+
+.deletable-item-list .item-delete {
+    /*display: none;*/
+    color: white;
+    padding-right: 10px;
+}
+
+.deletable-item-list:hover .item-delete {
+    /*display: inline-block;*/
+    color: #980c46;
+    padding-right: 10px;
+}
+
+.deletable-item-add{
+    margin-top: 10px;
 }

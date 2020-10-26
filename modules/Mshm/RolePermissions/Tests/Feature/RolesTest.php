@@ -4,7 +4,7 @@ namespace Mshm\RolePermissions\Tests\Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
-use Mshm\Course\Database\Seeds\RolePermissionTableSeeder;
+use Mshm\RolePermissions\Database\Seeds\RolePermissionTableSeeder;
 use Mshm\RolePermissions\Models\Permission;
 use Mshm\RolePermissions\Models\Role;
 use Mshm\User\Models\User;

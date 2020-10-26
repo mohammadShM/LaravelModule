@@ -1,6 +1,6 @@
 <?php
 
-namespace Mshm\Course\Database\Seeds;
+namespace Mshm\RolePermissions\Database\Seeds;
 
 use Illuminate\Database\Seeder;
 use Mshm\RolePermissions\Models\Permission;

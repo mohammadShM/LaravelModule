@@ -2,10 +2,8 @@
 
 namespace Mshm\Course\Providers;
 
-use DatabaseSeeder;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\ServiceProvider;
-use Mshm\Course\Database\Seeds\RolePermissionTableSeeder;
 use Mshm\Course\Models\Course;
 use Mshm\Course\Policies\CoursePolicy;
 
@@ -19,7 +17,6 @@ class CourseServiceProvider extends ServiceProvider
         $this->loadMigrationsFrom(__DIR__ . '/../Database/Migrations');
         $this->loadJsonTranslationsFrom(__DIR__ . '/../Resources/Lang');
         $this->loadTranslationsFrom(__DIR__ . '/../Resources/Lang', "Courses");
-        DatabaseSeeder::$seeders[] = RolePermissionTableSeeder::class;
         Gate::policy(Course::class, CoursePolicy::class);
     }
 

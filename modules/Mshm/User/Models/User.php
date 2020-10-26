@@ -10,6 +10,9 @@ use Illuminate\Notifications\DatabaseNotification;
 use Illuminate\Notifications\DatabaseNotificationCollection;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Carbon;
+use Mshm\Course\Models\Course;
+use Mshm\Media\Models\Media;
+use Mshm\RolePermissions\Models\Role;
 use Mshm\User\Notifications\ResetPasswordRequestNotification;
 use Mshm\User\Notifications\VerifyMailNotification;
 use Spatie\Permission\Traits\HasRoles;
@@ -41,12 +44,30 @@ use Spatie\Permission\Traits\HasRoles;
  * @method static Builder|User whereRememberToken($value)
  * @method static Builder|User whereUpdatedAt($value)
  * @method static permission(string $string)
+ * @method static findOrCreate($user)
  */
-
 class User extends Authenticatable implements MustVerifyEmail
 {
     use Notifiable;
     use HasRoles;
+
+    const STATUS_ACTIVE = 'active';
+    const STATUS_INACTIVE = 'inactive';
+    const STATUS_BAN = 'ban';
+    public static $statuses = [
+        self::STATUS_ACTIVE,
+        self::STATUS_INACTIVE,
+        self::STATUS_BAN,
+    ];
+
+    public static $defaultUsers = [
+        [
+            'email' => 'admin@admin.com',
+            'password' => 'demo',
+            'name' => 'Admin',
+            'role' => Role::ROLE_SUPER_ADMIN,
+        ],
+    ];
 
     /**
      * The attributes that are mass assignable.
@@ -83,6 +104,16 @@ class User extends Authenticatable implements MustVerifyEmail
     public function sendResetPasswordRequestNotification()
     {
         $this->notify(new ResetPasswordRequestNotification());
+    }
+
+    public function image()
+    {
+        return $this->belongsTo(Media::class, 'image_id');
+    }
+
+    public function courses()
+    {
+        return $this->hasMany(Course::class, 'teacher_id');
     }
 
 }

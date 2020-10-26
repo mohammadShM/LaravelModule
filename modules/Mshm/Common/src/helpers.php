@@ -2,7 +2,7 @@
 
 namespace Mshm\Common;
 
-function newFeedback($title, $body, $type)
+function newFeedback($title = "عملیات موفقیت آمیز", $body = "عملیات با موفقیت انجام شد", $type = "success")
 {
     /** @noinspection MissingService */
     $session = session()->has('feedbacks') ? session()->get('feedbacks') : [];

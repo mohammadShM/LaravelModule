@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "73c7f46e2a58f24b128ee1868fd93522",
+    "content-hash": "5ad4b372294ac6f45b49de0bd911d595",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1365,6 +1365,34 @@
                 }
             ],
             "time": "2020-05-22T08:12:19+00:00"
+        },
+        {
+            "name": "mshm/common",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "./modules/Mshm/Common",
+                "reference": "d31688e9d05734426edeb76623fa686e344cb3a2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "\\Mshm\\Common\\Providers\\CommonServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Mshm\\Common\\": "src"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "nesbot/carbon",
@@ -6438,6 +6466,7 @@
             "keywords": [
                 "tokenizer"
             ],
+            "abandoned": true,
             "time": "2019-09-17T06:23:10+00:00"
         },
         {
@@ -7482,7 +7511,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "mshm/common": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

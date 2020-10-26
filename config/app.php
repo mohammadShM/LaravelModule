@@ -175,13 +175,13 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         // custom service provider for module user ===============================
+        \Mshm\RolePermissions\Providers\RolePermissionServiceProvider::class,
         \Mshm\User\Providers\UserServiceProvider::class,
         \Mshm\Dashboard\Providers\DashboardServiceProvider::class,
         \Mshm\Category\Providers\CategoryServiceProvider::class,
-        \Mshm\RolePermissions\Providers\RolePermissionServiceProvider::class,
         \Mshm\Course\Providers\CourseServiceProvider::class,
         \Mshm\Media\Providers\MediaServiceProvider::class,
-        \Mshm\Common\Providers\CommonServiceProvider::class,
+        // \Mshm\Common\Providers\CommonServiceProvider::class,
 
     ],
 

@@ -7,7 +7,7 @@ use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 use Mshm\Category\Models\Category;
-use Mshm\Course\Database\Seeds\RolePermissionTableSeeder;
+use Mshm\RolePermissions\Database\Seeds\RolePermissionTableSeeder;
 use Mshm\Course\Models\Course;
 use Mshm\RolePermissions\Models\Permission;
 use Mshm\User\Models\User;

@@ -5,6 +5,10 @@ Route::group(['namespace' => 'Mshm\User\Http\Controllers', 'middleware' => 'web'
     // for user roles ==============================================================================
     Route::resource('users', 'UserController');
     Route::post('users/{user}/add/role', 'UserController@addRole')->name('users.addRole');
+    Route::delete('users/{user}/remove/{role}/role', 'UserController@removeRole')
+        ->name('users.removeRole');
+    Route::patch('users/{user}/manualVerify', 'UserController@manualVerify')
+         ->name('users.manualVerify');
     // override route ==============================================================================
     /** @var Route $router */
     $router->post('/email/verify', 'Auth\VerificationController@verify')

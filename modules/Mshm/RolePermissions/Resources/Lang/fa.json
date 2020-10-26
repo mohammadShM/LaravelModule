@@ -4,6 +4,8 @@
     "manage courses": "مدیریت دوره ها",
     "manage users": "مدیریت کاربران",
     "teach": "تدریس",
-    "super admin": "مدیر کل" ,
-    "manage own courses": "مدیریت دوره های خود"
+    "manage own courses": "مدیریت دوره های خود",
+    "super admin": "مدیر کل",
+    "teacher": "مدرس",
+    "student": "دانشجو"
 }
