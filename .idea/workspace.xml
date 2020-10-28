@@ -28,44 +28,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2a3277d-b2ce-442a-9b1c-bf89ca5e04db" name="Default Changelist" comment="1 =&gt; remove role for user&#10;2 =&gt; edit users&#10;3 =&gt; delete users&#10;4 =&gt; create composer.json file for modules&#10;5 =&gt; get ip for users table&#10;6 =&gt; set one role for users Instead multi roles for users &#10;7 =&gt;">
-      <change afterPath="$PROJECT_DIR$/.idea/blade.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Common/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/User/Database/Seeds/UsersTableSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/User/Http/Middleware/StoreUserIp.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/User/Http/Requests/UpdateUserRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/User/Resources/Views/Admin/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/User/Resources/Views/Lang/fa.json" afterDir="false" />
+    <list default="true" id="e2a3277d-b2ce-442a-9b1c-bf89ca5e04db" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/LaravelWebModular.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LaravelWebModular.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/mohammadshm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/mohammadshm.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Category/Tests/Feature/CategoryTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Category/Tests/Feature/CategoryTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Common/Providers/CommonServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Common/src/Providers/CommonServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Common/Resources/layouts/feedbacks.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Common/src/Resources/layouts/feedbacks.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Common/Responses/AjaxResponses.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Common/src/Responses/AjaxResponses.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Common/helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Common/src/helpers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Database/Seeds/RolePermissionTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/RolePermissions/Database/Seeds/RolePermissionTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Providers/CourseServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Providers/CourseServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Tests/Feature/CourseTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Tests/Feature/CourseTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/RolePermissions/Models/Role.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/RolePermissions/Models/Role.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/RolePermissions/Providers/RolePermissionServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/RolePermissions/Providers/RolePermissionServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/RolePermissions/Resources/Lang/fa.json" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/RolePermissions/Resources/Lang/fa.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/RolePermissions/Tests/Feature/RolesTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/RolePermissions/Tests/Feature/RolesTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/User/Database/Migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/User/Database/Migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/User/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/User/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/User/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/User/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/User/Policies/UserPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/User/Policies/UserPolicy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/User/Providers/UserServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/User/Providers/UserServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/User/Repositories/UserRepo.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/User/Repositories/UserRepo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/User/Resources/Views/Admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/User/Resources/Views/Admin/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/User/Routes/user_routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/User/Routes/user_routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/panel/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/panel/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/panel/js/js.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/panel/js/js.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sample.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +43,13 @@
     <execution>
       <executable path="composer" />
     </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="composer.json" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -128,7 +101,6 @@
       <path value="$PROJECT_DIR$/vendor/laravel/tinker" />
       <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
       <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
-      <path value="$PROJECT_DIR$/vendor/scrivo/highlight.php" />
       <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
       <path value="$PROJECT_DIR$/vendor/league/commonmark" />
       <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
@@ -194,6 +166,9 @@
       <path value="$PROJECT_DIR$/vendor/spatie/laravel-permission" />
       <path value="$PROJECT_DIR$/vendor/intervention/image" />
       <path value="$PROJECT_DIR$/vendor/mshm/common" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/vendor/league/mime-type-detection" />
+      <path value="$PROJECT_DIR$/vendor/react/promise" />
     </include_path>
   </component>
   <component name="ProjectId" id="1dS3189ejc4TnY1Q42OhBOKIpBQ" />
@@ -215,7 +190,8 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -272,6 +248,7 @@
   <component name="SvnConfiguration">
     <configuration />
   </component>
+  <component name="TYPO3Settings" version="202.5.8" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="e2a3277d-b2ce-442a-9b1c-bf89ca5e04db" name="Default Changelist" comment="" />
@@ -366,7 +343,23 @@
       <workItem from="1603549495150" duration="1206000" />
       <workItem from="1603556100701" duration="2493000" />
       <workItem from="1603626078357" duration="1461000" />
-      <workItem from="1603713168565" duration="15255000" />
+      <workItem from="1603713168565" duration="15808000" />
+      <workItem from="1603809247046" duration="118000" />
+      <workItem from="1603809422461" duration="31000" />
+      <workItem from="1603809658029" duration="199000" />
+      <workItem from="1603809933256" duration="575000" />
+      <workItem from="1603811371281" duration="44000" />
+      <workItem from="1603838844599" duration="180000" />
+      <workItem from="1603839099926" duration="37000" />
+      <workItem from="1603839150561" duration="27000" />
+      <workItem from="1603839189391" duration="75000" />
+      <workItem from="1603839310186" duration="189000" />
+      <workItem from="1603840662285" duration="347000" />
+      <workItem from="1603841038698" duration="55000" />
+      <workItem from="1603841118273" duration="31000" />
+      <workItem from="1603841161509" duration="58000" />
+      <workItem from="1603841238952" duration="146000" />
+      <workItem from="1603884854118" duration="916000" />
     </task>
     <task id="LOCAL-00001" summary="for create login and register form in front and back by laravel/ui">
       <created>1592576031330</created>
@@ -529,7 +522,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599317187903</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="1 =&gt; remove role for user&#10;2 =&gt; edit users&#10;3 =&gt; delete users&#10;4 =&gt; create composer.json file for modules&#10;5 =&gt; get ip for users table&#10;6 =&gt; set one role for users Instead multi roles for users">
+      <created>1603745964549</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1603745964549</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -579,7 +579,8 @@
     <MESSAGE value="1 =&gt; super admin&#10;2 =&gt; create policy and gate for models&#10;3 =&gt; update controllers and testes for modules&#10;4 =&gt; create new test for all modules" />
     <MESSAGE value="1 =&gt; completed test for course module &#10;2 =&gt; create role permission test for module RolePermission" />
     <MESSAGE value="1 =&gt; create common module&#10;2 =&gt; completes module User&#10;3 =&gt; show feedbacks" />
-    <option name="LAST_COMMIT_MESSAGE" value="1 =&gt; create common module&#10;2 =&gt; completes module User&#10;3 =&gt; show feedbacks" />
+    <MESSAGE value="1 =&gt; remove role for user&#10;2 =&gt; edit users&#10;3 =&gt; delete users&#10;4 =&gt; create composer.json file for modules&#10;5 =&gt; get ip for users table&#10;6 =&gt; set one role for users Instead multi roles for users" />
+    <option name="LAST_COMMIT_MESSAGE" value="1 =&gt; remove role for user&#10;2 =&gt; edit users&#10;3 =&gt; delete users&#10;4 =&gt; create composer.json file for modules&#10;5 =&gt; get ip for users table&#10;6 =&gt; set one role for users Instead multi roles for users" />
   </component>
   <component name="WindowStateProjectService">
     <state x="355" y="67" key="#CLI_Interpreters" timestamp="1598012403476">
@@ -630,10 +631,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="511" y="245" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1597939330190" />
-    <state x="226" y="27" width="1018" height="742" key="CommitChangelistDialog2" timestamp="1603744989500">
+    <state x="226" y="27" width="1018" height="742" key="CommitChangelistDialog2" timestamp="1603745954296">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="226" y="27" width="1018" height="742" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1603744989500" />
+    <state x="226" y="27" width="1018" height="742" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1603745954296" />
     <state x="542" y="167" key="FileChooserDialogImpl" timestamp="1599317414560">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -662,14 +663,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="593" y="332" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1599316781407" />
-    <state x="391" y="63" key="SettingsEditor" timestamp="1603635522756">
+    <state x="391" y="63" key="SettingsEditor" timestamp="1603887832094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="391" y="63" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1603635522756" />
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1599317194346">
+    <state x="391" y="63" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1603887832094" />
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1603745992798">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1599317194346" />
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603745992798" />
     <state x="409" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1595927399181">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
