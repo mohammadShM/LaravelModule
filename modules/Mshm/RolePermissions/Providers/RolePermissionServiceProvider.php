@@ -34,6 +34,7 @@ class RolePermissionServiceProvider extends ServiceProvider
             "icon" => "i-role_permissions",
             "title" => "نقش های کاربری",
             "url" => route('role-permissions.index'),
+            'permission'=>Permission::PERMISSION_MANAGE_USERS,
         ]);
     }
 

@@ -1,14 +1,27 @@
 <?php
 
-Route::group(['namespace' => 'Mshm\User\Http\Controllers', 'middleware' => 'web'], function ($router) {
+// for routers with auth middleware ==================================================================================
+Route::group(['namespace' => 'Mshm\User\Http\Controllers', 'middleware' => ['web', 'auth']], function ($router) {
     // Auth::routes(['verify' => true]);
     // for user roles ==============================================================================
-    Route::resource('users', 'UserController');
-    Route::post('users/{user}/add/role', 'UserController@addRole')->name('users.addRole');
+    Route::post('users/{user}/add/role', 'UserController@addRole')
+        ->name('users.addRole');
     Route::delete('users/{user}/remove/{role}/role', 'UserController@removeRole')
         ->name('users.removeRole');
     Route::patch('users/{user}/manualVerify', 'UserController@manualVerify')
-         ->name('users.manualVerify');
+        ->name('users.manualVerify');
+    Route::post('users/photo', 'UserController@updatePhoto')
+        ->name('users.photo');
+    Route::get('users/profile', 'UserController@profile')
+        ->name('users.profile');
+    Route::post('users/profile', 'UserController@updateProfile')
+        ->name('users.profile');
+    Route::post('tutors/{username}', 'UserController@viewProfile')
+        ->name('viewProfile');
+    Route::resource('users', 'UserController');
+});
+// for routers without auth middleware ===============================================================================
+Route::group(['namespace' => 'Mshm\User\Http\Controllers', 'middleware' => 'web'], function ($router) {
     // override route ==============================================================================
     /** @var Route $router */
     $router->post('/email/verify', 'Auth\VerificationController@verify')
@@ -21,7 +34,7 @@ Route::group(['namespace' => 'Mshm\User\Http\Controllers', 'middleware' => 'web'
     Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
     Route::post('/login', 'Auth\LoginController@login')->name('login');
     // logout =========================================================================================
-    Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
+    Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
     // reset password =================================================================================
     Route::get('/password/reset', 'Auth\ForgotPasswordController@showVerifyCodeRequestForm')
         ->name('password.request');

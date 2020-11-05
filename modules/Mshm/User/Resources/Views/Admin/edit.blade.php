@@ -12,29 +12,29 @@
                 @csrf
                 @method('patch')
                 <x-input name="name" placeholder="نام کاربر" type="text" value="{{ $user->name }}" class="text-left"
-                         required/>
+                         required></x-input>
                 <x-input type="text" class="text-left" name="email" placeholder="ایمیل"
-                         value="{{ $user->email }}" required/>
+                         value="{{ $user->email }}" required></x-input>
                 <x-input type="text" class="text-left" name="mobile" placeholder="موبایل"
-                         value="{{ $user->mobile }}"/>
+                         value="{{ $user->mobile }}"></x-input>
                 <x-input type="text" class="text-left" name="username" placeholder="نام کاربری"
-                         value="{{ $user->username }}"/>
+                         value="{{ $user->username }}"></x-input>
                 <x-input type="text" class="text-left" name="headline" placeholder="عنوان"
-                         value="{{ $user->headline }}"/>
+                         value="{{ $user->headline }}"></x-input>
                 <x-input type="text" class="text-left" name="website" placeholder="وبسایت"
-                         value="{{ $user->website }}"/>
+                         value="{{ $user->website }}"></x-input>
                 <x-input type="text" class="text-left" name="linkedin" placeholder="لینکدین"
-                         value="{{ $user->linkedin }}"/>
+                         value="{{ $user->linkedin }}"></x-input>
                 <x-input type="text" class="text-left" name="facebook" placeholder="فیس بوک"
-                         value="{{ $user->facebook }}"/>
+                         value="{{ $user->facebook }}"></x-input>
                 <x-input type="text" class="text-left" name="twitter" placeholder="توویتر"
-                         value="{{ $user->twitter }}"/>
+                         value="{{ $user->twitter }}"></x-input>
                 <x-input type="text" class="text-left" name="youtube" placeholder="یوتیوپ"
-                         value="{{ $user->youtube }}"/>
+                         value="{{ $user->youtube }}"></x-input>
                 <x-input type="text" class="text-left" name="instagram" placeholder="اینستاگزام"
-                         value="{{ $user->instagram }}"/>
+                         value="{{ $user->instagram }}"></x-input>
                 <x-input type="text" class="text-left" name="telegram" placeholder="تلگرام"
-                         value="{{ $user->telegram }}"/>
+                         value="{{ $user->telegram }}"></x-input>
                 <x-select name="status" class="mt-2" required>
                     <option value="">وضعیت حساب کاربر</option>
                     @foreach(\Mshm\User\Models\User::$statuses as $status)
@@ -50,9 +50,9 @@
                         >@Lang($role->name)</option>
                     @endforeach
                 </x-select>
-                <x-file placeholder="آپلود بنر کاربر" name="image" :value="$user->image"/>
-                <x-input type="password" class="text-left" name="password" placeholder="پسورد جدید"/>
-                <x-textarea placeholder="بیو" name="bio" value="{{ $user->bio }}"/>
+                <x-file placeholder="آپلود بنر کاربر" name="image" value="$user->image"></x-file>
+                <x-input type="password" class="text-left" name="password" placeholder="پسورد جدید"></x-input>
+                <x-textarea placeholder="بیو" name="bio" value="{{ $user->bio }}"></x-textarea>
                 <button class="btn btn-webamooz_net">بروزرسانی</button>
             </form>
         </div>

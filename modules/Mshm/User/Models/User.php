@@ -11,6 +11,7 @@ use Illuminate\Notifications\DatabaseNotificationCollection;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Carbon;
 use Mshm\Course\Models\Course;
+use Mshm\Course\Models\Season;
 use Mshm\Media\Models\Media;
 use Mshm\RolePermissions\Models\Role;
 use Mshm\User\Notifications\ResetPasswordRequestNotification;
@@ -35,6 +36,8 @@ use Spatie\Permission\Traits\HasRoles;
  * @property string|null $remember_token
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
+ * @property mixed username
+ * @property mixed image
  * @method static Builder|User whereCreatedAt($value)
  * @method static Builder|User whereEmail($value)
  * @method static Builder|User whereEmailVerifiedAt($value)
@@ -115,5 +118,24 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->hasMany(Course::class, 'teacher_id');
     }
+
+    public function seasons()
+    {
+        return $this->hasMany(Season::class);
+    }
+
+    public function profilePath()
+    {
+        return $this->username ? route('viewProfile', $this->username)
+            : route('viewProfile', 'username');
+    }
+
+    public function getThumbAttribute()
+     {
+         if ($this->image) {
+             return '/storage/' . $this->image->files[300];
+         }
+         return '/panel/img/profile.jpg';
+     }
 
 }

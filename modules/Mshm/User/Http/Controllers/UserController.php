@@ -7,6 +7,8 @@ use Mshm\Common\Responses\AjaxResponses;
 use Mshm\Media\Services\MediaFileService;
 use Mshm\RolePermissions\Repositories\RoleRepo;
 use Mshm\User\Http\Requests\AddRoleRequest;
+use Mshm\User\Http\Requests\UpdateProfileInformationRequest;
+use Mshm\User\Http\Requests\UpdateUserPhotoRequest;
 use Mshm\User\Http\Requests\UpdateUserRequest;
 use Mshm\User\Models\User;
 use Mshm\User\Repositories\UserRepo;
@@ -56,6 +58,37 @@ class UserController extends Controller
         $this->userRepo->update($userId, $request);
         newFeedback();
         return redirect()->back();
+    }
+
+    public function updatePhoto(UpdateUserPhotoRequest $request)
+    {
+        /** @noinspection PhpUnhandledExceptionInspection */
+        $this->authorize('editProfile', User::class);
+        $media = MediaFileService::upload($request->file('userPhoto'));
+        if (auth()->user()->image) {
+            auth()->user()->image->delete();
+        }
+        auth()->user()->image_id = $media->id;
+        /** @noinspection PhpUndefinedMethodInspection */
+        auth()->user()->save();
+        newFeedback();
+        return back();
+    }
+
+    public function profile()
+    {
+        /** @noinspection PhpUnhandledExceptionInspection */
+        $this->authorize('editProfile', User::class);
+        return view('User::admin.profile');
+    }
+
+    public function updateProfile(UpdateProfileInformationRequest $request)
+    {
+        /** @noinspection PhpUnhandledExceptionInspection */
+        $this->authorize('editProfile', User::class);
+        $this->userRepo->updateProfile($request);
+        newFeedback();
+        return back();
     }
 
     public function destroy($userId)

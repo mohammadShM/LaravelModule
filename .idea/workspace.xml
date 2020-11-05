@@ -28,10 +28,58 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2a3277d-b2ce-442a-9b1c-bf89ca5e04db" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/LaravelWebModular.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LaravelWebModular.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="e2a3277d-b2ce-442a-9b1c-bf89ca5e04db" name="Default Changelist" comment="1 =&gt; user profile page&#10;2 =&gt; create UserPhoto component &#10;3 =&gt; create model season &#10;4 =&gt; edit season &#10;5 =&gt; manage permission for slider in dashboard&#10;6 =&gt; create SeasonPolicy and complete CoursePolicy &#10;7 =&gt; create season test&#10;8 =&gt; store lessons for seasons">
+      <change afterPath="$PROJECT_DIR$/app/View/Components/UserPhoto.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/Course/Database/Migrations/2020_10_30_160609_create_seasons_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/Course/Http/Controllers/LessonController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/Course/Http/Controllers/SeasonController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/Course/Http/Requests/SeasonRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/Course/Models/Lesson.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/Course/Models/Season.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/Course/Policies/SeasonPolicy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/Course/Repositories/SeasonRepo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/Course/Resources/Views/details.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/Course/Resources/Views/lessons/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/Course/Resources/Views/seasons/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/Course/Resources/Views/seasons/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/Course/Routes/lessons_routes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/Course/Routes/seasons_routes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/Course/Tests/Feature/SeasonTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/User/Http/Requests/UpdateProfileInformationRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/User/Http/Requests/UpdateUserPhotoRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/User/Resources/Views/Admin/profile.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/user-photo.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/mohammadshm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/mohammadshm.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/View/Components/Textarea.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/Components/Textarea.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Category/Providers/CategoryServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Category/Providers/CategoryServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Http/Controllers/CourseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Http/Controllers/CourseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Models/Course.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Models/Course.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Policies/CoursePolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Policies/CoursePolicy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Providers/CourseServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Providers/CourseServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Resources/Lang/fa.json" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Resources/Lang/fa.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Resources/Views/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Resources/Views/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Resources/Views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Resources/Views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Routes/courses_routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Routes/courses_routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Dashboard/Config/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Dashboard/Config/sidebar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Dashboard/Resources/Views/layout/foot.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Dashboard/Resources/Views/layout/foot.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Dashboard/Resources/Views/layout/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Dashboard/Resources/Views/layout/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Dashboard/Resources/Views/layout/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Dashboard/Resources/Views/layout/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/RolePermissions/Providers/RolePermissionServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/RolePermissions/Providers/RolePermissionServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/User/Database/Migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/User/Database/Migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/User/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/User/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/User/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/User/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/User/Policies/UserPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/User/Policies/UserPolicy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/User/Providers/UserServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/User/Providers/UserServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/User/Repositories/UserRepo.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/User/Repositories/UserRepo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/User/Resources/Views/Admin/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/User/Resources/Views/Admin/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/User/Resources/Views/Front/verify.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/User/Resources/Views/Front/verify.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/User/Routes/user_routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/User/Routes/user_routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/User/Tests/Feature/RegistrationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/User/Tests/Feature/RegistrationTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/panel/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/panel/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/textarea.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/textarea.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +158,6 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
       <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
       <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
-      <path value="$PROJECT_DIR$/vendor/facade/flare-client-php" />
       <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
       <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
       <path value="$PROJECT_DIR$/vendor/psy/psysh" />
@@ -169,6 +216,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
       <path value="$PROJECT_DIR$/vendor/league/mime-type-detection" />
       <path value="$PROJECT_DIR$/vendor/react/promise" />
+      <path value="$PROJECT_DIR$/vendor/facade/flare-client-php" />
     </include_path>
   </component>
   <component name="ProjectId" id="1dS3189ejc4TnY1Q42OhBOKIpBQ" />
@@ -185,8 +233,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="add_unversioned_files" value="$PROJECT_DIR$/vendor/laravel/ui/auth-backend/VerifiesEmails.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/framework/src/Illuminate/Contracts/Auth/MustVerifyEmail.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/framework/src/Illuminate/Mail/resources/views/html/themes/default.css&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/fzaninotto/faker/src/Faker/Generator.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/ui/auth-backend/AuthenticatesUsers.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/framework/src/Illuminate/Routing/Router.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/ui/src/Auth/bootstrap-stubs/auth/login.stub&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/storage/framework/views/dda049c9e200e442f8a8d037b92db6dfd6703224.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/framework/src/Illuminate/Http/RedirectResponse.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/ui/src/Auth/bootstrap-stubs/auth/register.stub&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/framework/src/Illuminate/Auth/Listeners/SendEmailVerificationNotification.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/spatie/laravel-permission/src/Traits/HasRoles.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/ui/auth-backend/RegistersUsers.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/ui/auth-backend/SendsPasswordResetEmails.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/.env" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/modules/Mshm/User/Database" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/vendor/laravel/ui/auth-backend/VerifiesEmails.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/framework/src/Illuminate/Contracts/Auth/MustVerifyEmail.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/framework/src/Illuminate/Mail/resources/views/html/themes/default.css&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/fzaninotto/faker/src/Faker/Generator.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/ui/auth-backend/AuthenticatesUsers.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/framework/src/Illuminate/Routing/Router.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/ui/src/Auth/bootstrap-stubs/auth/login.stub&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/storage/framework/views/dda049c9e200e442f8a8d037b92db6dfd6703224.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/framework/src/Illuminate/Http/RedirectResponse.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/storage/logs/laravel.log&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/ui/src/Auth/bootstrap-stubs/auth/register.stub&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/framework/src/Illuminate/Auth/Listeners/SendEmailVerificationNotification.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/spatie/laravel-permission/src/Traits/HasRoles.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/ui/auth-backend/RegistersUsers.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/ui/auth-backend/SendsPasswordResetEmails.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/.env" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/modules/Mshm/Course/Routes" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -194,40 +242,40 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\Course\Routes" />
+      <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\Course\Resources\Views\lessons" />
+      <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\Course\Http\Controllers" />
+      <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\Course\Models" />
+      <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\Course\Tests\Feature" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\Course\Database\Migrations" />
+      <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\Course\Http\Controllers" />
+      <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\Course\Models" />
       <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\User\Http\Middlewares" />
       <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\Common\src" />
-      <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\RolePermissions\Database" />
-      <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\Common" />
-      <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\Course\Tests\Feautre" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\User\Database" />
-      <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\User\Http\Requests" />
-      <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\User\Resources\Views\Admin" />
-      <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\Course\Resources\Views" />
-      <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\Course\Resources" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.RolesTest.test_normal_user_can_not_delete_role">
-    <configuration name="RolesTest.test_normal_user_can_not_delete_role" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Mshm\RolePermissions\Tests\Feature\RolesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/modules/Mshm/RolePermissions/Tests/Feature/RolesTest.php" method="test_normal_user_can_not_delete_role" scope="Method" />
+  <component name="RunManager" selected="PHPUnit.RegistrationTest.test_verified_user_can_see_home_page">
+    <configuration name="RegistrationTest.test_verified_user_can_see_home_page" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Mshm\User\Tests\Feature\RegistrationTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/modules/Mshm/User/Tests/Feature/RegistrationTest.php" method="test_verified_user_can_see_home_page" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="RolesTest.test_normal_user_can_not_see_edit" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Mshm\RolePermissions\Tests\Feature\RolesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/modules/Mshm/RolePermissions/Tests/Feature/RolesTest.php" method="test_normal_user_can_not_see_edit" scope="Method" />
+    <configuration name="SeasonTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Mshm\Course\Tests\Feature\SeasonTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/modules/Mshm/Course/Tests/Feature/SeasonTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="RolesTest.test_normal_user_can_not_update_roles" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Mshm\RolePermissions\Tests\Feature\RolesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/modules/Mshm/RolePermissions/Tests/Feature/RolesTest.php" method="test_normal_user_can_not_update_roles" scope="Method" />
+    <configuration name="SeasonTest.test_permitted_user_can_lock_season" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Mshm\Course\Tests\Feature\SeasonTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/modules/Mshm/Course/Tests/Feature/SeasonTest.php" method="test_permitted_user_can_lock_season" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="RolesTest.test_permitted_user_can_delete_role" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Mshm\RolePermissions\Tests\Feature\RolesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/modules/Mshm/RolePermissions/Tests/Feature/RolesTest.php" method="test_permitted_user_can_delete_role" scope="Method" />
+    <configuration name="SeasonTest.test_permitted_user_can_see_course_details_page" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Mshm\Course\Tests\Feature\SeasonTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/modules/Mshm/Course/Tests/Feature/SeasonTest.php" method="test_permitted_user_can_see_course_details_page" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="RolesTest.test_permitted_user_can_update_roles" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Mshm\RolePermissions\Tests\Feature\RolesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/modules/Mshm/RolePermissions/Tests/Feature/RolesTest.php" method="test_permitted_user_can_update_roles" scope="Method" />
+    <configuration name="SeasonTest.test_permitted_user_can_unlock_season" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Mshm\Course\Tests\Feature\SeasonTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/modules/Mshm/Course/Tests/Feature/SeasonTest.php" method="test_permitted_user_can_unlock_season" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -236,11 +284,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.RolesTest.test_permitted_user_can_update_roles" />
-        <item itemvalue="PHPUnit.RolesTest.test_permitted_user_can_delete_role" />
-        <item itemvalue="PHPUnit.RolesTest.test_normal_user_can_not_update_roles" />
-        <item itemvalue="PHPUnit.RolesTest.test_normal_user_can_not_see_edit" />
-        <item itemvalue="PHPUnit.RolesTest.test_normal_user_can_not_delete_role" />
+        <item itemvalue="PHPUnit.RegistrationTest.test_verified_user_can_see_home_page" />
+        <item itemvalue="PHPUnit.SeasonTest" />
+        <item itemvalue="PHPUnit.SeasonTest.test_permitted_user_can_see_course_details_page" />
+        <item itemvalue="PHPUnit.SeasonTest.test_permitted_user_can_unlock_season" />
+        <item itemvalue="PHPUnit.SeasonTest.test_permitted_user_can_lock_season" />
       </list>
     </recent_temporary>
   </component>
@@ -359,7 +407,23 @@
       <workItem from="1603841118273" duration="31000" />
       <workItem from="1603841161509" duration="58000" />
       <workItem from="1603841238952" duration="146000" />
-      <workItem from="1603884854118" duration="916000" />
+      <workItem from="1603884854118" duration="1756000" />
+      <workItem from="1603888692990" duration="231000" />
+      <workItem from="1603888942201" duration="1913000" />
+      <workItem from="1603890878264" duration="1237000" />
+      <workItem from="1603895464477" duration="12139000" />
+      <workItem from="1603975534426" duration="5424000" />
+      <workItem from="1604067875064" duration="6690000" />
+      <workItem from="1604076295440" duration="169000" />
+      <workItem from="1604076604928" duration="6194000" />
+      <workItem from="1604160779769" duration="5463000" />
+      <workItem from="1604236492510" duration="8694000" />
+      <workItem from="1604322130454" duration="2490000" />
+      <workItem from="1604340490549" duration="4318000" />
+      <workItem from="1604345981333" duration="5000" />
+      <workItem from="1604407613222" duration="1187000" />
+      <workItem from="1604487720239" duration="5272000" />
+      <workItem from="1604562040726" duration="12709000" />
     </task>
     <task id="LOCAL-00001" summary="for create login and register form in front and back by laravel/ui">
       <created>1592576031330</created>
@@ -583,10 +647,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="1 =&gt; remove role for user&#10;2 =&gt; edit users&#10;3 =&gt; delete users&#10;4 =&gt; create composer.json file for modules&#10;5 =&gt; get ip for users table&#10;6 =&gt; set one role for users Instead multi roles for users" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="355" y="67" key="#CLI_Interpreters" timestamp="1598012403476">
+    <state x="355" y="67" key="#CLI_Interpreters" timestamp="1604516309890">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="355" y="67" key="#CLI_Interpreters/0.0.1536.824@0.0.1536.824" timestamp="1598012403476" />
+    <state x="355" y="67" key="#CLI_Interpreters/0.0.1536.824@0.0.1536.824" timestamp="1604516309890" />
     <state x="395" y="91" key="#Inspections" timestamp="1596723236711">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -599,18 +663,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="617" y="226" key="#Language_Injections/0.0.1536.824@0.0.1536.824" timestamp="1598375832067" />
-    <state x="443" y="0" width="689" height="824" key="#PHP" timestamp="1598012407498">
+    <state x="475" y="232" key="#Notifications" timestamp="1603888640870">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="443" y="0" width="689" height="824" key="#PHP/0.0.1536.824@0.0.1536.824" timestamp="1598012407498" />
+    <state x="475" y="232" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1603888640870" />
+    <state x="443" y="0" width="689" height="824" key="#PHP" timestamp="1604516315535">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="443" y="0" width="689" height="824" key="#PHP/0.0.1536.824@0.0.1536.824" timestamp="1604516315535" />
     <state x="361" y="53" key="#Plugins" timestamp="1595940438078">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="53" key="#Plugins/0.0.1536.824@0.0.1536.824" timestamp="1595940438078" />
-    <state x="467" y="203" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595875331059">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="467" y="203" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1595875331059" />
     <state x="566" y="93" key="#com.intellij.ide.util.MemberChooser" timestamp="1597661433543">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -619,77 +683,81 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="449" y="143" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1596638157230" />
-    <state x="433" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603726505973">
+    <state x="433" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604343890402">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="433" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1603726505973" />
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603742086104">
+    <state x="433" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1604343890402" />
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604583559765">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1603742086104" />
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1604583559765" />
+    <state x="567" y="114" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1" timestamp="1604171558076">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="567" y="114" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1/0.0.1536.824@0.0.1536.824" timestamp="1604171558076" />
     <state x="511" y="245" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1597939330190">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="511" y="245" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1597939330190" />
-    <state x="226" y="27" width="1018" height="742" key="CommitChangelistDialog2" timestamp="1603745954296">
+    <state x="242" y="78" width="1018" height="742" key="CommitChangelistDialog2" timestamp="1604583718556">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="226" y="27" width="1018" height="742" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1603745954296" />
-    <state x="542" y="167" key="FileChooserDialogImpl" timestamp="1599317414560">
+    <state x="242" y="78" width="1018" height="742" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1604583718556" />
+    <state x="542" y="167" key="FileChooserDialogImpl" timestamp="1603890709974">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="542" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1599317414560" />
-    <state width="1495" height="254" key="GridCell.Tab.0.bottom" timestamp="1598111738961">
+    <state x="542" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1603890709974" />
+    <state width="1495" height="205" key="GridCell.Tab.0.bottom" timestamp="1604583599706">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1495" height="254" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1598111738961" />
-    <state width="1495" height="254" key="GridCell.Tab.0.center" timestamp="1598111738961">
+    <state width="1495" height="205" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604583599706" />
+    <state width="1495" height="205" key="GridCell.Tab.0.center" timestamp="1604583599706">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1495" height="254" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1598111738961" />
-    <state width="1495" height="254" key="GridCell.Tab.0.left" timestamp="1598111738960">
+    <state width="1495" height="205" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1604583599706" />
+    <state width="1495" height="205" key="GridCell.Tab.0.left" timestamp="1604583599706">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1495" height="254" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1598111738960" />
-    <state width="1495" height="254" key="GridCell.Tab.0.right" timestamp="1598111738961">
+    <state width="1495" height="205" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1604583599706" />
+    <state width="1495" height="205" key="GridCell.Tab.0.right" timestamp="1604583599706">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1495" height="254" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1598111738961" />
+    <state width="1495" height="205" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1604583599706" />
+    <state x="349" y="148" key="IDE.errors.dialog" timestamp="1604589524314">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="349" y="148" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1604589524314" />
     <state x="374" y="213" key="NewPhpClassDialog" timestamp="1599315681675">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="374" y="213" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1599315681675" />
-    <state x="593" y="332" key="NewPhpFileDialog" timestamp="1599316781407">
+    <state x="593" y="332" key="NewPhpFileDialog" timestamp="1604075454198">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="593" y="332" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1599316781407" />
-    <state x="391" y="63" key="SettingsEditor" timestamp="1603887832094">
+    <state x="593" y="332" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1604075454198" />
+    <state x="359" y="51" key="SettingsEditor" timestamp="1604076464449">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="391" y="63" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1603887832094" />
+    <state x="359" y="51" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1604076464449" />
     <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1603745992798">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603745992798" />
-    <state x="409" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1595927399181">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="409" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1595927399181" />
     <state x="556" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596382769994">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="556" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1596382769994" />
-    <state x="463" y="136" width="610" height="552" key="find.popup" timestamp="1603304712723">
+    <state x="669" y="210" width="610" height="552" key="find.popup" timestamp="1604340182144">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="463" y="136" width="610" height="552" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1603304712723" />
+    <state x="669" y="210" width="610" height="552" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1604340182144" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1596463592840">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1596463592840" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1598450849526">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1604344642963">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1598450849526" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1604344642963" />
   </component>
 </project>

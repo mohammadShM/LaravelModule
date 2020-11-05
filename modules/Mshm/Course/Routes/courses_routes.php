@@ -1,7 +1,8 @@
 <?php
 
 
-Route::group(['namespace' => 'Mshm\Course\Http\Controllers', 'middleware' => ['web', 'auth', 'verified']]
+Route::group(['namespace' => 'Mshm\Course\Http\Controllers',
+        'middleware' => ['web', 'auth', 'verified']]
     , function ($router) {
         $router->resource('courses', 'CourseController');
         $router->patch('courses/{course}/accept', 'CourseController@accept')
@@ -10,5 +11,7 @@ Route::group(['namespace' => 'Mshm\Course\Http\Controllers', 'middleware' => ['w
             ->name('courses.reject');
         $router->patch('courses/{course}/lock', 'CourseController@lock')
             ->name('courses.lock');
+        $router->get('courses/{course}/details', 'CourseController@details')
+            ->name('courses.details');
     });
 

@@ -65,6 +65,14 @@ class CourseController extends Controller
         return redirect(route('courses.index'));
     }
 
+    public function details($id, CourseRepo $courseRepo)
+    {
+        $course = $courseRepo->findById($id);
+        /** @noinspection PhpUnhandledExceptionInspection */
+        $this->authorize('details', $course);
+        return view('Courses::details', compact('course'));
+    }
+
     public function destroy($id, CourseRepo $courseRepo)
     {
         // DELETE MEDIA (BANNER)

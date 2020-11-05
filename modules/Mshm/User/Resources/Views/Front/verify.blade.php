@@ -9,7 +9,10 @@
             </a>
             <div class="card-header">
                 <p class="activation-code-title">کد فرستاده شده به ایمیل <span>{{ auth()->user()->email }}</span> را
-                    وارد کنید</p>
+                    وارد کنید . ممکن هست ایمیل به پوشه هرزنامه فرستاده شده باشد .
+                    ایمیلتان را اشتباه وارد کرده اید ؟
+                    <a href="{{ route('users.profile') }}">برای ویرایش ایمیل کلیک کنید</a> .
+                </p>
             </div>
             <div class="form-content form-content1">
                 <input name="verify_code" class="activation-code-input @error('verify_code') is-invalid @enderror"

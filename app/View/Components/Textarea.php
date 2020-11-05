@@ -7,16 +7,16 @@ use Illuminate\View\Component;
 class Textarea extends Component
 {
 
-    public $placeholder;
     public $name;
     public $value;
+    public $placeholder;
 
     public function __construct($placeholder, $name, $value = null)
     {
 
-        $this->placeholder = $placeholder;
         $this->name = $name;
         $this->value = $value;
+        $this->placeholder = $placeholder;
     }
 
     public function render()

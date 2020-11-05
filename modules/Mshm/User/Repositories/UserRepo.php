@@ -56,4 +56,27 @@ class UserRepo
         return User::where('id', $userId)->update($update);
     }
 
+    /** @noinspection PhpPossiblePolymorphicInvocationInspection */
+    public function updateProfile($request)
+    {
+        auth()->user()->name = $request->name;
+        if (auth()->user()->email != $request->email) {
+            auth()->user()->email = $request->email;
+            auth()->user()->email_verified_at = null;
+        }
+        /** @noinspection PhpUndefinedMethodInspection */
+        if (auth()->user()->hasPermissionTo(Permission::PERMISSION_TEACH)) {
+            auth()->user()->card_number = $request->card_number;
+            auth()->user()->shaba = $request->shaba;
+            auth()->user()->headline = $request->headline;
+            auth()->user()->bio = $request->bio;
+            auth()->user()->username = $request->username;
+        }
+        if ($request->password) {
+            auth()->user()->password = bcrypt($request->password);
+        }
+        /** @noinspection PhpUndefinedMethodInspection */
+        auth()->user()->save();
+    }
+
 }

@@ -5,6 +5,7 @@ namespace Mshm\User\Providers;
 use DatabaseSeeder;
 use Gate;
 use Illuminate\Support\ServiceProvider;
+use Mshm\RolePermissions\Models\Permission;
 use Mshm\User\Database\Seeds\UsersTableSeeder;
 use Mshm\User\Http\Middleware\StoreUserIp;
 use Mshm\User\Models\User;
@@ -32,7 +33,15 @@ class UserServiceProvider extends ServiceProvider
             "icon" => "i-users",
             "title" => "کاربران",
             "url" => route('users.index'),
+            'permission' => Permission::PERMISSION_MANAGE_USERS
         ]);
+        $this->app->booted(function () {
+            config()->set('sidebar.items.usersInformation', [
+                "icon" => "i-user__inforamtion",
+                "title" => "اطلاعات کاربری",
+                "url" => route('users.profile'),
+            ]);
+        });
     }
 
 }

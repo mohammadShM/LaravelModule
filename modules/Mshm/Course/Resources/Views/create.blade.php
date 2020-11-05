@@ -1,7 +1,8 @@
 @extends('Dashboard::master')
 @section('breadcrumb')
+    <!--suppress CheckEmptyScriptTag -->
     <li><a href="{{ route('courses.index') }}" title="دوره ها">دوره ها</a></li>
-    <li><a href="#" title="ویرایش دوره">ویرایش دوره</a></li>
+    <li><a href="#" title="ویرایش دوره">ایجاد دوره</a></li>
 @endsection
 @section('content')
     <div class="row no-gutters  " style="align-content: center;justify-content: center;">

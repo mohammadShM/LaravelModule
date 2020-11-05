@@ -693,6 +693,7 @@ textarea {
 }
 
 .sidebar__nav .i-user__inforamtion a::before {
+    /*content: '\e111';*/
     content: '\e111';
 }
 
@@ -1975,7 +1976,7 @@ span.tagRemove:hover {
 }
 
 .sidebar__nav .i-role_permissions a::before {
-    content: "\e111";
+    content: "\e112";
 }
 
 .w-100 {
