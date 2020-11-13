@@ -27,7 +27,7 @@
                     <td class="status">@Lang($season->status)</td>
                     <td class="confirmation_status">@Lang($season->confirmation_status)</td>
                     <td>
-                        <a href="" class="item-delete mlg-15" title="حذف"
+                        <a href="" class="item-delete-me mlg-15" title="حذف"
                            onclick="deleteItem(event ,'{{ route('seasons.destroy',$season->id) }}')"></a>
                         @can(\Mshm\RolePermissions\Models\Permission::PERMISSION_MANAGE_COURSES)
                             <a href=""

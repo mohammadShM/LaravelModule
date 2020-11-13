@@ -48,7 +48,8 @@ class UserController extends Controller
         $this->authorize('edit', User::class);
         $user = $this->userRepo->findById($userId);
         if ($request->hasFile('image')) {
-            $request->request->add(['image_id' => MediaFileService::upload($request->file('image'))->id]);
+            $request->request->add(['image_id' => MediaFileService::publicUpload($request
+                ->file('image'))->id]);
             if ($user->image) {
                 $user->image->delete();
             }
@@ -64,8 +65,10 @@ class UserController extends Controller
     {
         /** @noinspection PhpUnhandledExceptionInspection */
         $this->authorize('editProfile', User::class);
-        $media = MediaFileService::upload($request->file('userPhoto'));
+        $media = MediaFileService::publicUpload($request->file('userPhoto'));
+        /** @noinspection PhpPossiblePolymorphicInvocationInspection */
         if (auth()->user()->image) {
+            /** @noinspection PhpPossiblePolymorphicInvocationInspection */
             auth()->user()->image->delete();
         }
         auth()->user()->image_id = $media->id;

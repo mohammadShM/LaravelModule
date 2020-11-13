@@ -8,6 +8,7 @@ use Mshm\Common\Responses\AjaxResponses;
 use Mshm\Course\Http\Requests\CourseRequest;
 use Mshm\Course\Models\Course;
 use Mshm\Course\Repositories\CourseRepo;
+use Mshm\Course\Repositories\LessonRepo;
 use Mshm\Media\Services\MediaFileService;
 use Mshm\User\Repositories\UserRepo;
 
@@ -33,7 +34,7 @@ class CourseController extends Controller
 
     public function store(CourseRequest $request, CourseRepo $courseRepo)
     {
-        $request->request->add(['banner_id' => MediaFileService::upload($request->file('image'))->id]);
+        $request->request->add(['banner_id' => MediaFileService::publicUpload($request->file('image'))->id]);
         $courseRepo->store($request);
         return redirect()->route('courses.index');
     }
@@ -54,7 +55,8 @@ class CourseController extends Controller
         /** @noinspection PhpUnhandledExceptionInspection */
         $this->authorize('edit', $course);
         if ($request->hasFile('image')) {
-            $request->request->add(['banner_id' => MediaFileService::upload($request->file('image'))->id]);
+            $request->request->add(['banner_id' => MediaFileService::publicUpload($request
+                ->file('image'))->id]);
             if ($course->banner) {
                 $course->banner->delete();
             }
@@ -65,12 +67,13 @@ class CourseController extends Controller
         return redirect(route('courses.index'));
     }
 
-    public function details($id, CourseRepo $courseRepo)
+    public function details($id, CourseRepo $courseRepo, LessonRepo $lessonRepo)
     {
         $course = $courseRepo->findById($id);
+        $lessons = $lessonRepo->paginate();
         /** @noinspection PhpUnhandledExceptionInspection */
         $this->authorize('details', $course);
-        return view('Courses::details', compact('course'));
+        return view('Courses::details', compact('course', 'lessons'));
     }
 
     public function destroy($id, CourseRepo $courseRepo)

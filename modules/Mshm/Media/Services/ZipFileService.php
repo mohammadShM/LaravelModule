@@ -5,13 +5,13 @@ namespace Mshm\Media\Services;
 use Illuminate\Support\Facades\Storage;
 use Mshm\Media\Contracts\FileServiceContract;
 
-class VideoFileService extends DefaultFileService implements FileServiceContract
+class ZipFileService extends DefaultFileService implements FileServiceContract
 {
 
     public static function upload($file, $filename, $dir): array
     {
         Storage::putFileAs($dir, $file, $filename . '.' . $file->getClientOriginalExtension());
-        return ["video" => $filename . '.' . $file->getClientOriginalExtension()];
+        return ["zip" => $filename . '.' . $file->getClientOriginalExtension()];
     }
 
 }

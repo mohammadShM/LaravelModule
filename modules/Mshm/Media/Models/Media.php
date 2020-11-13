@@ -11,6 +11,7 @@ use Mshm\Media\Services\MediaFileService;
  * @property int|string|null user_id
  * @property  mixed filename
  * @property mixed id
+ * @property mixed is_private
  * @method save()
  */
 class Media extends Model

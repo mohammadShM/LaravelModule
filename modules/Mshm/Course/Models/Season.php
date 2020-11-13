@@ -28,7 +28,7 @@ class Season extends Model
     const STATUS_LOCKED = 'locked';
     static $statuses = [self::STATUS_OPENED, self::STATUS_LOCKED];
 
-	public function course()
+    public function course()
     {
         return $this->belongsTo(Course::class);
     }
@@ -36,6 +36,11 @@ class Season extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function lessons()
+    {
+        return $this->hasMany(Lesson::class);
     }
 
 }

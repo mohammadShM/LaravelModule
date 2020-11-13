@@ -11,6 +11,7 @@ use Illuminate\Notifications\DatabaseNotificationCollection;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Carbon;
 use Mshm\Course\Models\Course;
+use Mshm\Course\Models\Lesson;
 use Mshm\Course\Models\Season;
 use Mshm\Media\Models\Media;
 use Mshm\RolePermissions\Models\Role;
@@ -123,6 +124,11 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->hasMany(Season::class);
     }
+
+    public function lessons()
+     {
+         return $this->hasMany(Lesson::class);
+     }
 
     public function profilePath()
     {

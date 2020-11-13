@@ -2,24 +2,21 @@
 
 namespace Mshm\Media\Services;
 
+use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
+use Mshm\Media\Contracts\FileServiceContract;
 
-class ImageFileService
+class ImageFileService extends DefaultFileService implements FileServiceContract
 {
 
     protected static $sizes = ['300', '600'];
 
-    public static function upload($file)
+    public static function upload(UploadedFile $file, $filename, $dir): array
     {
-        $filename = uniqid();
-        $extension = $file->getClientOriginalExtension();
-        $dir = 'public\\';
-        Storage::putFileAs($dir, $file, $filename. '.' . $extension);
-        // $dir = 'app\public\\';
-        // $file->move(storage_path($dir), $filename . '.' . $extension);
-        $path = $dir . $filename . '.' . $extension;
-        return self::resize(Storage::path($path), $dir, $filename, $extension);
+        Storage::putFileAs($dir, $file, $filename . '.' . $file->getClientOriginalExtension());
+        $path = $dir . $filename . '.' . $file->getClientOriginalExtension();
+        return self::resize(Storage::path($path), $dir, $filename, $file->getClientOriginalExtension());
     }
 
     private static function resize($img, $dir, $filename, $extension)
@@ -33,13 +30,6 @@ class ImageFileService
             })->save(Storage::path($dir) . $filename . '_' . $size . '.' . $extension);
         }
         return $imgs;
-    }
-
-    public static function delete($media)
-    {
-        foreach ($media->files as $file) {
-            Storage::delete('public\\' . $file);
-        }
     }
 
 }

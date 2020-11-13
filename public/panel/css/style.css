@@ -2012,3 +2012,9 @@ span.tagRemove:hover {
 .deletable-item-add{
     margin-top: 10px;
 }
+
+.item-delete-me:before {
+    content: '\e129';
+    font-weight: bolder;
+    font-size: 16px;
+}

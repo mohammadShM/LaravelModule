@@ -16,7 +16,10 @@
                     <button class="btn all-confirm-btn">تایید همه جلسات</button>
                     <button class="btn confirm-btn">تایید جلسات</button>
                     <button class="btn reject-btn">رد جلسات</button>
-                    <button class="btn delete-btn">حذف جلسات</button>
+                    <button class="btn delete-btn"
+                            onclick="deleteMultiple('{{ route('lessons.destroyMultiple' , $course->id) }}')">
+                        حذف جلسات
+                    </button>
 
                 </div>
                 <div class="table__box">
@@ -29,7 +32,7 @@
                                     <span class="checkmark"></span>
                                 </label>
                             </th>
-                            <th>شناسه</th>
+                            <th>شماره</th>
                             <th>عنوان جلسه</th>
                             <th>عنوان فصل</th>
                             <th>مدت زمان جلسه</th>
@@ -39,72 +42,58 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr role="row" class="" data-row-id="1">
-                            <td>
-                                <label class="ui-checkbox">
-                                    <input type="checkbox" class="sub-checkbox" data-id="1">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </td>
-                            <td><a href="">1</a></td>
-                            <td><a href="">دوره مقدماتی تا پیشرفته لاراول</a></td>
-                            <td>بخش بک اند پروژه</td>
-                            <td>12 دقیقه</td>
-                            <td>تایید شده</td>
-                            <td>همه</td>
-                            <td>
-                                <a href="" class="item-delete mlg-15" data-id="1" href="javascript: void(0)"
-                                   title="حذف"></a>
-                                <a href="" class="item-reject mlg-15" title="رد"></a>
-                                <a href="" class="item-lock mlg-15" title="قفل "></a>
-                                <a href="" class="item-confirm mlg-15" title="تایید"></a>
-                                <a href="" class="item-edit " title="ویرایش"></a>
-                            </td>
-                        </tr>
-
-                        <tr role="row" data-row-id="2">
-                            <td>
-                                <label class="ui-checkbox">
-                                    <input type="checkbox" class="sub-checkbox" data-id="2">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </td>
-                            <td><a href="">1</a></td>
-                            <td><a href="">دوره مقدماتی تا پیشرفته لاراول</a></td>
-                            <td>بخش بک اند پروژه</td>
-                            <td>12 دقیقه</td>
-                            <td>تایید شده</td>
-                            <td>همه</td>
-                            <td>
-                                <a href="" class="item-delete mlg-15" title="حذف"></a>
-                                <a href="" class="item-reject mlg-15" title="رد"></a>
-                                <a href="" class="item-lock mlg-15" title="قفل "></a>
-                                <a href="" class="item-confirm mlg-15" title="تایید"></a>
-                                <a href="" class="item-edit " title="ویرایش"></a>
-                            </td>
-                        </tr>
-                        <tr role="row" data-row-id="3">
-                            <td>
-                                <label class="ui-checkbox">
-                                    <input type="checkbox" class="sub-checkbox" data-id="3">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </td>
-                            <td><a href="">1</a></td>
-                            <td><a href="">دوره مقدماتی تا پیشرفته لاراول</a></td>
-                            <td>بخش بک اند پروژه</td>
-                            <td>12 دقیقه</td>
-                            <td>تایید شده</td>
-                            <td>شرکت کنندگان</td>
-                            <td>
-                                <a href="" class="item-delete mlg-15" data-id="2" href="javascript: void(0)"
-                                   title="حذف"></a>
-                                <a href="" class="item-reject mlg-15" title="رد"></a>
-                                <a href="" class="item-lock mlg-15" title="قفل "></a>
-                                <a href="" class="item-confirm mlg-15" title="تایید"></a>
-                                <a href="" class="item-edit " title="ویرایش"></a>
-                            </td>
-                        </tr>
+                        @foreach($lessons as $lesson)
+                            <tr role="row" class="" data-row-id="{{ $lesson->id }}">
+                                <td>
+                                    <label class="ui-checkbox">
+                                        <input type="checkbox" class="sub-checkbox" data-id="{{ $lesson->id }}">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                                <td><a href="">{{ $lesson->number }}</a></td>
+                                <td><a href="">{{ $lesson->title }}</a></td>
+                                <td>{{ $lesson->season->title }}</td>
+                                <td>{{ $lesson->time }} دقیقه</td>
+                                <td class="confirmation_status">
+                                       <span class="{{ $lesson->getConfirmationStatusCssClass() }}">
+                                           @lang($lesson->confirmation_status)</span>
+                                </td>
+                                <td class="status">
+                                    @if ($lesson->status == \Mshm\Course\Models\Lesson::STATUS_OPENED)
+                                        {{ $lesson->free ? 'همه' : 'شرکت کنندگان' }}
+                                    @else
+                                        <span>قفل شده</span>
+                                    @endif
+                                </td>
+                                <td>
+                                    <a href="" class="item-delete-me mlg-15" title="حذف"
+                                       onclick="deleteItem(event ,'{{ route('lessons.destroy',
+                                       [$course->id ,$lesson->id]) }}')"></a>
+                                    <a href=""
+                                       onclick="updateConfirmationStatus(event,'{{ route('lessons.accept',$lesson->id) }}'
+                                           ,'آیا از تایید این آیتم اطمینان دارید','تایید شده')"
+                                       class="item-confirm mlg-15" title="تایید"></a>
+                                    <a href=""
+                                       onclick="updateConfirmationStatus(event,'{{ route('lessons.reject',$lesson->id) }}'
+                                           ,'آیا از رد این آیتم اطمینان دارید','رد شده')"
+                                       class="item-reject mlg-15" title="رد"></a>
+                                    @if ($lesson->status == \Mshm\Course\Models\Lesson::STATUS_OPENED)
+                                        <a href="" onclick="updateConfirmationStatus(event,
+                                            '{{ route('lessons.lock',$lesson->id) }}',
+                                            'آیا از قفل کردن این آیتم اطمینان دارید'
+                                            ,'قفل شده','status')" class="item-lock mlg-15 text-error"
+                                           title="قفل کردن"></a>
+                                    @else
+                                        <a href="" onclick="updateConfirmationStatus(event,
+                                            '{{ route('lessons.unlock',$lesson->id) }}',
+                                            'آیا از باز کردن این آیتم اطمینان دارید'
+                                            ,'باز شده','status')" class="item-lock mlg-15 text-success"
+                                           title="باز کردن"></a>
+                                    @endif
+                                    <a href="" class="item-edit " title="ویرایش"></a>
+                                </td>
+                            </tr>
+                        @endforeach
                         </tbody>
                     </table>
                 </div>
