@@ -6,6 +6,7 @@ use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
 use Mshm\Media\Contracts\FileServiceContract;
+use Mshm\Media\Models\Media;
 
 class ImageFileService extends DefaultFileService implements FileServiceContract
 {
@@ -32,4 +33,8 @@ class ImageFileService extends DefaultFileService implements FileServiceContract
         return $imgs;
     }
 
+    public static function thumb(Media $media)
+    {
+        return "/storage/" . $media->files['300'];
+    }
 }

@@ -12,14 +12,14 @@ class UsersTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(): void
     {
         foreach (User::$defaultUsers as $user) {
             User::firstOrCreate(['email' => $user['email']], [
                 'email' => $user['email'],
                 'name' => $user['name'],
                 'password' => bcrypt($user['password']),
-            ])->assignRole($user['role']);
+            ])->assignRole($user['role'])->markEmailAsVerified();
         }
 
     }

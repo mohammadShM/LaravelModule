@@ -10,6 +10,7 @@ use Mshm\Course\Models\Course;
 use Mshm\Course\Repositories\CourseRepo;
 use Mshm\Course\Repositories\LessonRepo;
 use Mshm\Media\Services\MediaFileService;
+use Mshm\RolePermissions\Models\Permission;
 use Mshm\User\Repositories\UserRepo;
 
 class CourseController extends Controller
@@ -18,8 +19,15 @@ class CourseController extends Controller
     public function index(CourseRepo $courseRepo)
     {
         /** @noinspection PhpUnhandledExceptionInspection */
-        $this->authorize('manage', Course::class);
-        $courses = $courseRepo->paginate();
+        $this->authorize('index', Course::class);
+        /** @noinspection PhpUndefinedMethodInspection */
+        /** @noinspection NullPointerExceptionInspection */
+        if (auth()->user()->hasAnyPermission([Permission::PERMISSION_MANAGE_COURSES,
+            Permission::PERMISSION_SUPER_ADMIN])) {
+            $courses = $courseRepo->paginate();
+        } else {
+            $courses = $courseRepo->getCoursesByTeacherId(auth()->id());
+        }
         return view('Courses::index', compact('courses'));
     }
 
@@ -70,7 +78,7 @@ class CourseController extends Controller
     public function details($id, CourseRepo $courseRepo, LessonRepo $lessonRepo)
     {
         $course = $courseRepo->findById($id);
-        $lessons = $lessonRepo->paginate();
+        $lessons = $lessonRepo->paginate($id);
         /** @noinspection PhpUnhandledExceptionInspection */
         $this->authorize('details', $course);
         return view('Courses::details', compact('course', 'lessons'));

@@ -1,4 +1,5 @@
 <?php
+/** @noinspection TypeUnsafeComparisonInspection */
 
 namespace Mshm\Course\Policies;
 

@@ -4,6 +4,7 @@ namespace Mshm\Media\Services;
 
 use Illuminate\Support\Facades\Storage;
 use Mshm\Media\Contracts\FileServiceContract;
+use Mshm\Media\Models\Media;
 
 class VideoFileService extends DefaultFileService implements FileServiceContract
 {
@@ -14,4 +15,8 @@ class VideoFileService extends DefaultFileService implements FileServiceContract
         return ["video" => $filename . '.' . $file->getClientOriginalExtension()];
     }
 
+    public static function thumb(Media $media)
+    {
+        return url('/img/video-thumb.png');
+    }
 }

@@ -58,7 +58,7 @@ class CourseTest extends TestCase
     }
 
     // ************************* permitted user can store course *************************
-    public function test_permitted_user_can_store_course()
+    public function test_permitted_user_can_store_course(): void
     {
         // $this->withoutExceptionHandling();
         $this->actAsUser();
@@ -67,7 +67,7 @@ class CourseTest extends TestCase
         Storage::fake('local');
         $response = $this->post(route("courses.store"), $this->courseData());
         $response->assertRedirect(route('courses.index'));
-        $this->assertEquals(1, Course::count());
+        self::assertEquals(1, Course::count());
     }
 
     // ************************* permitted user can edit course *************************
@@ -124,10 +124,10 @@ class CourseTest extends TestCase
             "percent" => 71,
             "type" => Course::TYPE_CASH,
             "status" => Course::STATUS_NOT_COMPLETED,
-            "image" => UploadedFile::fake()->image('img.jpg'),
+           "image" => UploadedFile::fake()->image('img.jpg'),
         ])->assertRedirect(route('courses.index'));
         $course = $course->fresh();
-        $this->assertEquals('updated title', $course->title);
+        self::assertEquals('updated title', $course->title);
     }
 
     public function test_normal_user_can_not_update_course()
@@ -216,7 +216,7 @@ class CourseTest extends TestCase
     // ================================ for create fake user ================================
     private function createUser()
     {
-        $this->actingAs(factory(User::class)->create());
+        $this->actingAs(User::factory()->create());
         $this->seed(RolePermissionTableSeeder::class);
     }
 

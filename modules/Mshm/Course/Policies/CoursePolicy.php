@@ -1,4 +1,5 @@
 <?php
+/** @noinspection TypeUnsafeComparisonInspection */
 
 namespace Mshm\Course\Policies;
 
@@ -15,18 +16,32 @@ class CoursePolicy
 
     }
 
-    public function manage(User $user)
+    public function manage(User $user): bool
     {
         return $user->hasPermissionTo(Permission::PERMISSION_MANAGE_COURSES);
     }
 
-    public function create(User $user)
+    public function index($user): bool
     {
         return $user->hasPermissionTo(Permission::PERMISSION_MANAGE_COURSES) ||
             $user->hasPermissionTo(Permission::PERMISSION_MANAGE_OWN_COURSES);
     }
 
-    public function edit($user, $course)
+    public function create(User $user): bool
+    {
+        return $user->hasPermissionTo(Permission::PERMISSION_MANAGE_COURSES) ||
+            $user->hasPermissionTo(Permission::PERMISSION_MANAGE_OWN_COURSES);
+    }
+
+    public function createLesson($user, $course): bool
+    {
+        /** @noinspection TypeUnsafeComparisonInspection */
+        return $user->hasPermissionTo(Permission::PERMISSION_MANAGE_COURSES) ||
+            ($user->hasPermissionTo(Permission::PERMISSION_MANAGE_OWN_COURSES) &&
+                $course->teacher_id == $user->id);
+    }
+
+    public function edit($user, $course): bool
     {
         if ($user->hasPermissionTo(Permission::PERMISSION_MANAGE_COURSES)) return true;
         return $user->hasPermissionTo(Permission::PERMISSION_MANAGE_OWN_COURSES) &&

@@ -67,4 +67,9 @@ class CourseRepo
         ]);
     }
 
+    public function getCoursesByTeacherId(?int $id)
+    {
+        return Course::where('teacher_id', $id)->get();
+    }
+
 }

@@ -4,6 +4,7 @@ namespace Mshm\User\Providers;
 
 use DatabaseSeeder;
 use Gate;
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\ServiceProvider;
 use Mshm\RolePermissions\Models\Permission;
 use Mshm\User\Database\Seeds\UsersTableSeeder;
@@ -20,6 +21,9 @@ class UserServiceProvider extends ServiceProvider
         $this->loadFactoriesFrom(__DIR__ . '/../Database/Factories');
         $this->loadViewsFrom(__DIR__ . '/../Resources/Views', 'User');
         $this->loadJsonTranslationsFrom(__DIR__ . "/../Resources/Views/Lang");
+        Factory::guessFactoryNamesUsing(function (string $modelName){
+            return "Mshm\User\Database\Factories\\".class_basename($modelName).'Factory';
+        });
         config()->set('auth.providers.users.model', User::class);
         Gate::policy(User::class, UserPolicy::class);
         DatabaseSeeder::$seeders[] = UsersTableSeeder::class;

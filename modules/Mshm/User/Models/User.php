@@ -5,6 +5,7 @@ namespace Mshm\User\Models;
 use Eloquent;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\DatabaseNotification;
 use Illuminate\Notifications\DatabaseNotificationCollection;
@@ -54,6 +55,7 @@ class User extends Authenticatable implements MustVerifyEmail
 {
     use Notifiable;
     use HasRoles;
+    use hasFactory ;
 
     const STATUS_ACTIVE = 'active';
     const STATUS_INACTIVE = 'inactive';
@@ -67,7 +69,7 @@ class User extends Authenticatable implements MustVerifyEmail
     public static $defaultUsers = [
         [
             'email' => 'admin@admin.com',
-            'password' => 'demo',
+            'password' => '@M123m',
             'name' => 'Admin',
             'role' => Role::ROLE_SUPER_ADMIN,
         ],

@@ -7,40 +7,38 @@ use Illuminate\Validation\Rule;
 use Mshm\Course\Models\Course;
 use Mshm\Course\Rules\ValidSeason;
 use Mshm\Course\Rules\ValidTeacher;
+use Mshm\Media\Services\MediaFileService;
 
 class LessonRequest extends FormRequest
 {
 
-    public function authorize()
+    public function authorize(): bool
     {
+        /** @noinspection TypeUnsafeComparisonInspection */
         return auth()->check() == true;
     }
 
 
-    public function rules()
+    public function rules(): array
     {
-        /** @noinspection PhpUnnecessaryLocalVariableInspection */
         $rules = [
             "title" => "required|min:3|max:190",
             "slug" => "nullable|min:3|max:190",
             "number" => "nullable|numeric",
             "time" => "required|numeric|min:0|max:255",
             "season_id" => [new ValidSeason()],
-            "free" => "required|boolean",
+            "is_free" => "required|boolean",
             "lesson_file" => "required|file|mimes:avi,mkv,mp4,zip,rar,m4v",
         ];
         // for update
-//        if (request()->method === 'PATCH') {
-//            $rules["image"] = "nullable|mimes:jpg,png,jpeg";
-//            $rules["slug"] = "required|min:3|max:190|unique:courses,slug,"
-//                // course === id in function update in get params in courseController
-//                . request()->route('course');
-//        }
+        if (request()->method === 'PATCH') {
+            $rules["lesson_file"] = "nullable|file|mimes:".MediaFileService::getExtensions();
+        }
         // for update and store
         return $rules;
     }
 
-    public function attributes()
+    public function attributes(): array
     {
         return [
             "title" => "عنوان درس",

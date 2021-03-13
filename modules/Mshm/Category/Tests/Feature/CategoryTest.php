@@ -58,7 +58,7 @@ class CategoryTest extends TestCase
     // ================================== create admin fake for test ==================================
     private function actionAsAdmin()
     {
-        $this->actingAs(factory(User::class)->create());
+        $this->actingAs(User::factory()->create());
         $this->seed(RolePermissionTableSeeder::class);
         /** @noinspection PhpUndefinedMethodInspection */
         auth()->user()->givePermissionTo(Permission::PERMISSION_MANAGE_CATEGORIES);
@@ -68,7 +68,7 @@ class CategoryTest extends TestCase
     // ================================== create normal user fake for test ==================================
     private function actionAsUser()
     {
-        $this->actingAs(factory(User::class)->create());
+        $this->actingAs(User::factory()->create());
         $this->seed(RolePermissionTableSeeder::class);
     }
     // ================================== create normal user fake for test ==================================
