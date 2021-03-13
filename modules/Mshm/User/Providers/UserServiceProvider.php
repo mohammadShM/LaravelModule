@@ -14,6 +14,7 @@ use Mshm\User\Policies\UserPolicy;
 
 class UserServiceProvider extends ServiceProvider
 {
+    /** @noinspection ReturnTypeCanBeDeclaredInspection */
     public function register()
     {
         $this->loadRoutesFrom(__DIR__ . '/../Routes/user_routes.php');
@@ -31,6 +32,7 @@ class UserServiceProvider extends ServiceProvider
         $this->app['router']->pushMiddlewareToGroup('web', StoreUserIp::class);
     }
 
+    /** @noinspection ReturnTypeCanBeDeclaredInspection */
     public function boot()
     {
         config()->set('sidebar.items.users', [

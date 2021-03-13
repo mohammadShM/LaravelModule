@@ -28,56 +28,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2a3277d-b2ce-442a-9b1c-bf89ca5e04db" name="Default Changelist" comment="1 =&gt; edit lesson &#10;2 =&gt; update lesson &#10;3 =&gt; multiple actions against lessons &#10;4 =&gt; create lessons policy&#10;5 =&gt; create test for lessons&#10;6 =&gt; same change for teacher&#10;7 =&gt; update php and laravel in version 8">
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/laravel-idea.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Course/Policies/LessonPolicy.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Course/Resources/Views/lessons/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Course/Tests/Feature/LessonTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/video-thumb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/zip-thumb.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/LaravelWebModular.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LaravelWebModular.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/mohammadshm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/mohammadshm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/symfony2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
+    <list default="true" id="e2a3277d-b2ce-442a-9b1c-bf89ca5e04db" name="Default Changelist" comment="1 =&gt; edit lesson &#10;2 =&gt; update lesson &#10;3 =&gt; multiple actions against lessons &#10;4 =&gt; create lessons policy&#10;5 =&gt; create test for lessons&#10;6 =&gt; same change for teacher&#10;7 =&gt; update php and laravel in version 8&#10;8 =&gt; refactor code in laravel 8">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Category/Tests/Feature/CategoryTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Category/Tests/Feature/CategoryTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Database/Migrations/2020_11_08_191026_create_lessons_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Database/Migrations/2020_11_08_191026_create_lessons_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Http/Controllers/CourseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Http/Controllers/CourseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Http/Controllers/LessonController.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Http/Controllers/LessonController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Http/Requests/LessonRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Http/Requests/LessonRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Models/Lesson.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Models/Lesson.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Policies/CoursePolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Policies/CoursePolicy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Policies/SeasonPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Policies/SeasonPolicy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Providers/CourseServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Providers/CourseServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Repositories/CourseRepo.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Repositories/CourseRepo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Repositories/LessonRepo.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Repositories/LessonRepo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Resources/Views/details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Resources/Views/details.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Resources/Views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Resources/Views/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Resources/Views/lessons/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Resources/Views/lessons/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Routes/lessons_routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Routes/lessons_routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Rules/ValidSeason.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Rules/ValidSeason.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Tests/Feature/CourseTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Tests/Feature/CourseTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Tests/Feature/SeasonTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Tests/Feature/SeasonTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Dashboard/Resources/Views/layout/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Dashboard/Resources/Views/layout/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Media/Contracts/FileServiceContract.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Media/Contracts/FileServiceContract.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Media/Database/Migrations/2020_08_17_132837_create_media_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Media/Database/Migrations/2019_01_01_132837_create_media_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Media/Models/Media.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Media/Models/Media.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Media/Services/ImageFileService.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Media/Services/ImageFileService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Media/Services/MediaFileService.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Media/Services/MediaFileService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Media/Services/VideoFileService.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Media/Services/VideoFileService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Media/Services/ZipFileService.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Media/Services/ZipFileService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/RolePermissions/Tests/Feature/RolesTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/RolePermissions/Tests/Feature/RolesTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/User/Database/Factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/User/Database/Factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/User/Database/Migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/User/Database/Migrations/2019_01_02_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/User/Database/Migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/User/Database/Migrations/2019_01_02_100000_create_password_resets_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/User/Database/Seeds/UsersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/User/Database/Seeds/UsersTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/User/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/User/Models/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/Mshm/User/Providers/UserServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/User/Providers/UserServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/panel/js/js.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/panel/js/js.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/file.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/file.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -257,7 +210,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -307,11 +260,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.LessonTest.test_user_can_see_create_lesson_form" />
+        <item itemvalue="PHPUnit.LessonTest.test_permitted_user_can_destroy_multiple_lessons" />
+        <item itemvalue="PHPUnit.LessonTest.test_normal_user_can_not_see_create_lesson_form" />
         <item itemvalue="PHPUnit.CategoryTest.test_permitted_user_can_see_categories_panel" />
         <item itemvalue="PHPUnit.CategoryTest" />
-        <item itemvalue="PHPUnit.LessonTest.test_user_can_see_create_lesson_form" />
-        <item itemvalue="PHPUnit.LessonTest.test_normal_user_can_not_see_create_lesson_form" />
-        <item itemvalue="PHPUnit.LessonTest.test_permitted_user_can_destroy_multiple_lessons" />
       </list>
     </recent_temporary>
   </component>
@@ -495,7 +448,8 @@
       <workItem from="1615551712041" duration="329000" />
       <workItem from="1615552136264" duration="21435000" />
       <workItem from="1615587279035" duration="600000" />
-      <workItem from="1615637724722" duration="9430000" />
+      <workItem from="1615637724722" duration="10898000" />
+      <workItem from="1615665407410" duration="981000" />
     </task>
     <task id="LOCAL-00001" summary="for create login and register form in front and back by laravel/ui">
       <created>1592576031330</created>
@@ -679,7 +633,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605286025476</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="1 =&gt; edit lesson &#10;2 =&gt; update lesson &#10;3 =&gt; multiple actions against lessons &#10;4 =&gt; create lessons policy&#10;5 =&gt; create test for lessons&#10;6 =&gt; same change for teacher&#10;7 =&gt; update php and laravel in version 8&#10;8 =&gt; refactor code in laravel 8">
+      <created>1615664006785</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1615664006785</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -762,7 +723,8 @@
     <MESSAGE value="1 =&gt; remove role for user&#10;2 =&gt; edit users&#10;3 =&gt; delete users&#10;4 =&gt; create composer.json file for modules&#10;5 =&gt; get ip for users table&#10;6 =&gt; set one role for users Instead multi roles for users" />
     <MESSAGE value="1 =&gt; user profile page&#10;2 =&gt; create UserPhoto component &#10;3 =&gt; create model season &#10;4 =&gt; edit season &#10;5 =&gt; manage permission for slider in dashboard&#10;6 =&gt; create SeasonPolicy and complete CoursePolicy &#10;7 =&gt; create season test&#10;8 =&gt; store lessons for seasons" />
     <MESSAGE value="1 =&gt; store lesson &#10;2 =&gt; create VideoFileService function upload &#10;3 =&gt; open and close principle for media module &#10;4 =&gt; refactor MediaFileService.php &#10;5 =&gt; introduction to contracts and implementing ZipFileService.php&#10;6 =&gt; refactor media module&#10;7 =&gt; delete media file&#10;8 =&gt; delete lesson &#10;9 =&gt; delete multi lessons&#10;10 =&gt; lock and unlock and accept and reject routes for lessons" />
-    <option name="LAST_COMMIT_MESSAGE" value="1 =&gt; store lesson &#10;2 =&gt; create VideoFileService function upload &#10;3 =&gt; open and close principle for media module &#10;4 =&gt; refactor MediaFileService.php &#10;5 =&gt; introduction to contracts and implementing ZipFileService.php&#10;6 =&gt; refactor media module&#10;7 =&gt; delete media file&#10;8 =&gt; delete lesson &#10;9 =&gt; delete multi lessons&#10;10 =&gt; lock and unlock and accept and reject routes for lessons" />
+    <MESSAGE value="1 =&gt; edit lesson &#10;2 =&gt; update lesson &#10;3 =&gt; multiple actions against lessons &#10;4 =&gt; create lessons policy&#10;5 =&gt; create test for lessons&#10;6 =&gt; same change for teacher&#10;7 =&gt; update php and laravel in version 8&#10;8 =&gt; refactor code in laravel 8" />
+    <option name="LAST_COMMIT_MESSAGE" value="1 =&gt; edit lesson &#10;2 =&gt; update lesson &#10;3 =&gt; multiple actions against lessons &#10;4 =&gt; create lessons policy&#10;5 =&gt; create test for lessons&#10;6 =&gt; same change for teacher&#10;7 =&gt; update php and laravel in version 8&#10;8 =&gt; refactor code in laravel 8" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
