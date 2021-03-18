@@ -28,70 +28,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2a3277d-b2ce-442a-9b1c-bf89ca5e04db" name="Default Changelist" comment="1 =&gt; create front module&#10;2 =&gt; organize blade file for front module&#10;3 =&gt; download media for single course page&#10;4 =&gt; create table course_student&#10;5 =&gt; create page for teacher &#10;6 =&gt; buy course by zarinpal&#10;7 =&gt;">
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_200131_course_user.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Front/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Front/src/Http/Controllers/FrontController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Front/src/Providers/FrontServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Front/src/Resources/Views/layout/SingleCourseBox.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Front/src/Resources/Views/layout/episodes-list.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Front/src/Resources/Views/layout/foot.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Front/src/Resources/Views/layout/footer.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Front/src/Resources/Views/layout/head.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Front/src/Resources/Views/layout/header-ads.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Front/src/Resources/Views/layout/header.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Front/src/Resources/Views/layout/latestArticles.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Front/src/Resources/Views/layout/latestCourses.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Front/src/Resources/Views/layout/master.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Front/src/Resources/Views/layout/popularCourses.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Front/src/Resources/Views/layout/sidebar-banners.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Front/src/Resources/Views/layout/slider.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Front/src/Resources/Views/layout/top-info.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Front/src/Resources/Views/singleCourse.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Front/src/Resources/Views/tutor.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Front/src/Routes/front_route.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Media/Http/Controllers/MediaController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Media/Routes/media_routes.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Payment/Services/PaymentService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Payment/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Payment/src/Database/Migrations/2021_03_18_212100_create_payments_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Payment/src/Models/Payment.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Payment/src/Providers/PaymentServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Payment/src/Repositories/PaymentRepo.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/custom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/ltr.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/LaravelWebModular.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LaravelWebModular.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/mohammadshm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/mohammadshm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="e2a3277d-b2ce-442a-9b1c-bf89ca5e04db" name="Default Changelist" comment="1 =&gt; create front module&#10;2 =&gt; organize blade file for front module&#10;3 =&gt; download media for single course page&#10;4 =&gt; create table course_student&#10;5 =&gt; create page for teacher &#10;6 =&gt; buy course by zarinpal&#10;7 =&gt; create module payment for buy course">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Category/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Category/Models/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Category/Repositories/CategoryRepo.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Category/Repositories/CategoryRepo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Common/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Common/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Http/Controllers/CourseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Http/Controllers/CourseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Models/Course.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Models/Course.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Models/Lesson.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Models/Lesson.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Repositories/CourseRepo.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Repositories/CourseRepo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Repositories/LessonRepo.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Repositories/LessonRepo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Resources/Views/details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Resources/Views/details.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Routes/courses_routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Routes/courses_routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Tests/Feature/CourseTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Tests/Feature/CourseTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Dashboard/Resources/Views/layout/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Dashboard/Resources/Views/layout/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Media/Contracts/FileServiceContract.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Media/Contracts/FileServiceContract.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Media/Providers/MediaServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Media/Providers/MediaServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Media/Services/DefaultFileService.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Media/Services/DefaultFileService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Media/Services/ImageFileService.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Media/Services/ImageFileService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Media/Services/MediaFileService.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Media/Services/MediaFileService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Media/Services/VideoFileService.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Media/Services/VideoFileService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Media/Services/ZipFileService.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Media/Services/ZipFileService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/User/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/User/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/User/Routes/user_routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/User/Routes/user_routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/modal.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/modal.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/modal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Front/src/Resources/Views/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -285,11 +225,11 @@
       <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\public\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\Payment\src" />
       <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\Payment\src\Database\Migrations" />
       <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\Front\src" />
       <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\Front\Resources\Views" />
       <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\Front\Resources" />
-      <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\Front\Routes" />
     </key>
   </component>
   <component name="RunManager" selected="PHPUnit.phpunit.xml">
@@ -518,7 +458,7 @@
       <workItem from="1615908869033" duration="13307000" />
       <workItem from="1615985812748" duration="5679000" />
       <workItem from="1616065805151" duration="4409000" />
-      <workItem from="1616085795369" duration="10395000" />
+      <workItem from="1616085795369" duration="11739000" />
     </task>
     <task id="LOCAL-00001" summary="for create login and register form in front and back by laravel/ui">
       <created>1592576031330</created>
@@ -716,7 +656,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615666435172</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="1 =&gt; create front module&#10;2 =&gt; organize blade file for front module&#10;3 =&gt; download media for single course page&#10;4 =&gt; create table course_student&#10;5 =&gt; create page for teacher &#10;6 =&gt; buy course by zarinpal&#10;7 =&gt; create module payment for buy course">
+      <created>1616106174941</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1616106174941</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -800,7 +747,8 @@
     <MESSAGE value="1 =&gt; user profile page&#10;2 =&gt; create UserPhoto component &#10;3 =&gt; create model season &#10;4 =&gt; edit season &#10;5 =&gt; manage permission for slider in dashboard&#10;6 =&gt; create SeasonPolicy and complete CoursePolicy &#10;7 =&gt; create season test&#10;8 =&gt; store lessons for seasons" />
     <MESSAGE value="1 =&gt; store lesson &#10;2 =&gt; create VideoFileService function upload &#10;3 =&gt; open and close principle for media module &#10;4 =&gt; refactor MediaFileService.php &#10;5 =&gt; introduction to contracts and implementing ZipFileService.php&#10;6 =&gt; refactor media module&#10;7 =&gt; delete media file&#10;8 =&gt; delete lesson &#10;9 =&gt; delete multi lessons&#10;10 =&gt; lock and unlock and accept and reject routes for lessons" />
     <MESSAGE value="1 =&gt; edit lesson &#10;2 =&gt; update lesson &#10;3 =&gt; multiple actions against lessons &#10;4 =&gt; create lessons policy&#10;5 =&gt; create test for lessons&#10;6 =&gt; same change for teacher&#10;7 =&gt; update php and laravel in version 8&#10;8 =&gt; refactor code in laravel 8" />
-    <option name="LAST_COMMIT_MESSAGE" value="1 =&gt; edit lesson &#10;2 =&gt; update lesson &#10;3 =&gt; multiple actions against lessons &#10;4 =&gt; create lessons policy&#10;5 =&gt; create test for lessons&#10;6 =&gt; same change for teacher&#10;7 =&gt; update php and laravel in version 8&#10;8 =&gt; refactor code in laravel 8" />
+    <MESSAGE value="1 =&gt; create front module&#10;2 =&gt; organize blade file for front module&#10;3 =&gt; download media for single course page&#10;4 =&gt; create table course_student&#10;5 =&gt; create page for teacher &#10;6 =&gt; buy course by zarinpal&#10;7 =&gt; create module payment for buy course" />
+    <option name="LAST_COMMIT_MESSAGE" value="1 =&gt; create front module&#10;2 =&gt; organize blade file for front module&#10;3 =&gt; download media for single course page&#10;4 =&gt; create table course_student&#10;5 =&gt; create page for teacher &#10;6 =&gt; buy course by zarinpal&#10;7 =&gt; create module payment for buy course" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
