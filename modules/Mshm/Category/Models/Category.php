@@ -1,8 +1,10 @@
-<?php
+<?php /** @noinspection PhpMissingFieldTypeInspection */
 
 namespace Mshm\Category\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Mshm\Course\Models\Course;
 
 /**
@@ -20,27 +22,31 @@ class Category extends Model
 
     protected $guarded = [];
 
-    /** @noinspection PhpUnused */
-    public function getParentAttribute()
+    public function getParentAttribute(): string
     {
         return (is_null($this->parent_id)) ? 'ندارد' : $this->parentCategory->title;
     }
 
-    /** @noinspection PhpUnused */
-    public function parentCategory()
+    public function parentCategory(): BelongsTo
     {
-        return $this->belongsTo(Category::class, 'parent_id');
+        // return $this->belongsTo(Category::class, 'parent_id');
+        return $this->belongsTo(__CLASS__, 'parent_id');
     }
 
-    /** @noinspection PhpUnused */
-    public function subCategories()
+    public function subCategories(): HasMany
     {
-        $this->hasMany(Category::class, 'parent_id');
+       // return $this->hasMany(Category::class, 'parent_id');
+       return $this->hasMany(__CLASS__, 'parent_id');
     }
 
-    public function courses()
+    public function courses(): HasMany
     {
         return $this->hasMany(Course::class);
+    }
+
+    public function path(): string
+    {
+        return route('categories.show', $this->id);
     }
 
 }

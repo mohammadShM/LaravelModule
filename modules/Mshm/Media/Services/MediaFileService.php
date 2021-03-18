@@ -1,4 +1,9 @@
 <?php
+/** @noinspection PhpMissingFieldTypeInspection */
+/** @noinspection ReturnTypeCanBeDeclaredInspection */
+/** @noinspection PhpMissingReturnTypeInspection */
+
+/** @noinspection TypeUnsafeComparisonInspection */
 
 namespace Mshm\Media\Services;
 
@@ -32,8 +37,18 @@ class MediaFileService
     {
         $extension = self::normalizeExtension(self::$file);
         foreach (config("mediaFile.mediaTypeServices") as $type => $service) {
-            if (in_array($extension, $service['extensions'])) {
+            if (in_array($extension, $service['extensions'], true)) {
                 return self::uploadByHandler(new $service['handler'], $type);
+            }
+        }
+        return null;
+    }
+
+    public static function stream(Media $media)
+    {
+        foreach (config("mediaFile.mediaTypeServices") as $type => $service) {
+            if ($media->type == $type) {
+                return $service['handler']::stream($media);
             }
         }
         return null;
@@ -49,14 +64,14 @@ class MediaFileService
         return null;
     }
 
-    private static function normalizeExtension($file): string
+    private static function normalizeExtension($file)
     {
         return strtolower($file->getClientOriginalExtension());
     }
 
     private static function filenameGenerator()
     {
-        return uniqid();
+        return uniqid('', true);
     }
 
     private static function uploadByHandler(FileServiceContract $service, $key): Media

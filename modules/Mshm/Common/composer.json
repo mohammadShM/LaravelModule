@@ -14,5 +14,6 @@
                 "\\Mshm\\Common\\Providers\\CommonServiceProvider"
             ]
         }
-    }
+    },
+    "description": ""
 }

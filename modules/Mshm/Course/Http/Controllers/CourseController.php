@@ -1,4 +1,11 @@
-<?php
+<?php /** @noinspection PhpPossiblePolymorphicInvocationInspection */
+/** @noinspection TypeUnsafeComparisonInspection */
+/** @noinspection ReturnTypeCanBeDeclaredInspection */
+/** @noinspection PhpMissingReturnTypeInspection */
+/** @noinspection NullPointerExceptionInspection */
+/** @noinspection PhpUndefinedMethodInspection */
+
+/** @noinspection PhpUnhandledExceptionInspection */
 
 namespace Mshm\Course\Http\Controllers;
 
@@ -10,18 +17,17 @@ use Mshm\Course\Models\Course;
 use Mshm\Course\Repositories\CourseRepo;
 use Mshm\Course\Repositories\LessonRepo;
 use Mshm\Media\Services\MediaFileService;
+use Mshm\Payment\Services\PaymentService;
 use Mshm\RolePermissions\Models\Permission;
 use Mshm\User\Repositories\UserRepo;
+use function Mshm\Common\newFeedback;
 
 class CourseController extends Controller
 {
 
     public function index(CourseRepo $courseRepo)
     {
-        /** @noinspection PhpUnhandledExceptionInspection */
         $this->authorize('index', Course::class);
-        /** @noinspection PhpUndefinedMethodInspection */
-        /** @noinspection NullPointerExceptionInspection */
         if (auth()->user()->hasAnyPermission([Permission::PERMISSION_MANAGE_COURSES,
             Permission::PERMISSION_SUPER_ADMIN])) {
             $courses = $courseRepo->paginate();
@@ -33,7 +39,6 @@ class CourseController extends Controller
 
     public function create(UserRepo $userRepo, CategoryRepo $categoryRepo)
     {
-        /** @noinspection PhpUnhandledExceptionInspection */
         $this->authorize('create', Course::class);
         $teachers = $userRepo->getTeachers();
         $categories = $categoryRepo->all();
@@ -50,7 +55,6 @@ class CourseController extends Controller
     public function edit($id, CourseRepo $courseRepo, UserRepo $userRepo, CategoryRepo $categoryRepo)
     {
         $course = $courseRepo->findById($id);
-        /** @noinspection PhpUnhandledExceptionInspection */
         $this->authorize('edit', $course);
         $teachers = $userRepo->getTeachers();
         $categories = $categoryRepo->all();
@@ -60,7 +64,6 @@ class CourseController extends Controller
     public function update($id, CourseRequest $request, CourseRepo $courseRepo)
     {
         $course = $courseRepo->findById($id);
-        /** @noinspection PhpUnhandledExceptionInspection */
         $this->authorize('edit', $course);
         if ($request->hasFile('image')) {
             $request->request->add(['banner_id' => MediaFileService::publicUpload($request
@@ -79,7 +82,6 @@ class CourseController extends Controller
     {
         $course = $courseRepo->findById($id);
         $lessons = $lessonRepo->paginate($id);
-        /** @noinspection PhpUnhandledExceptionInspection */
         $this->authorize('details', $course);
         return view('Courses::details', compact('course', 'lessons'));
     }
@@ -88,7 +90,6 @@ class CourseController extends Controller
     {
         // DELETE MEDIA (BANNER)
         $course = $courseRepo->findById($id);
-        /** @noinspection PhpUnhandledExceptionInspection */
         $this->authorize('delete', $course);
         if ($course->banner) {
             $course->banner->delete();
@@ -102,7 +103,6 @@ class CourseController extends Controller
 
     public function accept($id, CourseRepo $courseRepo)
     {
-        /** @noinspection PhpUnhandledExceptionInspection */
         $this->authorize('change_confirmation_status', Course::class);
         if ($courseRepo->updateConfirmationStatus($id, Course::CONFIRMATION_STATUS_ACCEPTED)) {
             return AjaxResponses::successResponse();
@@ -112,7 +112,6 @@ class CourseController extends Controller
 
     public function reject($id, CourseRepo $courseRepo)
     {
-        /** @noinspection PhpUnhandledExceptionInspection */
         $this->authorize('change_confirmation_status', Course::class);
         if ($courseRepo->updateConfirmationStatus($id, Course::CONFIRMATION_STATUS_REJECTED)) {
             return AjaxResponses::successResponse();
@@ -122,12 +121,57 @@ class CourseController extends Controller
 
     public function lock($id, CourseRepo $courseRepo)
     {
-        /** @noinspection PhpUnhandledExceptionInspection */
         $this->authorize('change_confirmation_status', Course::class);
         if ($courseRepo->updateStatus($id, Course::STATUS_LOCKED)) {
             return AjaxResponses::successResponse();
         }
         return AjaxResponses::FailedResponse();
     }
+
+    public function buy($courseId, CourseRepo $courseRepo)
+    {
+        $course = $courseRepo->findById($courseId);
+        if (!$this->courseCanPurchased($course)) {
+            return back();
+        }
+        if (!$this->authUserCanPurchasedCourse($course)) {
+            return back();
+        }
+        $amount = 0;
+        /** @noinspection PhpParamsInspection */
+        $payment = PaymentService::generate($amount, $course, auth()->user());
+        return true;
+    }
+
+    public function courseCanPurchased(Course $course)
+    {
+        if ($course->type == Course::TYPE_FREE) {
+            newFeedback('عملیات نا موفق', 'دوره های رایگان قابل خریداری نیستند!', 'error');
+            return false;
+        }
+        if ($course->status == Course::STATUS_LOCKED) {
+            newFeedback('عملیات نا موفق', 'این دوره قفل شده است و فعلا قابل خریداری نیست!', 'error');
+            return false;
+        }
+        if ($course->confirmation_status != Course::CONFIRMATION_STATUS_ACCEPTED) {
+            newFeedback('عملیات نا موفق', 'دوره انتخابی شما هنوز تایید نشده است!', 'error');
+            return false;
+        }
+        return true;
+    }
+
+    public function authUserCanPurchasedCourse(Course $course)
+    {
+        if (auth()->id() == $course->teacher_id) {
+            newFeedback('عملیات نا موفق', 'شما مدرس این دوره هستید!', 'error');
+            return false;
+        }
+        if (auth()->user()->hasAccessToCourse($course)) {
+            newFeedback('عملیات نا موفق', 'ما به دوره دسترسی دارید!', 'error');
+            return false;
+        }
+        return true;
+    }
+
 
 }

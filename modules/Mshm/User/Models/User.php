@@ -1,4 +1,8 @@
-<?php
+<?php /** @noinspection PhpMissingFieldTypeInspection */
+/** @noinspection AccessModifierPresentedInspection */
+/** @noinspection ReturnTypeCanBeDeclaredInspection */
+
+/** @noinspection PhpMissingReturnTypeInspection */
 
 namespace Mshm\User\Models;
 
@@ -55,7 +59,7 @@ class User extends Authenticatable implements MustVerifyEmail
 {
     use Notifiable;
     use HasRoles;
-    use hasFactory ;
+    use HasFactory;
 
     const STATUS_ACTIVE = 'active';
     const STATUS_INACTIVE = 'inactive';
@@ -122,15 +126,21 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->hasMany(Course::class, 'teacher_id');
     }
 
+    public function purchases()
+    {
+        return $this->belongsToMany(Course::class, 'course_user',
+            'user_id', 'course_id');
+    }
+
     public function seasons()
     {
         return $this->hasMany(Season::class);
     }
 
     public function lessons()
-     {
-         return $this->hasMany(Lesson::class);
-     }
+    {
+        return $this->hasMany(Lesson::class);
+    }
 
     public function profilePath()
     {
@@ -139,11 +149,30 @@ class User extends Authenticatable implements MustVerifyEmail
     }
 
     public function getThumbAttribute()
-     {
-         if ($this->image) {
-             return '/storage/' . $this->image->files[300];
-         }
-         return '/panel/img/profile.jpg';
-     }
+    {
+        if ($this->image) {
+            return '/storage/' . $this->image->files[300];
+        }
+        return '/panel/img/profile.jpg';
+    }
+
+    public function hasAccessToCourse(Course $course)
+    {
+        /** @noinspection IfReturnReturnSimplificationInspection */
+        /** @noinspection NotOptimalIfConditionsInspection */
+        if ($this->can('manage', Course::class) ||
+            $this->id === $course->teacher_id ||
+            $course->students->contains($this->id)
+        ) {
+            return true;
+        }
+        return false;
+    }
+
+    public function studentsCount()
+    {
+        //todo: complete
+        return 0;
+    }
 
 }

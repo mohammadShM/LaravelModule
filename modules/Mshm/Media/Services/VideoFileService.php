@@ -1,4 +1,7 @@
 <?php
+/** @noinspection ReturnTypeCanBeDeclaredInspection */
+
+/** @noinspection PhpMissingReturnTypeInspection */
 
 namespace Mshm\Media\Services;
 
@@ -19,4 +22,10 @@ class VideoFileService extends DefaultFileService implements FileServiceContract
     {
         return url('/img/video-thumb.png');
     }
+
+    public static function getFileName()
+    {
+        return (self::$media->is_private ? 'private/' : 'public/') . self::$media->files['video'];
+    }
+
 }

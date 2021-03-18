@@ -21,7 +21,7 @@
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
-    border: 1px solid #ebebeb;
+    border: 1px solid #ebebeb ;
     width: 60%;
     color: #fff;
     overflow: auto;
@@ -66,5 +66,8 @@
     color: #000 !important;
     cursor: pointer;
 }
+
+
+
 
 

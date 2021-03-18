@@ -124,7 +124,7 @@ class CourseTest extends TestCase
             "percent" => 71,
             "type" => Course::TYPE_CASH,
             "status" => Course::STATUS_NOT_COMPLETED,
-           "image" => UploadedFile::fake()->image('img.jpg'),
+            "image" => UploadedFile::fake()->image('img.jpg'),
         ])->assertRedirect(route('courses.index'));
         $course = $course->fresh();
         self::assertEquals('updated title', $course->title);
@@ -236,8 +236,8 @@ class CourseTest extends TestCase
         return [
             'teacher_id' => auth()->id(),
             'category_id' => $category->id,
-            'title' => $this->faker->sentence(2),
-            "slug" => $this->faker->sentence(2),
+            'title' => $this->faker->sentence(2,true),
+            "slug" => $this->faker->sentence(2,true),
             "priority" => 12,
             "price" => 12000,
             "percent" => 70,

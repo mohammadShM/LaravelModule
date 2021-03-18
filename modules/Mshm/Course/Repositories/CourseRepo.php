@@ -4,6 +4,7 @@ namespace Mshm\Course\Repositories;
 
 use Illuminate\Support\Str;
 use Mshm\Course\Models\Course;
+use Mshm\Course\Models\Lesson;
 
 class CourseRepo
 {
@@ -70,6 +71,26 @@ class CourseRepo
     public function getCoursesByTeacherId(?int $id)
     {
         return Course::where('teacher_id', $id)->get();
+    }
+
+    public function latestCourses()
+    {
+        return Course::where('confirmation_status', Course::CONFIRMATION_STATUS_ACCEPTED)
+            ->latest()->take(8)->get();
+    }
+
+    public function getDuration($id)
+    {
+        return Lesson::where('course_id', $id)
+            ->where('confirmation_status', Lesson::CONFIRMATION_STATUS_ACCEPTED)
+            ->sum('time');
+    }
+
+    public function getLessonsCount($id): int
+    {
+        return Lesson::where('course_id',$id)
+            ->where('confirmation_status', Lesson::CONFIRMATION_STATUS_ACCEPTED)
+            ->count();
     }
 
 }

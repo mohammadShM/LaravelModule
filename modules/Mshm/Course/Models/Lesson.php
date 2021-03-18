@@ -4,6 +4,7 @@ namespace Mshm\Course\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Support\Facades\URL;
 use Mshm\Media\Models\Media;
 use Mshm\User\Models\User;
 
@@ -15,6 +16,11 @@ use Mshm\User\Models\User;
  * @method static orderBy(string $string)
  * @method static find(int $int)
  * @property mixed confirmation_status
+ * @property mixed course
+ * @property mixed id
+ * @property mixed slug
+ * @property mixed media
+ * @property mixed media_id
  */
 class Lesson extends Model
 {
@@ -64,6 +70,16 @@ class Lesson extends Model
         }
 
         return "#919191";
+    }
+
+    public function path(): string
+    {
+        return $this->course->path() . '?lesson=l-' . $this->id . '-' . $this->slug;
+    }
+
+    public function downloadLink(): string
+    {
+        return URL::temporarySignedRoute('media.download', now()->addDay(), ['media' => $this->media_id]);
     }
 
 }

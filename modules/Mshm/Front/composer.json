@@ -1,0 +1,16 @@
+{
+    "name": "mshm/front",
+    "autoload": {
+        "psr-4": {
+            "Mshm\\Front\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "\\Mshm\\Front\\Providers\\FrontServiceProvider"
+            ]
+        }
+    },
+    "description": ""
+}

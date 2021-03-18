@@ -1,0 +1,16 @@
+{
+    "name": "mshm/payment",
+    "autoload": {
+        "psr-4": {
+            "Mshm\\Payment\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "\\Mshm\\Payment\\Providers\\PaymentServiceProvider"
+            ]
+        }
+    },
+    "description": ""
+}

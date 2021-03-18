@@ -1,4 +1,7 @@
 <?php
+/** @noinspection ReturnTypeCanBeDeclaredInspection */
+
+/** @noinspection PhpMissingReturnTypeInspection */
 
 namespace Mshm\Media\Services;
 
@@ -19,4 +22,10 @@ class ZipFileService extends DefaultFileService implements FileServiceContract
     {
         return url('/img/zip-thumb.png');
     }
+
+    public static function getFileName()
+    {
+        return (static::$media->is_private ? 'private/' : 'public/') . static::$media->files['zip'];
+    }
+
 }

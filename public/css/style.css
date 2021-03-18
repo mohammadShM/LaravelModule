@@ -123,8 +123,8 @@ a, span {
     height: 44px;
     width: 120px;
     display: block;
-    background-size:cover;
-    background: url("../img/weblogo.png") no-repeat ;
+    background-size: cover;
+    background: url("../img/weblogo.png") no-repeat;
 }
 
 .t-header-search {
@@ -516,19 +516,23 @@ a, span {
 }
 
 .article {
-    margin-top: 150px;
+    /*margin-top: 150px;*/
+    margin-top: 100px !important;
 }
 
 .article.mr-202 {
-    margin-top: 201px;
+    /*margin-top: 201px;*/
+    margin-top: 151px !important;
 }
 
 .article.mr-152 {
-    margin-top: 154px;
+    /*margin-top: 154px;*/
+    margin-top: 104px !important;
 }
 
 .article.mr-107 {
-    margin-top: 107px;
+    /*margin-top: 107px;*/
+    margin-top: 57px !important;
 }
 
 .posts, .articles {
@@ -3688,6 +3692,6 @@ textarea {
     color: red;
 }
 
-.is-invalid{
+.is-invalid {
     border: 1px solid red;
 }
