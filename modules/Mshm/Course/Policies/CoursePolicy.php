@@ -1,9 +1,11 @@
-<?php
+<?php /** @noinspection PhpMissingReturnTypeInspection */
+
 /** @noinspection TypeUnsafeComparisonInspection */
 
 namespace Mshm\Course\Policies;
 
 use Illuminate\Auth\Access\HandlesAuthorization;
+use Mshm\Course\Repositories\CourseRepo;
 use Mshm\RolePermissions\Models\Permission;
 use Mshm\User\Models\User;
 
@@ -54,6 +56,7 @@ class CoursePolicy
         return null;
     }
 
+    /** @noinspection PhpUnused */
     public function change_confirmation_status($user)
     {
         if ($user->hasPermissionTo(Permission::PERMISSION_MANAGE_COURSES)) return true;
@@ -74,6 +77,17 @@ class CoursePolicy
         if ($user->hasPermissionTo(Permission::PERMISSION_MANAGE_OWN_COURSES)
             && $course->teacher_id == $user->id) return true;
         return null;
+    }
+
+    public function download($user, $course)
+    {
+        if ($user->hasPermissionTo(Permission::PERMISSION_MANAGE_COURSES) ||
+            $user->id === $course->teacher_id ||
+            $course->hasStudent($user->id)
+        ) {
+            return true;
+        }
+        return false;
     }
 
 }

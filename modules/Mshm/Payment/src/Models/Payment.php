@@ -1,4 +1,6 @@
-<?php /** @noinspection PhpMissingFieldTypeInspection */
+<?php /** @noinspection PhpMissingReturnTypeInspection */
+
+/** @noinspection PhpMissingFieldTypeInspection */
 
 namespace Mshm\Payment\Models;
 
@@ -6,6 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * @method static create(array $array)
+ * @method static where(string $string, $id)
+ * @property mixed amount
+ * @property mixed paymentable
  */
 class Payment extends Model
 {
@@ -22,4 +27,10 @@ class Payment extends Model
         self::STATUS_SUCCESS,
         self::STATUS_FAIL,
     ];
+
+    public function paymentable()
+    {
+        return $this->morphTo("paymentable");
+    }
+
 }

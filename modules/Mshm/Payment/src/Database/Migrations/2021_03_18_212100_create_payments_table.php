@@ -18,7 +18,7 @@ class CreatePaymentsTable extends Migration
             $table->id();
             $table->foreignId('buyer_id');
             $table->foreignId('paymentable_id');
-            $table->foreignId('paymentable_type');
+            $table->string('paymentable_type',255);
             $table->string('amount', 10);
             $table->string('invoice_id');
             $table->string('gateway');

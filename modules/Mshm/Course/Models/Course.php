@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 use Mshm\Category\Models\Category;
 use Mshm\Course\Repositories\CourseRepo;
 use Mshm\Media\Models\Media;
+use Mshm\Payment\Models\Payment;
 use Mshm\User\Models\User;
 
 /**
@@ -80,9 +81,19 @@ class Course extends Model
         return $this->hasMany(Lesson::class);
     }
 
+    public function payments()
+    {
+        return $this->morphMany(Payment::class, 'paymentable');
+    }
+
     public function getDuration()
     {
         return (new CourseRepo())->getDuration($this->id);
+    }
+
+    public function hasStudent($student_id)
+    {
+        return resolve(CourseRepo::class)->hasStudent($this, $student_id);
     }
 
     public function formattedDuration(): string

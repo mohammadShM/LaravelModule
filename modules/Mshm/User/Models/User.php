@@ -15,6 +15,7 @@ use Illuminate\Notifications\DatabaseNotification;
 use Illuminate\Notifications\DatabaseNotificationCollection;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\DB;
 use Mshm\Course\Models\Course;
 use Mshm\Course\Models\Lesson;
 use Mshm\Course\Models\Season;
@@ -156,23 +157,13 @@ class User extends Authenticatable implements MustVerifyEmail
         return '/panel/img/profile.jpg';
     }
 
-    public function hasAccessToCourse(Course $course)
-    {
-        /** @noinspection IfReturnReturnSimplificationInspection */
-        /** @noinspection NotOptimalIfConditionsInspection */
-        if ($this->can('manage', Course::class) ||
-            $this->id === $course->teacher_id ||
-            $course->students->contains($this->id)
-        ) {
-            return true;
-        }
-        return false;
-    }
-
     public function studentsCount()
     {
-        //todo: complete
-        return 0;
+        return DB::table("courses")
+            ->select("course_id")
+            ->where("teacher_id", $this->id)
+            ->join("course_user", "courses.id", "=", "course_user.course_id")
+            ->count();
     }
 
 }

@@ -5,6 +5,9 @@
 //});
 
 // for set handle role permissions in user login
+//use Mshm\Payment\Gateways\Gateway;
+//use Mshm\Payment\Models\Payment;
+
 //Route::get('/test', function () {
 //    // for create permission by package laravel permission
 ////    Permission::create([
@@ -19,5 +22,8 @@
 ////        auth()->user()->givePermissionTo(Permission::PERMISSION_SUPER_ADMIN);
 ////        return auth()->user()->permissions;
 //    // for set role
+////    $gateway = resolve(Gateway::class);
+////    $payment = new Payment();
+////    $gateway->request($payment);
 //    // return auth()->user()->assignRole('teacher');
 //});

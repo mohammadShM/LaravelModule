@@ -1,4 +1,5 @@
-<?php
+<?php /** @noinspection PhpMissingReturnTypeInspection */
+
 /** @noinspection PhpInconsistentReturnPointsInspection */
 
 namespace Mshm\Course\Policies;
@@ -25,6 +26,18 @@ class LessonPolicy
         return $user->hasPermissionTo(Permission::PERMISSION_MANAGE_COURSES) ||
             ($user->hasPermissionTo(Permission::PERMISSION_MANAGE_OWN_COURSES) &&
                 $user->id == $lesson->course->teacher_id);
+    }
+
+    public function download($user, $lesson)
+    {
+        if ($user->hasPermissionTo(Permission::PERMISSION_MANAGE_COURSES) ||
+            $user->id === $lesson->course->teacher_id ||
+            $lesson->course->hasStudent($user->id) ||
+            $lesson->is_free
+        ) {
+            return true;
+        }
+        return false;
     }
 
 }

@@ -3,10 +3,8 @@
 <!--for toast in library-->
 <script src="/js/jquery.toast.min.js"></script>
 <!--suppress HtmlUnknownTarget -->
-<script src="/panel/js/js.js?v={{ uniqid() }}"></script>
-@section('js')
-    <script>
-        @include('Common::layouts.feedbacks')
-    </script>
-@endsection
+<script src="/panel/js/js.js?v={{ uniqid('', true) }}"></script>
+<script>
+    @include('Common::layouts.feedbacks')
+</script>
 @yield('js')

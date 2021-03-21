@@ -3,6 +3,7 @@
 namespace Mshm\Payment\Repositories;
 
 use Mshm\Payment\Models\Payment;
+use mysql_xdevapi\ExecutionStatus;
 
 class PaymentRepo
 {
@@ -20,6 +21,18 @@ class PaymentRepo
             'seller_p' => $data['seller_p'],
             'seller_share' => $data['seller_share'],
             'site_share' => $data['site_share'],
+        ]);
+    }
+
+    public function findByInvoiceId($invoiceId)
+    {
+        return Payment::where('invoice_id', $invoiceId)->first();
+    }
+
+    public function changeStatus($id, $status)
+    {
+        return Payment::where("id", $id)->update([
+            "status" => $status
         ]);
     }
 

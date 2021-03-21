@@ -60,3 +60,20 @@
 .table-striped>tbody>tr:nth-of-type(odd){
     background-color: #fdfdfd;
 }
+
+.episodes-list--title {
+    padding: 20px;
+    position: relative;
+    border-bottom: 2px solid #46b2f0;
+    color: #444;
+    font-weight: 500;
+}
+
+.episodes-list--title:before {
+    content: '';
+    position: absolute;
+    border: 1px solid #46b2f0;
+    right: 0;
+    width: 140px;
+    bottom: -1px;
+}

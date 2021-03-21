@@ -1,4 +1,6 @@
-<?php
+<?php /** @noinspection PhpMissingReturnTypeInspection */
+
+/** @noinspection PhpMissingFieldTypeInspection */
 
 namespace Mshm\Course\Models;
 
@@ -58,8 +60,9 @@ class Lesson extends Model
         return $this->belongsTo(Media::class);
     }
 
-    /** @noinspection TypeUnsafeComparisonInspection */
-    public function getConfirmationStatusCssClass(): string
+
+    /** @noinspection PhpUnused */
+    public function getConfirmationStatusCssClass()
     {
         if ($this->confirmation_status == self::CONFIRMATION_STATUS_ACCEPTED) {
             return "text-success";
@@ -72,14 +75,17 @@ class Lesson extends Model
         return "#919191";
     }
 
-    public function path(): string
+    public function path()
     {
         return $this->course->path() . '?lesson=l-' . $this->id . '-' . $this->slug;
     }
 
-    public function downloadLink(): string
+    public function downloadLink()
     {
-        return URL::temporarySignedRoute('media.download', now()->addDay(), ['media' => $this->media_id]);
+        if ($this->media) {
+            return URL::temporarySignedRoute('media.download', now()->addDay(), ['media' => $this->media_id]);
+        }
+        return null;
     }
 
 }

@@ -28,10 +28,41 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2a3277d-b2ce-442a-9b1c-bf89ca5e04db" name="Default Changelist" comment="1 =&gt; create front module&#10;2 =&gt; organize blade file for front module&#10;3 =&gt; download media for single course page&#10;4 =&gt; create table course_student&#10;5 =&gt; create page for teacher &#10;6 =&gt; buy course by zarinpal&#10;7 =&gt; create module payment for buy course">
+    <list default="true" id="e2a3277d-b2ce-442a-9b1c-bf89ca5e04db" name="Default Changelist" comment="1 =&gt; complete module payment for buy course &#10;2 =&gt; design pattern adapter for payment module&#10;3 =&gt; design pattern singleton for payment module&#10;4 =&gt;">
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/Course/Listeners/RegisterUserInTheCourse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/Course/Providers/EventServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/Payment/src/Contracts/GateWayContract.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/Payment/src/Events/PaymentWasSuccessful.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/Payment/src/Gateways/Gateway.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/Payment/src/Gateways/Zarinpal/Zarinpal.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/Payment/src/Gateways/Zarinpal/ZarinpalAdapter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/Payment/src/Http/Controllers/PaymentController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Mshm/Payment/src/Routes/payment_routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/mohammadshm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/mohammadshm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Http/Controllers/CourseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Http/Controllers/CourseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Models/Course.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Models/Course.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Models/Lesson.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Models/Lesson.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Policies/CoursePolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Policies/CoursePolicy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Policies/LessonPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Policies/LessonPolicy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Providers/CourseServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Providers/CourseServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Repositories/CourseRepo.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Repositories/CourseRepo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Dashboard/Resources/Views/layout/foot.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Dashboard/Resources/Views/layout/foot.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Dashboard/Resources/Views/layout/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Dashboard/Resources/Views/layout/head.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Front/src/Resources/Views/layout/episodes-list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Front/src/Resources/Views/layout/episodes-list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Front/src/Resources/Views/layout/foot.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Front/src/Resources/Views/layout/foot.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Front/src/Resources/Views/layout/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Front/src/Resources/Views/layout/head.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Front/src/Resources/Views/singleCourse.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Front/src/Resources/Views/singleCourse.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Payment/src/Database/Migrations/2021_03_18_212100_create_payments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Payment/src/Database/Migrations/2021_03_18_212100_create_payments_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Payment/src/Models/Payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Payment/src/Models/Payment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Payment/src/Providers/PaymentServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Payment/src/Providers/PaymentServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Payment/src/Repositories/PaymentRepo.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Payment/src/Repositories/PaymentRepo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/Payment/src/Services/PaymentService.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Payment/src/Services/PaymentService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Mshm/User/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/User/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,12 +239,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="add_unversioned_files" value="$PROJECT_DIR$/vendor/laravel/ui/auth-backend/VerifiesEmails.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/framework/src/Illuminate/Contracts/Auth/MustVerifyEmail.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/framework/src/Illuminate/Mail/resources/views/html/themes/default.css&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/fzaninotto/faker/src/Faker/Generator.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/ui/auth-backend/AuthenticatesUsers.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/framework/src/Illuminate/Routing/Router.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/ui/src/Auth/bootstrap-stubs/auth/login.stub&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/storage/framework/views/dda049c9e200e442f8a8d037b92db6dfd6703224.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/framework/src/Illuminate/Http/RedirectResponse.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/storage/logs/laravel.log&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/ui/src/Auth/bootstrap-stubs/auth/register.stub&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/framework/src/Illuminate/Auth/Listeners/SendEmailVerificationNotification.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/spatie/laravel-permission/src/Traits/HasRoles.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/ui/auth-backend/RegistersUsers.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/storage/app/private/.gitignore&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/ui/auth-backend/SendsPasswordResetEmails.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/.env&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/framework/src/Illuminate/Http/UploadedFile.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/HasFactory.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/.phpunit.result.cache&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/modules/Mshm/Payment/src/Repositories/PaymentRepo.php" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/vendor/laravel/ui/auth-backend/VerifiesEmails.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/framework/src/Illuminate/Contracts/Auth/MustVerifyEmail.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/framework/src/Illuminate/Mail/resources/views/html/themes/default.css&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/fzaninotto/faker/src/Faker/Generator.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/ui/auth-backend/AuthenticatesUsers.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/framework/src/Illuminate/Routing/Router.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/ui/src/Auth/bootstrap-stubs/auth/login.stub&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/storage/framework/views/dda049c9e200e442f8a8d037b92db6dfd6703224.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/framework/src/Illuminate/Http/RedirectResponse.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/storage/logs/laravel.log&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/ui/src/Auth/bootstrap-stubs/auth/register.stub&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/framework/src/Illuminate/Auth/Listeners/SendEmailVerificationNotification.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/spatie/laravel-permission/src/Traits/HasRoles.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/ui/auth-backend/RegistersUsers.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/storage/app/private/.gitignore&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/ui/auth-backend/SendsPasswordResetEmails.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/.env&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/framework/src/Illuminate/Http/UploadedFile.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/HasFactory.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/.phpunit.result.cache&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/modules/Mshm/Payment/src/Repositories/PaymentRepo.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/modules/Mshm/Payment/src/Models/Payment.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/modules/Mshm/Payment/src/Events/PaymentWasSuccessful.php&#10;C:/Users/mohammadshm/Desktop/laravel/LaravelWebModule/LaravelWebModular/vendor/laravel/framework/src/Illuminate/Broadcasting/PrivateChannel.php" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/modules/Mshm/Payment" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -225,11 +256,11 @@
       <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\public\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\Course" />
       <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\Payment\src" />
+      <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\Payment\src\Gateways\Zarinpal" />
       <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\Payment\src\Database\Migrations" />
       <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\Front\src" />
-      <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\Front\Resources\Views" />
-      <recent name="C:\Users\mohammadshm\Desktop\laravel\LaravelWebModule\LaravelWebModular\modules\Mshm\Front\Resources" />
     </key>
   </component>
   <component name="RunManager" selected="PHPUnit.phpunit.xml">
@@ -263,10 +294,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.CourseTest" />
         <item itemvalue="PHPUnit.LessonTest.test_user_can_see_create_lesson_form" />
         <item itemvalue="PHPUnit.LessonTest.test_permitted_user_can_destroy_multiple_lessons" />
         <item itemvalue="PHPUnit.LessonTest.test_normal_user_can_not_see_create_lesson_form" />
+        <item itemvalue="PHPUnit.CourseTest" />
         <item itemvalue="PHPUnit.CategoryTest.test_permitted_user_can_see_categories_panel" />
       </list>
     </recent_temporary>
@@ -458,7 +489,24 @@
       <workItem from="1615908869033" duration="13307000" />
       <workItem from="1615985812748" duration="5679000" />
       <workItem from="1616065805151" duration="4409000" />
-      <workItem from="1616085795369" duration="11739000" />
+      <workItem from="1616085795369" duration="12189000" />
+      <workItem from="1616158670895" duration="4003000" />
+      <workItem from="1616180547641" duration="325000" />
+      <workItem from="1616180930669" duration="42000" />
+      <workItem from="1616180992149" duration="5799000" />
+      <workItem from="1616213821389" duration="8530000" />
+      <workItem from="1616224644849" duration="78000" />
+      <workItem from="1616224745218" duration="77000" />
+      <workItem from="1616224837759" duration="14000" />
+      <workItem from="1616224867452" duration="435000" />
+      <workItem from="1616225326028" duration="2067000" />
+      <workItem from="1616237793965" duration="255000" />
+      <workItem from="1616238080545" duration="107000" />
+      <workItem from="1616238202829" duration="2150000" />
+      <workItem from="1616240383496" duration="671000" />
+      <workItem from="1616241236134" duration="811000" />
+      <workItem from="1616326325895" duration="1210000" />
+      <workItem from="1616327746961" duration="13717000" />
     </task>
     <task id="LOCAL-00001" summary="for create login and register form in front and back by laravel/ui">
       <created>1592576031330</created>
@@ -663,7 +711,21 @@
       <option name="project" value="LOCAL" />
       <updated>1616106174941</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="1 =&gt; update dependencies in package.json">
+      <created>1616107297544</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1616107297544</updated>
+    </task>
+    <task id="LOCAL-00031" summary="1 =&gt; update axios &#10;2 =&gt;">
+      <created>1616107466877</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1616107466877</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -748,7 +810,9 @@
     <MESSAGE value="1 =&gt; store lesson &#10;2 =&gt; create VideoFileService function upload &#10;3 =&gt; open and close principle for media module &#10;4 =&gt; refactor MediaFileService.php &#10;5 =&gt; introduction to contracts and implementing ZipFileService.php&#10;6 =&gt; refactor media module&#10;7 =&gt; delete media file&#10;8 =&gt; delete lesson &#10;9 =&gt; delete multi lessons&#10;10 =&gt; lock and unlock and accept and reject routes for lessons" />
     <MESSAGE value="1 =&gt; edit lesson &#10;2 =&gt; update lesson &#10;3 =&gt; multiple actions against lessons &#10;4 =&gt; create lessons policy&#10;5 =&gt; create test for lessons&#10;6 =&gt; same change for teacher&#10;7 =&gt; update php and laravel in version 8&#10;8 =&gt; refactor code in laravel 8" />
     <MESSAGE value="1 =&gt; create front module&#10;2 =&gt; organize blade file for front module&#10;3 =&gt; download media for single course page&#10;4 =&gt; create table course_student&#10;5 =&gt; create page for teacher &#10;6 =&gt; buy course by zarinpal&#10;7 =&gt; create module payment for buy course" />
-    <option name="LAST_COMMIT_MESSAGE" value="1 =&gt; create front module&#10;2 =&gt; organize blade file for front module&#10;3 =&gt; download media for single course page&#10;4 =&gt; create table course_student&#10;5 =&gt; create page for teacher &#10;6 =&gt; buy course by zarinpal&#10;7 =&gt; create module payment for buy course" />
+    <MESSAGE value="1 =&gt; update dependencies in package.json" />
+    <MESSAGE value="1 =&gt; update axios &#10;2 =&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="1 =&gt; update axios &#10;2 =&gt;" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

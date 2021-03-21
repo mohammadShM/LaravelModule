@@ -17,6 +17,7 @@ use Mshm\Course\Models\Course;
 use Mshm\Course\Repositories\CourseRepo;
 use Mshm\Course\Repositories\LessonRepo;
 use Mshm\Media\Services\MediaFileService;
+use Mshm\Payment\Gateways\Gateway;
 use Mshm\Payment\Services\PaymentService;
 use Mshm\RolePermissions\Models\Permission;
 use Mshm\User\Repositories\UserRepo;
@@ -128,6 +129,7 @@ class CourseController extends Controller
         return AjaxResponses::FailedResponse();
     }
 
+    /** @noinspection PhpUnused */
     public function buy($courseId, CourseRepo $courseRepo)
     {
         $course = $courseRepo->findById($courseId);
@@ -137,10 +139,17 @@ class CourseController extends Controller
         if (!$this->authUserCanPurchasedCourse($course)) {
             return back();
         }
-        $amount = 0;
+        $amount = $course->getFinalPrice();
+        if ($amount <= 0) {
+            // for free course by Discount
+            $courseRepo->addStudentToCourse($course, auth()->id());
+            /** @noinspection PhpRedundantOptionalArgumentInspection */
+            newFeedback("عملیات موفقیت آمیز", "شما با موفقیت در دوره ثبت نام کردید.", "success");
+            return redirect($course->path());
+        }
         /** @noinspection PhpParamsInspection */
         $payment = PaymentService::generate($amount, $course, auth()->user());
-        return true;
+        resolve(Gateway::class)->redirect();
     }
 
     public function courseCanPurchased(Course $course)
@@ -166,7 +175,7 @@ class CourseController extends Controller
             newFeedback('عملیات نا موفق', 'شما مدرس این دوره هستید!', 'error');
             return false;
         }
-        if (auth()->user()->hasAccessToCourse($course)) {
+        if (auth()->user()->can("download", $course)) {
             newFeedback('عملیات نا موفق', 'ما به دوره دسترسی دارید!', 'error');
             return false;
         }

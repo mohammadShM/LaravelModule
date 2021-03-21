@@ -88,9 +88,26 @@ class CourseRepo
 
     public function getLessonsCount($id): int
     {
-        return Lesson::where('course_id',$id)
+        return Lesson::where('course_id', $id)
             ->where('confirmation_status', Lesson::CONFIRMATION_STATUS_ACCEPTED)
             ->count();
+    }
+
+    public function addStudentToCourse(Course $course, $student_id)
+    {
+        if (!$this->getCourseStudentById($course, $student_id)) {
+            $course->students()->attach($student_id);
+        }
+    }
+
+    public function getCourseStudentById(Course $course, $studentId)
+    {
+        return $course->students()->where("id", $studentId)->first();
+    }
+
+    public function hasStudent(Course $course, $student_id)
+    {
+        return $course->students->contains($student_id);
     }
 
 }
