@@ -87,6 +87,13 @@ class CourseController extends Controller
         return view('Courses::details', compact('course', 'lessons'));
     }
 
+    public function downloadLinks($id, CourseRepo $courseRepo)
+    {
+        $course = $courseRepo->findById($id);
+        $this->authorize('download', $course);
+        return implode("<br>", $course->downloadLinks());
+    }
+
     public function destroy($id, CourseRepo $courseRepo)
     {
         // DELETE MEDIA (BANNER)
@@ -176,7 +183,7 @@ class CourseController extends Controller
             return false;
         }
         if (auth()->user()->can("download", $course)) {
-            newFeedback('عملیات نا موفق', 'ما به دوره دسترسی دارید!', 'error');
+            newFeedback('عملیات نا موفق', 'شما به دوره دسترسی دارید!', 'error');
             return false;
         }
         return true;

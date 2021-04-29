@@ -15,7 +15,6 @@ use Mshm\RolePermissions\Models\Permission;
 class CourseServiceProvider extends ServiceProvider
 {
 
-    /** @noinspection ReturnTypeCanBeDeclaredInspection */
     public function register()
     {
         $this->app->register(EventServiceProvider::class);
@@ -31,7 +30,7 @@ class CourseServiceProvider extends ServiceProvider
         Gate::policy(Lesson::class, LessonPolicy::class);
     }
 
-    public function boot(): void
+    public function boot()
     {
         config()->set('sidebar.items.courses', [
             "icon" => "i-courses",

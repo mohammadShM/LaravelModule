@@ -5,6 +5,7 @@
 namespace Mshm\Payment\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Mshm\User\Models\User;
 
 /**
  * @method static create(array $array)
@@ -31,6 +32,11 @@ class Payment extends Model
     public function paymentable()
     {
         return $this->morphTo("paymentable");
+    }
+
+    public function buyer()
+    {
+        return $this->belongsTo(User::class,"buyer_id");
     }
 
 }

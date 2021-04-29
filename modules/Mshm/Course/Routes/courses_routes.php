@@ -15,5 +15,7 @@ Route::group(['namespace' => 'Mshm\Course\Http\Controllers',
             ->name('courses.details');
         $router->post('courses/{course}/buy', 'CourseController@buy')
             ->name('courses.buy');
+        $router->get('courses/{course}/download-links', 'CourseController@downloadLinks')
+            ->name('courses.downloadLinks');
     });
 

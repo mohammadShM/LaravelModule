@@ -81,16 +81,17 @@ class CourseRepo
 
     public function getDuration($id)
     {
-        return Lesson::where('course_id', $id)
-            ->where('confirmation_status', Lesson::CONFIRMATION_STATUS_ACCEPTED)
-            ->sum('time');
+        return $this->getLessonsQuery($id)->sum('time');
+    }
+
+    public function getLessons($id)
+    {
+        return $this->getLessonsQuery($id)->get();
     }
 
     public function getLessonsCount($id): int
     {
-        return Lesson::where('course_id', $id)
-            ->where('confirmation_status', Lesson::CONFIRMATION_STATUS_ACCEPTED)
-            ->count();
+        return $this->getLessonsQuery($id)->count();
     }
 
     public function addStudentToCourse(Course $course, $student_id)
@@ -108,6 +109,12 @@ class CourseRepo
     public function hasStudent(Course $course, $student_id)
     {
         return $course->students->contains($student_id);
+    }
+
+    public function getLessonsQuery($id)
+    {
+        return Lesson::where('course_id', $id)
+            ->where('confirmation_status', Lesson::CONFIRMATION_STATUS_ACCEPTED);
     }
 
 }
