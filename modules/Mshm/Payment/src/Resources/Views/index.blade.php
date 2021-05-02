@@ -143,7 +143,7 @@
                     style: {
                         left: '50px',
                         top: '18px',
-                        color: ( // theme ===
+                        color: ( // theme
                             Highcharts.defaultOptions.title.style &&
                             Highcharts.defaultOptions.title.style.color
                         ) || 'black'
