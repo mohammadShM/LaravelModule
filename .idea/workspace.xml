@@ -28,31 +28,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2a3277d-b2ce-442a-9b1c-bf89ca5e04db" name="Default Changelist" comment="1 =&gt; batch download for link in lessons for course &#10;2 =&gt; use chart for payment in dashboard&#10;3 =&gt;">
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Payment/src/Policies/PaymentPolicy.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Payment/src/Resources/Lang/fa.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Mshm/Payment/src/Resources/Views/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/LaravelWebModular.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LaravelWebModular.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/mohammadshm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/mohammadshm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="e2a3277d-b2ce-442a-9b1c-bf89ca5e04db" name="Default Changelist" comment="1 =&gt; batch download for link in lessons for course &#10;2 =&gt; use chart for payment in dashboard">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Http/Controllers/CourseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Http/Controllers/CourseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Models/Course.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Models/Course.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Providers/CourseServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Providers/CourseServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Repositories/CourseRepo.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Repositories/CourseRepo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Course/Routes/courses_routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Course/Routes/courses_routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Dashboard/Resources/Views/layout/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Dashboard/Resources/Views/layout/head.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Front/src/Resources/Views/layout/episodes-list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Front/src/Resources/Views/layout/episodes-list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Payment/src/Http/Controllers/PaymentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Payment/src/Http/Controllers/PaymentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Payment/src/Models/Payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Payment/src/Models/Payment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Payment/src/Providers/PaymentServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Payment/src/Providers/PaymentServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Payment/src/Repositories/PaymentRepo.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Payment/src/Repositories/PaymentRepo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Payment/src/Routes/payment_routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Payment/src/Routes/payment_routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/Payment/src/Services/PaymentService.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/Payment/src/Services/PaymentService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Mshm/RolePermissions/Models/Permission.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Mshm/RolePermissions/Models/Permission.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,7 +218,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -508,7 +488,10 @@
       <workItem from="1616600470424" duration="449000" />
       <workItem from="1616601866232" duration="872000" />
       <workItem from="1616605502071" duration="147000" />
-      <workItem from="1619694242756" duration="2855000" />
+      <workItem from="1619694242756" duration="5053000" />
+      <workItem from="1619803033013" duration="4928000" />
+      <workItem from="1619872564552" duration="515000" />
+      <workItem from="1619941332935" duration="927000" />
     </task>
     <task id="LOCAL-00001" summary="for create login and register form in front and back by laravel/ui">
       <created>1592576031330</created>
@@ -734,7 +717,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616362712258</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="1 =&gt; batch download for link in lessons for course &#10;2 =&gt; use chart for payment in dashboard">
+      <created>1619718038778</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1619718038778</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -796,7 +786,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="config first tools for module" />
     <MESSAGE value="complete User module for register and login pages" />
     <MESSAGE value="Create route account verification with six-digit code and testing for it ." />
     <MESSAGE value="1 =&gt; test for verification .&#10;2 =&gt; refactor user route&#10;3 =&gt; reset password verify code" />
@@ -821,7 +810,8 @@
     <MESSAGE value="1 =&gt; update dependencies in package.json" />
     <MESSAGE value="1 =&gt; update axios &#10;2 =&gt;" />
     <MESSAGE value="1 =&gt; complete module payment for buy course &#10;2 =&gt; design pattern adapter for payment module&#10;3 =&gt; design pattern singleton for payment module&#10;4 =&gt; design pattern subscriber for register user in the course &#10;5 =&gt; create download link for lessons in courses" />
-    <option name="LAST_COMMIT_MESSAGE" value="1 =&gt; complete module payment for buy course &#10;2 =&gt; design pattern adapter for payment module&#10;3 =&gt; design pattern singleton for payment module&#10;4 =&gt; design pattern subscriber for register user in the course &#10;5 =&gt; create download link for lessons in courses" />
+    <MESSAGE value="1 =&gt; batch download for link in lessons for course &#10;2 =&gt; use chart for payment in dashboard" />
+    <option name="LAST_COMMIT_MESSAGE" value="1 =&gt; batch download for link in lessons for course &#10;2 =&gt; use chart for payment in dashboard" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
