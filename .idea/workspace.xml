@@ -28,9 +28,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2a3277d-b2ce-442a-9b1c-bf89ca5e04db" name="Default Changelist" comment="1 =&gt; batch download for link in lessons for course &#10;2 =&gt; use chart for payment in dashboard">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="e2a3277d-b2ce-442a-9b1c-bf89ca5e04db" name="Default Changelist" comment="1 =&gt; batch download for link in lessons for course &#10;2 =&gt; use chart for payment in dashboard" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -488,7 +486,7 @@
       <workItem from="1619694242756" duration="5053000" />
       <workItem from="1619803033013" duration="4928000" />
       <workItem from="1619872564552" duration="515000" />
-      <workItem from="1619941332935" duration="2623000" />
+      <workItem from="1619941332935" duration="3065000" />
     </task>
     <task id="LOCAL-00001" summary="for create login and register form in front and back by laravel/ui">
       <created>1592576031330</created>
@@ -728,7 +726,21 @@
       <option name="project" value="LOCAL" />
       <updated>1619942360864</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="1 =&gt; batch download for link in lessons for course &#10;2 =&gt; use chart for payment in dashboard">
+      <created>1619947150919</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1619947150919</updated>
+    </task>
+    <task id="LOCAL-00036" summary="1 =&gt; batch download for link in lessons for course &#10;2 =&gt; use chart for payment in dashboard">
+      <created>1619947293226</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1619947293226</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
